@@ -17,11 +17,12 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'honza/vim-snippets'
     Plug 'mlaursen/vim-react-snippets'
 
-    Plug 'Quramy/tsuquyomi', { 'do': 'npm -g install typescript' }
+    Plug 'Quramy/tsuquyomi', { 'do': 'npm -g install typecript' }
     Plug 'Shougo/vimproc.vim', { 'do': 'make' }
     Plug 'vim-syntastic/syntastic'
     Plug 'scrooloose/nerdtree'
-    Plug 'jistr/vim-nerdtree-tabs'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'ryanoasis/vim-devicons'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-fugitive'
     Plug 'vim-airline/vim-airline'
@@ -139,6 +140,8 @@ set gfn=Monospace\ 10
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h15
+
 
 let mapleader = ","
 
