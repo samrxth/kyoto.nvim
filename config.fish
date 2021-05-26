@@ -61,3 +61,7 @@ function pull
   git pull
 end
 funcsave pull
+# i suggest running one of the following commands after installing fish
+# omf install bobthefish
+# OR
+# omf install sashimi
