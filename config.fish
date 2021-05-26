@@ -65,3 +65,4 @@ funcsave pull
 # omf install bobthefish
 # OR
 # omf install sashimi
+fish_vi_key_bindings
