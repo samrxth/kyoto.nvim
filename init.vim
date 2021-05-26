@@ -17,6 +17,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'honza/vim-snippets'
     Plug 'mlaursen/vim-react-snippets'
 
+    Plug 'Quramy/tsuquyomi', { 'do': 'npm -g install typescript' }
+    Plug 'Shougo/vimproc.vim', { 'do': 'make' }
     Plug 'vim-syntastic/syntastic'
     Plug 'scrooloose/nerdtree'
     Plug 'jistr/vim-nerdtree-tabs'
@@ -25,7 +27,6 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'airblade/vim-gitgutter'
-    Plug 'tpope/vim-rhubar'
     Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -139,8 +140,6 @@ set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
 
-
-
 let mapleader = ","
 
 let g:fzf_action = {
@@ -183,6 +182,7 @@ let g:airline#extensions#virtualenv#enabled = 1
 let g:yats_host_keyword = 1
 " Syntax highlight
 let python_highlight_all = 1
+let g:tsuquyomi_shortest_import_path = 1
 
 
 augroup fzf
