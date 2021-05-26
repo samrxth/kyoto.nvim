@@ -234,6 +234,9 @@ nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <silent> <S-t> :tabnew<CR>
 
+map gn :bn<cr>
+map gp :bp<cr>
+
 cmap W w
 cmap Q q
 
