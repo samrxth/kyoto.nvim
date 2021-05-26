@@ -15,6 +15,7 @@ call plug#begin('~/.config/nvim/plugged')
     "" Snippets
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
+    Plug 'mlaursen/vim-react-snippets'
 
     Plug 'vim-syntastic/syntastic'
     Plug 'scrooloose/nerdtree'
@@ -133,7 +134,6 @@ set mousemodel=popup
 set t_Co=256
 set guioptions=egmrti
 set gfn=Monospace\ 10
-set gcr=a:blinkon0
 "" fzf.vim
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
