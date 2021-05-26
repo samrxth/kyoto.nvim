@@ -2,7 +2,7 @@
 ## Vim screenshot
 ![Screenshot](https://raw.githubusercontent.com/samrath2007/Dotfiles/main/Screenshot%202021-05-26%20at%2011.06.43%20AM.png)
 ## Fish screenshot
-![Screenshot](https://raw.githubusercontent.com/samrath2007/Dotfiles/main/Screenshot%202021-05-26%20at%2011.06.43%20AM.png)
+![Screenshot](https://github.com/samrath2007/Dotfiles/blob/main/Screenshot%202021-05-26%20at%2011.08.05%20AM.png)
 
 ### Installation steps for vim config
 ```
