@@ -7,13 +7,12 @@
 ""    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
 "" on windows
 
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.vim/plugged')
     "" Vim-Session
     Plug 'xolox/vim-misc'
     Plug 'xolox/vim-session'
 
     "" Snippets
-    Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
     Plug 'mlaursen/vim-react-snippets'
 
@@ -22,14 +21,12 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'vim-syntastic/syntastic'
     Plug 'scrooloose/nerdtree'
     Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'ryanoasis/vim-devicons'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-fugitive'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'airblade/vim-gitgutter'
     Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     Plug 'mxw/vim-jsx'
@@ -94,7 +91,7 @@ call plug#begin('~/.config/nvim/plugged')
     " typescript
     Plug 'leafgarland/typescript-vim'
     Plug 'HerringtonDarkholme/yats.vim'
-
+    
 
     "*****************************************************************************
     "*****************************************************************************
@@ -102,7 +99,7 @@ call plug#begin('~/.config/nvim/plugged')
 call plug#end()
 
 
-filetyp plugin indent on
+filetype plugin indent on
 syntax on
 
 set nocompatible
@@ -121,7 +118,6 @@ set t_8f=\[[38;2;%lu;%lu;%lum
 set t_8b=\[[48;2;%lu;%lu;%lum
 set termguicolors
 set mouse=a
-set clipboard=unnamedplus
 set whichwrap+=<,>,[,]
 set hidden
 set hlsearch
@@ -135,13 +131,12 @@ set number
 set mousemodel=popup
 set t_Co=256
 set guioptions=egmrti
-set gfn=Monospace\ 10
 "" fzf.vim
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h15
-
+set smarttab
+set relativenumber
 
 let mapleader = ","
 
@@ -194,13 +189,20 @@ autocmd! FileType fzf
 autocmd  FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 augroup END
-au TermEnter * setlocal scrolloff=0
-au TermLeave * setlocal scrolloff=3
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 autocmd BufWritePre *.py, *.pyc !black %
-set smarttab
+if has("autocmd")
+  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+  au InsertEnter,InsertChange *
+\ if v:insertmode == 'i' |
+\   silent execute '!echo -ne "\e[6 q"' | redraw! |
+\ elseif v:insertmode == 'r' |
+\   silent execute '!echo -ne "\e[4 q"' | redraw! |
+\ endif
+au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree
 
@@ -217,14 +219,6 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 noremap <leader>a ggVG
 noremap <Leader>nn :NERDTreeToggle<cr>
-nnoremap c "_c
-vnoremap c "_c
-nnoremap C "_C
-vnoremap C "_C
-nnoremap x "_x
-vnoremap x "_x
-nnoremap X "_X
-vnoremap X "_X
 noremap <Leader>ga :Gwrite<CR>
 noremap <Leader>gc :Gcommit<CR>
 noremap <Leader>gsh :Gpush<CR>
@@ -236,6 +230,12 @@ noremap <Leader>gr :Gremove<CR>
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <silent> <S-t> :tabnew<CR>
+noremap y "*y
+noremap p "*p
+noremap x "*x
+noremap X "*x
+noremap Y "+y
+noremap P "+p
 
 map gn :bn<cr>
 map gp :bp<cr>
@@ -252,5 +252,4 @@ endif
 endfunction
 
 colorscheme gruvbox
-highlight LineNr term=bold
-highlight Normal guibg=NONE ctermbg=NONE
+
