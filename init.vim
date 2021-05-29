@@ -18,7 +18,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'leafgarland/typescript-vim'
     Plug 'HerringtonDarkholme/yats.vim'
     Plug 'wakatime/vim-wakatime'
-		Plug 'tomasiser/vim-code-dark'
+    Plug 'tomasiser/vim-code-dark'
+    Plug 'vimwiki/vimwiki'
 call plug#end()
 
 nnoremap y "*y
@@ -32,6 +33,7 @@ nnoremap <leader>a ggVG
 let g:python3_host_prog='/usr/local/bin/python3'
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeIgnore = ['^node_modules$']
+let g:NERDTreeShowHidden=1
 let g:prettier#quickfix_enabled = 0
 let g:prettier#quickfix_auto_focus = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
@@ -87,6 +89,8 @@ function! s:show_documentation()
 endfunction
 
 command! -nargs=0 Format :call CocAction('format')
+
+set guifont=RobotoMono\ Nerd\ Font\ Mono:h14
 
 
 map gn :bn<cr>
