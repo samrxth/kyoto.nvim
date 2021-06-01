@@ -1,6 +1,7 @@
 # Dotfiles
 ## Vim screenshot
-![Screenshot](https://raw.githubusercontent.com/samrath2007/Dotfiles/main/Screenshot%202021-05-29%20at%2010.07.53%20AM.png)
+![Screenshot](https://raw.githubusercontent.com/samrath2007/Dotfiles/main/Screenshot%2021-06-01%20at%204.03.30%20PM.png)
+![Screenshot](https://raw.githubusercontent.com/samrath2007/Dotfiles/main/Screenshot%2021-06-01%20at%204.03.30%27PM.png)
 ## Fish screenshot
 ![Screenshot](https://github.com/samrath2007/Dotfiles/blob/main/Screenshot%202021-05-26%20at%2011.08.05%20AM.png)
 
