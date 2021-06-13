@@ -1,10 +1,16 @@
 # Dotfiles
+<<<<<<< HEAD
 
 ## Vim screenshot
 
 ![Screenshot](https://raw.githubusercontent.com/samrath2007/Dotfiles/main/Screenshot%2021-06-01%20at%204.03.30%20PM.png)
 ![Screenshot](https://raw.githubusercontent.com/samrath2007/Dotfiles/main/Screenshot%2021-06-01%20at%204.03.30%27PM.png)
 
+=======
+## Vim screenshots
+![Screenshot](https://raw.githubusercontent.com/samrath2007/Dotfiles/main/Screenshot%202021-06-01%20at%204.03.30%20PM.png)
+![Screenshot](https://raw.githubusercontent.com/samrath2007/Dotfiles/main/Screenshot%202021-06-01%20at%204.03.37%20PM.png)
+>>>>>>> 7176c236319ac67779fe3c7d7b7a45315e5802fd
 ## Fish screenshot
 
 ![Screenshot](https://github.com/samrath2007/Dotfiles/blob/main/Screenshot%202021-05-26%20at%2011.08.05%20AM.png)
