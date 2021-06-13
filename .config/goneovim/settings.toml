@@ -1,0 +1,43 @@
+[Editor]
+Borderless = false
+ExtCmdline   = true
+ExtPopupmenu = true
+ExtTabline   = true
+ExtMessages  = true
+Clipboard = false
+Transparent = 0.9
+Macmeta = true
+DrawBorder = true
+IndentGuide = true
+
+
+[Message]
+
+[Statusline]
+Visible = true
+ModeIndicatorType = "textLabel"
+
+
+[Tabline]
+Visible = true
+
+[Popupmenu]
+
+[Lint]
+Visible = true
+
+[MiniMap]
+Disable = false
+Visible = true
+
+[ScrollBar]
+Visible = true
+
+[SideBar]
+Visible = true
+Width = 130
+
+[Workspace]
+PathStyle = "minimum"
+RestoreSession = false
+FileExplorerOpenCmd = ":tabnew"
