@@ -55,7 +55,6 @@ map gp :bp<cr>
 
 let g:prettier#quickfix_enabled = 0
 let g:prettier#quickfix_auto_focus = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 let g:airline_theme = 'codedark'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
@@ -116,6 +115,9 @@ cnoreabbrev wq w<bar>bd
 cmap W w
 cmap Q q
 
+
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+autocmd BufRead,BufNewFile *.md,*.wiki,*.txt setlocal spell
 
 "coc.nvim configurations
 command! -nargs=0 Format :call CocAction('format')

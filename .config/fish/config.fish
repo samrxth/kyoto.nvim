@@ -73,6 +73,12 @@ function tv
 end
 funcsave tv
 
+function updateDotsGit
+  cp ~/.vimrc ~/Dotfiles/.config/nvim/init.vim
+  cp ~/.config/fish/config.fish ~/Dotfiles/.config/fish/config.fish
+  cp ~/.config/goneovim/settings.toml ~/Dotfiles/.config/goneovim/settings.toml
+end
+funcsave updateDotsGit
 
 function pull
   git pull
