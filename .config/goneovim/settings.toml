@@ -9,6 +9,8 @@ Transparent = 0.9
 Macmeta = true
 DrawBorder = true
 IndentGuide = true
+fontFamily = "RobotoMono Nerd Font Mono"
+fontsize = 15
 
 
 [Message]
