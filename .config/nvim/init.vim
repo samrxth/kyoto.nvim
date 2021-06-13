@@ -3,15 +3,15 @@ let mapleader = ","
 call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-fugitive'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
     Plug 'airblade/vim-gitgutter'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'tpope/vim-eunuch'
     Plug 'airblade/vim-gitgutter'
     Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+    Plug 'itchyny/lightline.vim'
     Plug 'leafgarland/typescript-vim'
+    Plug 'ghifarit53/tokyonight-vim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'HerringtonDarkholme/yats.vim'
     Plug 'wincent/terminus'
@@ -19,11 +19,24 @@ call plug#begin('~/.vim/plugged')
     "" bclose is a ranger dependency for nvim
     Plug 'rbgrouleff/bclose.vim'
     Plug 'wakatime/vim-wakatime'
-    Plug 'tomasiser/vim-code-dark'
     Plug 'vimwiki/vimwiki'
 call plug#end()
 
-nnoremap <Leader>nn :NERDTreeClose<CR>:NERDTreeCWD<CR>
+highlight clear
+if exists("syntax_on")
+  syntax reset
+endif
+
+set background=dark
+let g:colors_name = "silverhand"
+
+function! HighlightFor(group, ...)
+  execute "hi ".a:group
+        \ ." guifg=".a:1
+        \ ." guibg=".a:2
+        \ ." gui=".a:3
+endfunction
+
 nnoremap y "*y
 vnoremap y "*y
 nnoremap x "*x
@@ -53,14 +66,10 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 map gn :bn<cr>
 map gp :bp<cr>
 
+
+let g:tokyonight_style = 'storm'
 let g:prettier#quickfix_enabled = 0
 let g:prettier#quickfix_auto_focus = 0
-let g:airline_theme = 'codedark'
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#ale#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tagbar#enabled = 1
-let g:airline_skip_empty_sections = 1
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 let g:vimwiki_list = [{'path':'~/Documents/vimwiki'},
@@ -79,8 +88,8 @@ set shiftwidth=2
 " always uses spaces instead of tab characters
 set mouse=a
 set whichwrap+=<,>,[,]
-set guifont=RobotoMono\ Nerd\ Font\ Mono:h14
 set hidden
+set laststatus=2
 set updatetime=300
 "" Encoding
 set encoding=utf-8
@@ -108,7 +117,8 @@ set smartcase
 set fileformats=unix,dos,mac
 
 hi StatusLine guifg=#282c34 guifg=#abb2bf
-colorscheme codedark
+set background=dark
+colorscheme tokyonight
 
 cnoreabbrev q bd
 cnoreabbrev wq w<bar>bd
