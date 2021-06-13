@@ -47,6 +47,7 @@ abbr 'vrc' 'vim ~/.vimrc'
 abbr pip 'pip3'
 abbr t 'vim -c ":VimwikiIndex"'
 abbr gv 'open /Applications/goneovim.app'
+alias flutter './~/'
 
 
 function push

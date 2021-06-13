@@ -95,10 +95,7 @@ set updatetime=300
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
-set ttyfast
 set nocompatible
-set wildmode=longest,list,full
-set wildmenu
 "" Fix backspace indent
 set backspace=indent,eol,start
 
