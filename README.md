@@ -22,5 +22,5 @@ curl -L https://get.oh-my.fish > install
 ```
 - Install my fish theme
 ```
-omf install bobthefish
+omf install sashimi
 ```
