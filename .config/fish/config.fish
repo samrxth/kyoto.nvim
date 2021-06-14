@@ -47,8 +47,6 @@ abbr 'vrc' 'vim ~/.vimrc'
 abbr pip 'pip3'
 abbr t 'vim -c ":VimwikiIndex"'
 abbr gv 'open /Applications/goneovim.app'
-alias flutter './~/'
-
 
 function push
     git add .
@@ -81,6 +79,27 @@ function updateDotsGit
 end
 funcsave updateDotsGit
 
+function fish_mode_prompt
+switch $fish_bind_mode
+case default
+set_color --bold red
+echo 'N'
+case insert
+set_color --bold green
+echo 'I'
+case replace_one
+set_color --bold green
+echo 'R'
+case visual
+set_color --bold brmagenta
+echo 'V'
+case '*'
+set_color --bold red
+echo '?'
+end
+set_color normal
+end
+
 function pull
   git pull
 end
@@ -90,3 +109,5 @@ funcsave pull
 # OR
 # omf install sashimi
 fish_vi_key_bindings
+
+set PATH /Users/sam/flutter/bin $PATH

@@ -9,11 +9,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'airblade/vim-gitgutter'
     Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-    Plug 'itchyny/lightline.vim'
     Plug 'leafgarland/typescript-vim'
     Plug 'ghifarit53/tokyonight-vim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'HerringtonDarkholme/yats.vim'
+    Plug 'itchyny/lightline.vim'
     Plug 'wincent/terminus'
     Plug 'francoiscabrol/ranger.vim'
     "" bclose is a ranger dependency for nvim
@@ -51,6 +51,8 @@ nnoremap <D-x> "*x
 inoremap <D-v> <esc>:set paste<cr>a<c-r>=getreg('+')<cr><esc>:set nopaste<cr>mi`[=`]`ia
 inoremap <expr> <cr> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 nnoremap <Leader>f :FZF<CR>
+map <Up> gk
+map <Down> gj
 
 
 function! s:show_documentation()
@@ -75,6 +77,7 @@ let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 let g:vimwiki_list = [{'path':'~/Documents/vimwiki'},
             \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter1-Notes'},
             \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter2-Notes'},
+            \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter3-Notes'},
             \ {'path': '~/Desktop/ECONOMICS/Notes/EcoNotes'},
             \ {'path': '~/Desktop/German/DSD/'},
             \]

@@ -23,6 +23,8 @@ Visible = true
 Disable = false
 Visible = true
 
+
+
 [ScrollBar]
 Visible = true
 
@@ -34,3 +36,6 @@ Width = 130
 PathStyle = "minimum"
 RestoreSession = false
 FileExplorerOpenCmd = ":tabnew"
+
+[Popupmenu]
+ShowDetail = true
