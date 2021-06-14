@@ -39,3 +39,6 @@ FileExplorerOpenCmd = ":tabnew"
 
 [Popupmenu]
 ShowDetail = true
+
+[Statusline]
+Visible = true

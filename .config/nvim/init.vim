@@ -13,7 +13,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'ghifarit53/tokyonight-vim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'HerringtonDarkholme/yats.vim'
-    Plug 'itchyny/lightline.vim'
     Plug 'wincent/terminus'
     Plug 'francoiscabrol/ranger.vim'
     "" bclose is a ranger dependency for nvim
@@ -83,6 +82,11 @@ let g:vimwiki_list = [{'path':'~/Documents/vimwiki'},
             \]
 
 set number
+set noshowmode
+set noruler
+set laststatus=0
+set noshowcmd
+set cmdheight=1
 set smarttab
 set cindent
 set noswapfile
@@ -92,7 +96,6 @@ set shiftwidth=2
 set mouse=a
 set whichwrap+=<,>,[,]
 set hidden
-set laststatus=2
 set updatetime=300
 "" Encoding
 set encoding=utf-8
@@ -116,7 +119,6 @@ set ignorecase
 set smartcase
 set fileformats=unix,dos,mac
 
-hi StatusLine guifg=#282c34 guifg=#abb2bf
 set background=dark
 colorscheme tokyonight
 
