@@ -23,8 +23,6 @@ Visible = true
 Disable = false
 Visible = true
 
-
-
 [ScrollBar]
 Visible = true
 
@@ -42,3 +40,5 @@ ShowDetail = true
 
 [Statusline]
 Visible = true
+Left = [ "mode", "filename" ]
+ModeIndicatorType = "background"

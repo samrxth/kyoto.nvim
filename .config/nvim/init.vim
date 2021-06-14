@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'rbgrouleff/bclose.vim'
     Plug 'wakatime/vim-wakatime'
     Plug 'vimwiki/vimwiki'
+    Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 highlight clear
@@ -45,6 +46,7 @@ vnoremap p "*p
 inoremap jk <ESC>
 nnoremap <leader>a ggVG
 nnoremap <D-v> "*p
+nnoremap <leader>t :FloatermNew<CR>
 nnoremap <D-c> "*y
 nnoremap <D-x> "*x
 inoremap <D-v> <esc>:set paste<cr>a<c-r>=getreg('+')<cr><esc>:set nopaste<cr>mi`[=`]`ia
@@ -78,6 +80,7 @@ let g:vimwiki_list = [{'path':'~/Documents/vimwiki'},
             \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter2-Notes'},
             \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter3-Notes'},
             \ {'path': '~/Desktop/ECONOMICS/Notes/EcoNotes'},
+            \ {'path': '~/Desktop/Comp-Sci/Notes/Chapter1'},
             \ {'path': '~/Desktop/German/DSD/'},
             \]
 
@@ -124,8 +127,8 @@ colorscheme tokyonight
 
 cnoreabbrev q bd
 cnoreabbrev wq w<bar>bd
-cmap W w
-cmap Q q
+cnoreabbrev W w
+cnoreabbrev Q q
 
 
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
