@@ -1,12 +1,17 @@
-nnoremap <leader>nn :NvimTreeToggle<CR>
-nnoremap <silent>[b :BufferLineCycleNext<CR>
-nnoremap <silent>b] :BufferLineCyclePrev<CR>
-nnoremap <silent><mymap> :BufferLineMoveNext<CR>
-nnoremap <silent><mymap> :BufferLineMovePrev<CR>
-nnoremap <silent>be :BufferLineSortByExtension<CR>
-nnoremap <silent>bd :BufferLineSortByDirectory<CR>
-nnoremap <silent><mymap> :lua require'bufferline'.sort_buffers_by(function (buf_a, buf_b) return buf_a.id < buf_b.id end)<CR>
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
+inoremap <expr> <cr> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
+nmap <Leader>ss <cmd><C-u>SessionSave<CR>
+nmap <Leader>sl <cmd><C-u>SessionLoad<CR>
+nnoremap <silent> <C-z> <cmd>ToggleTerminal<Enter>
+tnoremap <silent> <C-z> <C-\><C-n><cmd>ToggleTerminal<Enter>
+nnoremap <leader>nn <cmd>NvimTreeToggle<CR>
+nnoremap <silent>[b <cmd>BufferLineCycleNext<CR>
+nnoremap <silent>b] <cmd>BufferLineCyclePrev<CR>
+nnoremap <silent><mymap> <cmd>BufferLineMoveNext<CR>
+nnoremap <silent><mymap> <cmd>BufferLineMovePrev<CR>
+nnoremap <silent>be <cmd>BufferLineSortByExtension<CR>
+nnoremap <silent>bd <cmd>BufferLineSortByDirectory<CR>
+nnoremap <silent><mymap> <cmd>lua require'bufferline'.sort_buffers_by(function (buf_a, buf_b) return buf_a.id < buf_b.id end)<CR>
+nnoremap <leader>ff <cmd>Telescope find_files hidden=true<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
@@ -14,6 +19,8 @@ xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 cnoreabbrev q bd
 cnoreabbrev wq w<bar>bd
+cnoreabbrev Wq w<bar>bd
+cnoreabbrev WQ w<bar>bd
 cnoreabbrev W w
 cnoreabbrev Q q
 nnoremap y "*y
@@ -29,8 +36,8 @@ map <Up> gk
 map <Down> gj
 nnoremap <D-c> "*y
 nnoremap <D-x> "*x
-map gn :bn<cr>
-map gp :bp<cr>
+map gn <cmd>bn<cr>
+map gp <cmd>bp<cr>
 map <A-S-d> <C-d>
 map <A-h> <C-w>h
 map <leader>h <C-w>h
@@ -48,20 +55,20 @@ inoremap <A-h> <C-\><C-N><C-w>h
 inoremap <A-j> <C-\><C-N><C-w>j
 inoremap <A-k> <C-\><C-N><C-w>k
 inoremap <A-l> <C-\><C-N><C-w>l
-vnoremap <A-Tab> :norm i  <CR>
-vnoremap <A-/> :norm i//<CR>
-vnoremap <A-\> :norm xx<CR>
-map <A-r> :source % <CR>
-map <A-i> :PlugInstall <CR>
-map <A-Return> :FloatermToggle <CR>
-map <A-S-l> :vsp <CR>
-map <A-S-j> :sp <CR>
-map <A-C-j> :res +5 <CR>
-map <A-C-k> :res -5 <CR>
-map <A-C-l> :vertical resize +5 <CR>
-map <A-C-h> :vertical resize -5 <CR>
-map e :e ~/.config/nvim/init.vim <CR>
-map <A-g> :Goyo <CR>
-map <A-e> :e ~/.config/nvim/init.vim <CR>
-nnoremap <silent>    <C-h> :BufferMovePrevious<CR>
-nnoremap <silent>    <C-l> :BufferMoveNext<CR>
+vnoremap <A-Tab> <cmd>norm i  <CR>
+vnoremap <A-/> <cmd>norm i//<CR>
+vnoremap <A-\> <cmd>norm xx<CR>
+map <A-r> <cmd>source % <CR>
+map <A-i> <cmd>PlugInstall <CR>
+map <A-Return> <cmd>FloatermToggle <CR>
+map <A-S-l> <cmd>vsp <CR>
+map <A-S-j> <cmd>sp <CR>
+map <A-C-j> <cmd>res +5 <CR>
+map <A-C-k> <cmd>res -5 <CR>
+map <A-C-l> <cmd>vertical resize +5 <CR>
+map <A-C-h> <cmd>vertical resize -5 <CR>
+map e <cmd>e ~/.config/nvim/init.vim <CR>
+map <A-g> <cmd>Goyo <CR>
+map <A-e> <cmd>e ~/.config/nvim/init.vim <CR>
+nnoremap <silent>    <C-h> <cmd>BufferMovePrevious<CR>
+nnoremap <silent>    <C-l> <cmd>BufferMoveNext<CR>

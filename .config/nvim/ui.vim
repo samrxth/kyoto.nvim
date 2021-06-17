@@ -11,8 +11,8 @@ local bg2 = "#3b4252"
 local bg3 = "#282c34"
 local fg = "#CACed6"
 local accent = "#81a1c1"
-local accent2 = "#BF616A" -- Not saved
-local accent3 = "#EBCB8B" -- Not saved
+local accent2 = "#BF616A"
+local accent3 = "#EBCB8B"
  require('bufferline').setup {
   options = {
     numbers = "none",
@@ -108,11 +108,8 @@ local accent3 = "#EBCB8B" -- Not saved
 EOF
 colorscheme base16-nord
 au Filetype html,xml,xsl source ~/.config/nvim/closetag.vim
-"highlight Normal ctermfg=grey guibg=NONE ctermbg=NONE
+highlight Normal ctermfg=grey guibg=NONE ctermbg=NONE
 highlight Visual cterm=reverse ctermbg=NONE
 highlight VertSplit cterm=reverse ctermbg=NONE guifg=#3b4252
-"highlight NvimTree guibg=#282c34
+highlight NvimTree guibg=#282c34
 highlight! StatusLineNC gui=underline guibg=NONE guifg=#3B465E
-
-
-

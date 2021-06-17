@@ -1,0 +1,46 @@
+*nvim-toggle-terminal.txt*
+                                                        *nvim-toggle-terminal*
+
+==============================================================================
+CONTENTS                                       *nvim-toggle-terminal-contents*
+  1. Configuration...............................|nvim-toggle-terminal-config|
+  2. Commands..................................|nvim-toggle-terminal-commands|
+  3. Functions................................|nvim-toggle-terminal-functions|
+
+==============================================================================
+CONFIGURATION                                    *nvim-toggle-terminal-config*
+
+                                                 *g:preserve_alternate_buffer*
+Preserve the alternate_buffer of the current window when opening and closing
+the terminal. Default is 1 (true)
+
+                                                         *g:auto_start_insert*
+enter insert mode automatically when given focus. Uses BufEnter event
+
+                                                       *g:open_in_insert_mode*
+start in insert mode when you open the terminal. Uses BufWinEnter event
+
+==============================================================================
+COMMANDS                                       *nvim-toggle-terminal-commands*
+
+:ToggleTerminal                                              *:ToggleTerminal*
+  Toggles a terminal which is the same shell instance regardless of where it
+  is called
+
+:ToggleTabTerminal                                        *:ToggleTabTerminal*
+  Toggles a tab specific terminal instance. It will a have different shell
+  session for each tab
+
+:ToggleWindowTerminal                                  *:ToggleWindowTerminal*
+  Toggles a window specific terminal instance. It will have a different shell
+  session for each window
+
+==============================================================================
+FUNCTIONS                                     *nvim-toggle-terminal-functions*
+
+nvim_toggle_terminal#Toggle({terminal_ref})    *nvim_toggle_terminal#Toggle()*
+  Toggle terminal buffer associated to `terminal_ref`. It will have the same
+  scope as the variable.
+
+
+vim:tw=78:ts=8:ft=help:norl:

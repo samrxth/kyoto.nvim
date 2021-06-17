@@ -1,6 +1,7 @@
 let mapleader = ","
 
-call plug#begin()
+call plug#begin('~/.config/nvim/plugged')
+  Plug 'caenrique/nvim-toggle-terminal'
   Plug 'wincent/terminus'
   Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -11,7 +12,9 @@ call plug#begin()
   Plug 'ryanoasis/vim-devicons'
   Plug 'kyazdani42/nvim-web-devicons' " for file icons
   Plug 'kyazdani42/nvim-tree.lua'
+  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
   Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'glepnir/spaceline.vim'
   Plug 'pangloss/vim-javascript'
@@ -24,101 +27,19 @@ call plug#begin()
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'shaunsingh/nord.nvim'
   Plug 'majutsushi/tagbar'
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'onsails/lspkind-nvim'
   Plug 'vimwiki/vimwiki'
+  Plug 'mhinz/vim-startify'
+  Plug 'francoiscabrol/ranger.vim'
+  Plug 'rbgrouleff/bclose.vim'
 call plug#end()
 
 
 
-set number
-set hidden
-set nobackup
-set background=dark
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set conceallevel=1
-set cursorline
-set updatetime=300
-set encoding=UTF-8
-set mouse=a
-set number
-set mouse=a
-set whichwrap+=<,>,[,]
-"" Searching
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-set fileformats=unix,dos,mac
-syntax enable 
-
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 15
-let g:tagbar_winsize = 8
-let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
-let g:nvim_tree_width = 25
-let g:nvim_tree_auto_ignore_ft = [ 'startify', 'dashboard' ]
-let g:battery#update_tabline = 1    " For tabline.
-let g:nord_cursor_line_number_background = 1
-let g:nord_italic = 1
-let g:nord_bold = 0
-let g:python3_host_prog = '/usr/local/bin/python3'
-let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open:
-let g:indentLine_enabled = 1
-let g:indentLine_char_list = ['▏']
-let g:indentLine_setConceal = 1
-let g:one_allow_italics = 1
-let g:vimwiki_list = [{'path':'~/Documents/vimwiki'},
-            \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter1-Notes'},
-            \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter2-Notes', },
-            \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter3-Notes', 'syntax': 'markdown', 'ext': '.md', 'custom_wiki2html': '~/go/bin/vimwiki-godown',},
-            \ {'path': '~/Desktop/ECONOMICS/Notes/EcoNotes'},
-            \ {'path': '~/Desktop/Comp-Sci/Notes/Chapter1', 'syntax': 'markdown', 'ext': '.md', 'custom_wiki2html': '~/go/bin/vimwiki-godown',},
-            \ {'path': '~/Desktop/German/DSD/'},
-            \]
-
 
 filetype plugin on
-set omnifunc=syntaxcomplete#Complete
-au FileType php setl ofu=phpcomplete#CompletePHP
-au FileType ruby,eruby setl ofu=rubycomplete#Complete
-au FileType html,xhtml setl ofu=htmlcomplete#CompleteTags
-au FileType c setl ofu=ccomplete#CompleteCpp
-au FileType css setl ofu=csscomplete#CompleteCSS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-augroup ProjectDrawer
-  autocmd!
-augroup END
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
-autocmd BufRead,BufNewFile *.md,*.wiki,*.txt setlocal spell
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
-autocmd BufRead * NvimTreeOpen
 source ~/.config/nvim/ui.vim
 source ~/.config/nvim/maps.vim
-
-"coc.nvim configurations
-command! -nargs=0 Format :call CocAction('format')
-let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-pairs',
-  \ 'coc-tsserver',
-  \ 'coc-eslint',
-  \ 'coc-prettier',
-  \ 'coc-json',
-  \ 'coc-emmet',
-  \ 'coc-react-refactor',
-  \ ]
-
-
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
+source ~/.config/nvim/au.vim
+source ~/.config/nvim/set.vim
+source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/coc-conf.vim
