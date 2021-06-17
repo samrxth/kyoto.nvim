@@ -1,5 +1,43 @@
 let mapleader = ","
 
+call plug#begin()
+  Plug 'wincent/terminus'
+  Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'sheerun/vim-polyglot'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'nvim-treesitter/playground'
+  Plug 'mattn/emmet-vim'
+  Plug 'mattn/webapi-vim'
+  Plug 'sainnhe/gruvbox-material'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'mhinz/vim-startify'
+  Plug 'HerringtonDarkholme/yats.vim'
+  Plug 'Yggdroot/indentLine'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'kyazdani42/nvim-web-devicons' " for file icons
+  Plug 'kyazdani42/nvim-tree.lua'
+  Plug 'junegunn/goyo.vim'
+  Plug 'lukas-reineke/indent-blankline.nvim'
+  Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+  Plug 'pangloss/vim-javascript'
+  Plug 'tomasiser/vim-code-dark'
+  Plug 'tarebyte/nvim-base16'
+  Plug 'akinsho/nvim-bufferline.lua'
+  Plug 'norcalli/nvim.lua'
+  Plug 'norcalli/nvim-base16.lua'
+  Plug 'Th3Whit3Wolf/one-nvim'
+  Plug 'dracula/vim', { 'as': 'dracula' }
+  Plug 'shaunsingh/nord.nvim'
+  Plug 'hardcoreplayers/spaceline.vim'
+  Plug 'majutsushi/tagbar'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'onsails/lspkind-nvim'
+  Plug 'vimwiki/vimwiki'
+call plug#end()
+
+
 
 set number
 set hidden
@@ -51,47 +89,7 @@ set incsearch
 set ignorecase
 set smartcase
 set fileformats=unix,dos,mac
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
-autocmd BufRead,BufNewFile *.md,*.wiki,*.txt setlocal spell
-
-
 syntax enable 
-
-call plug#begin()
-  Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-  Plug 'sheerun/vim-polyglot'
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  Plug 'nvim-treesitter/playground'
-  Plug 'mattn/emmet-vim'
-  Plug 'mattn/webapi-vim'
-  Plug 'sainnhe/gruvbox-material'
-  Plug 'leafgarland/typescript-vim'
-  Plug 'mhinz/vim-startify'
-  Plug 'HerringtonDarkholme/yats.vim'
-  Plug 'Yggdroot/indentLine'
-  Plug 'ryanoasis/vim-devicons'
-  Plug 'kyazdani42/nvim-web-devicons' " for file icons
-  Plug 'kyazdani42/nvim-tree.lua'
-  Plug 'junegunn/goyo.vim'
-  Plug 'lukas-reineke/indent-blankline.nvim'
-  Plug 'nvim-lua/popup.nvim'
-  Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-telescope/telescope.nvim'
-  Plug 'pangloss/vim-javascript'
-  Plug 'tomasiser/vim-code-dark'
-  Plug 'tarebyte/nvim-base16'
-  Plug 'akinsho/nvim-bufferline.lua'
-  Plug 'norcalli/nvim.lua'
-  Plug 'norcalli/nvim-base16.lua'
-  Plug 'Th3Whit3Wolf/one-nvim'
-  Plug 'dracula/vim', { 'as': 'dracula' }
-  Plug 'shaunsingh/nord.nvim'
-  Plug 'hardcoreplayers/spaceline.vim'
-  Plug 'majutsushi/tagbar'
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'onsails/lspkind-nvim'
-  Plug 'vimwiki/vimwiki'
-call plug#end()
 
 let g:spaceline_colorscheme = 'nord'
 let g:netrw_banner = 0
@@ -100,6 +98,9 @@ let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 15
 let g:tagbar_winsize = 8
+let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
+let g:nvim_tree_width = 25
+let g:nvim_tree_auto_ignore_ft = [ 'startify', 'dashboard' ]
 let g:battery#update_tabline = 1    " For tabline.
 let g:nord_cursor_line_number_background = 1
 let g:nord_italic = 1
@@ -127,15 +128,16 @@ au FileType ruby,eruby setl ofu=rubycomplete#Complete
 au FileType html,xhtml setl ofu=htmlcomplete#CompleteTags
 au FileType c setl ofu=ccomplete#CompleteCpp
 au FileType css setl ofu=csscomplete#CompleteCSS
-au VimEnter * NvimTreeOpen
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 augroup ProjectDrawer
   autocmd!
 augroup END
-
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+autocmd BufRead,BufNewFile *.md,*.wiki,*.txt setlocal spell
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+autocmd BufRead * NvimTreeOpen
 source ~/.config/nvim/ui.vim
 source ~/.config/nvim/maps.vim
-
 
 "coc.nvim configurations
 command! -nargs=0 Format :call CocAction('format')
@@ -155,3 +157,6 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+

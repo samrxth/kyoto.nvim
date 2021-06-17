@@ -1,3 +1,11 @@
+nnoremap <leader>nn :NvimTreeToggle<CR>
+nnoremap <silent>[b :BufferLineCycleNext<CR>
+nnoremap <silent>b] :BufferLineCyclePrev<CR>
+nnoremap <silent><mymap> :BufferLineMoveNext<CR>
+nnoremap <silent><mymap> :BufferLineMovePrev<CR>
+nnoremap <silent>be :BufferLineSortByExtension<CR>
+nnoremap <silent>bd :BufferLineSortByDirectory<CR>
+nnoremap <silent><mymap> :lua require'bufferline'.sort_buffers_by(function (buf_a, buf_b) return buf_a.id < buf_b.id end)<CR>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
@@ -23,7 +31,6 @@ nnoremap <D-c> "*y
 nnoremap <D-x> "*x
 map gn :bn<cr>
 map gp :bp<cr>
-
 map <A-S-d> <C-d>
 map <A-h> <C-w>h
 map <leader>h <C-w>h
