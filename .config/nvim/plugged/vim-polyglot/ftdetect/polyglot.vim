@@ -1,0 +1,1 @@
+call polyglot#init#init()

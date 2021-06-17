@@ -1,0 +1,203 @@
+---
+extensions: [inp]
+rules:
+- lines: 1
+  pattern: '^\*'
+  filetype: abaqus
+- lines: 500
+  pattern: '^header surface data'
+  ignore_case: true
+  filetype: trasys
+---
+extensions: [asa]
+rules:
+- override: true
+- filetype: aspvbs
+---
+extensions: [asp]
+rules:
+- override: true
+- lines: 3
+  pattern: 'perlscript'
+  ignore_case: true
+  filetype: aspperl
+- filetype: aspvbs
+---
+extensions: [h]
+rules:
+- lines: 200
+  pattern: '^\s*(@(interface|class|protocol|property|end|synchronised|selector|implementation)\b|#import\s+.+\.h[">])'
+  rules:
+  - if: "exists('g:c_syntax_for_h')"
+    filetype: objc
+  - filetype: objcpp
+- if: "exists('g:c_syntax_for_h')"
+  filetype: c
+- if: "exists('g:ch_syntax_for_h')"
+  filetype: ch
+- filetype: cpp
+---
+extensions: [m]
+rules:
+- lines: 100
+  rules:
+  - pattern: '^\s*/\*'
+    set: 'saw_comment'
+  - pattern: '^\s*(@(interface|class|protocol|property|end|synchronised|selector|implementation)\b|#import\s+.+\.h[">])'
+    filetype: objc
+  - pattern: '^\s*%'
+    if: "!has_key(g:polyglot_is_disabled, 'octave')"
+    filetype: octave
+  - pattern: '^\s*%'
+    if: "has_key(g:polyglot_is_disabled, 'octave')"
+    filetype: matlab
+  - pattern: '^\s*\(\*'
+    filetype: mma
+  - pattern: '^\s*((type|var)\b|--)'
+    ignore_case: true
+    filetype: murphi
+- if: "saw_comment"
+  filetype: objc
+- override: true
+- filetype: octave
+  if: "!has_key(g:polyglot_is_disabled, 'octave')"
+- filetype: matlab
+  if: "has_key(g:polyglot_is_disabled, 'octave')"
+---
+extensions: [fs]
+rules:
+- lines: 50
+  rules:
+  - pattern: '^(: |new-device)'
+    filetype: forth
+  - pattern: '^\s*(#light|import|let|module|namespace|open|type)'
+    filetype: fsharp
+  - pattern: '\s*(#version|precision|uniform|varying|vec[234])'
+    filetype: glsl
+- override: true
+- filetype: forth
+---
+extensions: [re]
+rules:
+- lines: 50
+  rules:
+  - pattern: '^\s*#(?:(?:if|ifdef|define|pragma)\s+\w|\s*include\s+[<"]|template\s*<)'
+    filetype: cpp
+  - filetype: reason
+---
+extensions: [idr]
+rules:
+- lines: 5
+  rules:
+  - pattern: '^\s*--.*[Ii]dris ?1'
+    filetype: idris
+  - pattern: '^\s*--.*[Ii]dris ?2'
+    filetype: idris2
+- lines: 30
+  rules:
+  - pattern: '^pkgs =.*'
+    filetype: idris
+  - pattern: '^depends =.*'
+    filetype: idris2
+  - pattern: '^%language (TypeProviders|ElabReflection)'
+    filetype: idris
+  - pattern: '^%language PostfixProjections'
+    filetype: idris2
+  - pattern: '^%access .*'
+    filetype: idris
+- override: true
+- filetype: idris2
+---
+extensions: [lidr]
+rules:
+- lines: 200
+  pattern: '^>\s*--.*[Ii]dris ?1'
+  filetype: lidris
+- filetype: lidris2
+---
+extensions: [bas]
+rules:
+- lines: 5
+  pattern: 'VB_Name|Begin VB\.(Form|MDIForm|UserControl)'
+  filetype: vb
+  ignore_case: true
+- filetype: basic
+---
+extensions: [pm]
+rules:
+- lines: 1
+  rules:
+  - pattern: 'XPM2'
+    filetype: xpm2
+  - pattern: 'XPM'
+    filetype: xpm
+- lines: 50
+  rules:
+  - pattern: '^\s*(?:use\s+v6\b|\bmodule\b|\b(?:my\s+)?class\b)'
+    filetype: raku
+  - pattern: '\buse\s+(?:strict\b|v?5\.)'
+    filetype: perl
+- override: true
+- filetype: perl
+  shebang: true
+  fallback: true
+---
+extensions: [pl]
+rules:
+- lines: 1
+  or:
+  - pattern: '^[^#]*:-'
+  - pattern: '^\s*(?:%|/\*)'
+  - pattern: '\.\s*$'
+  filetype: prolog
+- lines: 50
+  rules:
+  - pattern: '^\s*(?:use\s+v6\b|\bmodule\b|\b(?:my\s+)?class\b)'
+    filetype: raku
+  - pattern: '\buse\s+(?:strict\b|v?5\.)'
+    filetype: perl
+- override: true
+- filetype: perl
+  shebang: true
+  fallback: true
+---
+extensions: [t]
+rules:
+- lines: 5
+  pattern: '^\.'
+  filetype: nroff
+- lines: 50
+  rules:
+  - pattern: '^\s*(?:use\s+v6\b|\bmodule\b|\b(?:my\s+)?class\b)'
+    filetype: raku
+  - pattern: '\buse\s+(?:strict\b|v?5\.)'
+    filetype: perl
+  ## I haven't found turing syntax for vim...
+  # - pattern: '^\s*%[ \t]+|^\s*var\s+\w+(\s*:\s*\w+)?\s*:=\s*\w+'
+  #   filetype: turing
+- override: true
+- filetype: perl
+  shebang: true
+  fallback: true
+---
+extensions: [tt2]
+rules:
+- lines: 3
+  pattern: '<(?:!DOCTYPE HTML|[%?]|html)'
+  ignore_case: true
+  filetype: tt2html
+- filetype: tt2
+---
+extensions: [html]
+rules:
+- lines: 1
+  pattern: '^(%|<[%&].*>)'
+  filetype: mason
+- lines: 50
+  rules:
+  - pattern: '{%-?\s*(end.*|extends|block|macro|set|if|for|include|trans|load)\b|{#\s+'
+    filetype: htmldjango
+  - pattern: '\bDTD\s+XHTML\s'
+    filetype: xhtml
+- filetype: html
+  fallback: true

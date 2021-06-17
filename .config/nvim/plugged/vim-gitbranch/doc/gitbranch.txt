@@ -1,0 +1,35 @@
+*gitbranch.txt*	Provides the branch name of the current git repository
+
+Version: 0.0
+Author: itchyny (https://github.com/itchyny)
+License: MIT License
+Repository: https://github.com/itchyny/vim-gitbranch
+Last Change: 2015/02/10 17:01:22.
+
+CONTENTS					*gitbranch-contents*
+
+Introduction				|gitbranch-introduction|
+Function				|gitbranch-function|
+Changelog				|gitbranch-changelog|
+
+==============================================================================
+INTRODUCTION					*gitbranch-introduction*
+
+The *gitbranch* ( *gitbranch.vim* *vim-gitbranch* ) provides a function which
+returns the branch name of the git repository at the current directory.
+
+------------------------------------------------------------------------------
+FUNCTION					*gitbranch-function*
+Exposed functions of |gitbranch|.
+
+	gitbranch#name()			*gitbranch#name()*
+		Returns the branch name.
+
+==============================================================================
+CHANGELOG					*gitbranch-changelog*
+
+0.0	2014-03-02, ...
+	- Initial commit
+
+==============================================================================
+vim:tw=78:sw=4:ts=8:ft=help:norl:noet:

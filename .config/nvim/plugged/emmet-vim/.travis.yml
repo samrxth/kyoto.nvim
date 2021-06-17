@@ -1,0 +1,11 @@
+language: generic
+sudo: false
+dist: xenial
+git:
+  depth: 10
+
+script:
+  - uname -a
+  - which -a vim
+  - vim --cmd version --cmd quit
+  - make test

@@ -1,0 +1,21 @@
+name: Vim Polyglot CI
+
+on: 
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 0 * * 0' # weekly
+
+jobs:
+  test:
+    runs-on: ubuntu-latest 
+    steps:
+    - name: Install Vim
+      run: |
+        sudo add-apt-repository ppa:jonathonf/vim -y
+        sudo apt-get update -q
+        sudo apt-get install -y vim expect
+        vim --version
+    - uses: actions/checkout@v2
+    - name: Run Tests
+      run: make test
