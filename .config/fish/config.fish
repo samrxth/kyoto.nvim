@@ -46,7 +46,7 @@ abbr '.....' '../../../..'
 abbr '......' '../../../../..'
 abbr 'ls' 'exa -1 -F -a -B'
 abbr 'frc' 'vim ~/.config/fish/config.fish'
-abbr 'vrc' 'vim ~/.vimrc'
+abbr 'vrc' 'vim ~/.config/nvim/init.vim'
 abbr pip 'pip3'
 abbr t 'vim -c ":VimwikiIndex"'
 abbr gv '/Applications/goneovim.app/Contents/MacOS/goneovim'
@@ -76,7 +76,7 @@ end
 funcsave tv
 
 function updateDotsGit
-  cp ~/.vimrc ~/Dotfiles/.config/nvim/init.vim
+  cp -R ~/.config/nvim ~/Dotfiles/.config/nvim/
   cp ~/.config/fish/config.fish ~/Dotfiles/.config/fish/config.fish
   cp ~/.config/goneovim/settings.toml ~/Dotfiles/.config/goneovim/settings.toml
 end
