@@ -1,0 +1,20 @@
+typescriptGlobal:
+  - Symbol
+
+typescriptSymbolStaticProp:
+  - length
+  - iterator
+  - match
+  - replace
+  - search
+  - split
+  - hasInstance
+  - isConcatSpreadable
+  - unscopables
+  - species
+  - toPrimitive
+  - toStringTag
+
+typescriptSymbolStaticMethod:
+  - for
+  - keyFor

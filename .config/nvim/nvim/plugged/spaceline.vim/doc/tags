@@ -1,0 +1,11 @@
+g:spaceline_colorscheme	spaceline.txt	/*g:spaceline_colorscheme*
+g:spaceline_line_symbol	spaceline.txt	/*g:spaceline_line_symbol*
+g:spaceline_lsp_executive	spaceline.txt	/*g:spaceline_lsp_executive*
+g:spaceline_nvim_lsp_errorsign	spaceline.txt	/*g:spaceline_nvim_lsp_errorsign*
+g:spaceline_nvim_lsp_warnsign	spaceline.txt	/*g:spaceline_nvim_lsp_warnsign*
+g:spaceline_seperate_style	spaceline.txt	/*g:spaceline_seperate_style*
+spaceline.vim	spaceline.txt	/*spaceline.vim*
+spaceline.vim-contents	spaceline.txt	/*spaceline.vim-contents*
+spaceline.vim-intro	spaceline.txt	/*spaceline.vim-intro*
+spaceline.vim-options	spaceline.txt	/*spaceline.vim-options*
+spaceline.vim.txt	spaceline.txt	/*spaceline.vim.txt*

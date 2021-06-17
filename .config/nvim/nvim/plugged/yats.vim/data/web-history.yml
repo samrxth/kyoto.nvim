@@ -1,0 +1,14 @@
+typescriptBOMHistoryProp:
+  - length
+  - current
+  - next
+  - previous
+  - state
+  - scrollRestoration
+
+typescriptBOMHistoryMethod:
+  - back
+  - forward
+  - go
+  - pushState
+  - replaceState
