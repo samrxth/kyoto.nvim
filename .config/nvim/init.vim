@@ -1,25 +1,27 @@
 let mapleader = ","
 
 call plug#begin('~/.vim/plugged')
+    Plug 'nvim-lua/completion-nvim'
+    Plug 'vim-pandoc/vim-pandoc-syntax'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'tpope/vim-eunuch'
     Plug 'airblade/vim-gitgutter'
     Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     Plug 'leafgarland/typescript-vim'
     Plug 'ghifarit53/tokyonight-vim'
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'HerringtonDarkholme/yats.vim'
-    Plug 'wincent/terminus'
     Plug 'francoiscabrol/ranger.vim'
     "" bclose is a ranger dependency for nvim
     Plug 'rbgrouleff/bclose.vim'
     Plug 'wakatime/vim-wakatime'
     Plug 'vimwiki/vimwiki'
+    Plug 'godlygeek/tabular'
+    Plug 'plasticboy/vim-markdown'
     Plug 'voldikss/vim-floaterm'
+    Plug 'Quramy/tsuquyomi'
 call plug#end()
 
 highlight clear
@@ -75,12 +77,13 @@ let g:prettier#quickfix_enabled = 0
 let g:prettier#quickfix_auto_focus = 0
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:fzf_preview_window = ['right:50%', 'ctrl-/']
+let g:tsuquyomi_shortest_import_path = 1
 let g:vimwiki_list = [{'path':'~/Documents/vimwiki'},
             \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter1-Notes'},
-            \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter2-Notes'},
-            \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter3-Notes'},
+            \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter2-Notes', },
+            \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter3-Notes', 'syntax': 'markdown', 'ext': '.md', 'custom_wiki2html': '~/go/bin/vimwiki-godown',},
             \ {'path': '~/Desktop/ECONOMICS/Notes/EcoNotes'},
-            \ {'path': '~/Desktop/Comp-Sci/Notes/Chapter1'},
+            \ {'path': '~/Desktop/Comp-Sci/Notes/Chapter1', 'syntax': 'markdown', 'ext': '.md', 'custom_wiki2html': '~/go/bin/vimwiki-godown',},
             \ {'path': '~/Desktop/German/DSD/'},
             \]
 
@@ -129,7 +132,6 @@ cnoreabbrev q bd
 cnoreabbrev wq w<bar>bd
 cnoreabbrev W w
 cnoreabbrev Q q
-
 
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 autocmd BufRead,BufNewFile *.md,*.wiki,*.txt setlocal spell

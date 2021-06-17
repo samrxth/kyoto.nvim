@@ -12,6 +12,9 @@
 #╠══║╔╗║║║║║║╔╗║╚╣║║║║╚═╣╚═╝║╚═╝║─║║
 #╚══╩╝╚╩╩╩╩╝╚╝╚╩═╩╝╚╩═══╩═══╩═══╝─╚╝
 
+alias emmet-ls 'npx emmet-ls'
+alias nvim "./../../../../../../../../../../../../Users/sam/nvim/bin/nvim"
+alias vim "./../../../../../../../../../../../../Users/sam/nvim/bin/nvim"
 abbr python "python3"
 abbr c "clear"
 abbr fn "rm -rf ~/.local/share/nvim/swap"
@@ -41,12 +44,12 @@ abbr gc 'git clone'
 abbr '....' '../../..'
 abbr '.....' '../../../..'
 abbr '......' '../../../../..'
-abbr 'ls' 'logo-ls -1 -A -D'
+abbr 'ls' 'exa -1 -F -a -B'
 abbr 'frc' 'vim ~/.config/fish/config.fish'
 abbr 'vrc' 'vim ~/.vimrc'
 abbr pip 'pip3'
 abbr t 'vim -c ":VimwikiIndex"'
-abbr gv 'open /Applications/goneovim.app'
+abbr gv '/Applications/goneovim.app/Contents/MacOS/goneovim'
 
 function push
     git add .
@@ -111,3 +114,6 @@ funcsave pull
 fish_vi_key_bindings
 
 set PATH /Users/sam/flutter/bin $PATH
+
+set -x GOPATH /users/sam/go
+set -x PATH $PATH /usr/local/go/bin $GOPATH/bin

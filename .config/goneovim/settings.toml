@@ -6,12 +6,9 @@ Transparent = 0.9
 Macmeta = true
 DrawBorder = true
 IndentGuide = true
-fontFamily = "RobotoMono Nerd Font Mono"
-fontsize = 15
+fontFamily = "Fantasque Sans mono"
+fontsize = 17
 SmoothScroll = true
-
-
-[Message]
 
 [Tabline]
 Visible = true
