@@ -1,8 +1,5 @@
-set background=dark
-set number
 set hidden
 set nobackup
-set background=dark
 set tabstop=2
 set shiftwidth=2
 set expandtab

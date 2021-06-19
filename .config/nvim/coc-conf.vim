@@ -1,4 +1,3 @@
-
 "coc.nvim configurations
 command! -nargs=0 Format :call CocAction('format')
 let g:coc_global_extensions = [
@@ -9,7 +8,8 @@ let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-json',
   \ 'coc-emmet',
-  \ 'coc-react-refactor',
+  \ 'coc-tailwindcss',
+  \ 'coc-tabnine',
   \ ]
 
 
@@ -19,4 +19,3 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-

@@ -13,14 +13,16 @@
 #╚══╩╝╚╩╩╩╩╝╚╝╚╩═╩╝╚╩═══╩═══╩═══╝─╚╝
 
 alias emmet-ls 'npx emmet-ls'
-alias nvim "./../../../../../../../../../../../../Users/sam/nvim/bin/nvim"
-alias vim "./../../../../../../../../../../../../Users/sam/nvim/bin/nvim"
+abbr vim 'nvim'
 abbr python "python3"
+abbr C 'clear'
 abbr c "clear"
 abbr fn "rm -rf ~/.local/share/nvim/swap"
+abbr s 'ls'
 abbr ll 'ls'
 abbr l 'ls'
-abbr v 'vim'
+abbr v 'nvim'
+abbr vi 'nvim'
 abbr g 'git'
 abbr gb 'git branch'
 abbr ga 'git add'
@@ -45,10 +47,10 @@ abbr '....' '../../..'
 abbr '.....' '../../../..'
 abbr '......' '../../../../..'
 abbr 'ls' 'exa -1 -F -a -B'
-abbr 'frc' 'vim ~/.config/fish/config.fish'
-abbr 'vrc' 'vim ~/.config/nvim/init.vim'
+abbr 'frc' 'nvim ~/.config/fish/config.fish'
+abbr 'vrc' 'nvim ~/.config/nvim/init.vim'
 abbr pip 'pip3'
-abbr t 'vim -c ":VimwikiIndex"'
+abbr t 'nvim -c ":VimwikiIndex"'
 abbr gv '/Applications/goneovim.app/Contents/MacOS/goneovim'
 
 function push
@@ -71,7 +73,7 @@ funcsave mkcd
 
 function tv
   touch $argv
-  vim $argv
+  nvim $argv
 end
 funcsave tv
 
@@ -115,5 +117,6 @@ fish_vi_key_bindings
 
 set PATH /Users/sam/flutter/bin $PATH
 
+set -U fish_user_paths /Users/sam/.node_modules/bin $fish_user_paths
 set -x GOPATH /users/sam/go
 set -x PATH $PATH /usr/local/go/bin $GOPATH/bin

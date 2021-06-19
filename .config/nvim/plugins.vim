@@ -1,3 +1,14 @@
+let g:airline_theme='violet'
+let g:NERDCreateDefaultMappings = 1
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDAltDelims_java = 1
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+let g:NERDToggleCheckAllLines = 1
+let g:deoplete#enable_at_startup = 1
 let g:dashboard_default_executive ='telescope'
 let g:tagbar_winsize = 8
 let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
@@ -15,31 +26,20 @@ let g:indentLine_setConceal = 1
 let g:one_allow_italics = 1
 let g:vimwiki_list = [{'path':'~/Documents/vimwiki'},
             \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter1-Notes'},
-            \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter2-Notes', },
-            \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter3-Notes', 'syntax': 'markdown', 'ext': '.md', 'custom_wiki2html': '~/go/bin/vimwiki-godown',},
+            \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter2-Notes'},
+            \ {'path': '~/Desktop/ECONOMICS/Notes/Chapter3-Notes'},
             \ {'path': '~/Desktop/ECONOMICS/Notes/EcoNotes'},
-            \ {'path': '~/Desktop/Comp-Sci/Notes/Chapter1', 'syntax': 'markdown', 'ext': '.md', 'custom_wiki2html': '~/go/bin/vimwiki-godown',},
+            \ {'path': '~/Desktop/Comp-Sci/Notes/Chapter1'},
             \ {'path': '~/Desktop/German/DSD/'},
+            \ {'path': '~/Desktop/1M1B/vimwiki'},
+            \ {'path': '~/Desktop/Biology/Notes/PPT'},
             \]
-
-function! s:gitModified()
-    let files = systemlist('git ls-files -m 2>/dev/null')
-    return map(files, "{'line': v:val, 'path': v:val}")
-endfunction
-
-" same as above, but show untracked files, honouring .gitignore
-function! s:gitUntracked()
-    let files = systemlist('git ls-files -o --exclude-standard 2>/dev/null')
-    return map(files, "{'line': v:val, 'path': v:val}")
-endfunction
 
 let g:startify_lists = [
         \ { 'type': 'files',     'header': ['   MRU']            },
         \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
         \ { 'type': 'sessions',  'header': ['   Sessions']       },
         \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-        \ { 'type': function('s:gitModified'),  'header': ['   git modified']},
-        \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
         \ { 'type': 'commands',  'header': ['   Commands']       },
         \ ]
 
