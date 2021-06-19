@@ -2,6 +2,7 @@ let mapleader = ","
 
 call plug#begin('~/.config/nvim/plugged')
   "General
+  Plug 'glepnir/spaceline.vim'
   Plug 'preservim/nerdcommenter'
   Plug 'flrnprz/plastic.vim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

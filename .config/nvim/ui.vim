@@ -107,6 +107,3 @@ local accent3 = "#EBCB8B"
 
 EOF
 colorscheme plastic
-if exists('g:loaded_lightline_powerful') || v:version < 800
-  finish
-endif
