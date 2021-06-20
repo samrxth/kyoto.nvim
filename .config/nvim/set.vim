@@ -1,3 +1,4 @@
+set termguicolors
 set hidden
 set nobackup
 set tabstop=2

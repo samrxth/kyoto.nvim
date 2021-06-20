@@ -98,6 +98,7 @@ set PATH /Users/sam/flutter/bin $PATH
 set -U fish_user_paths /Users/sam/.node_modules/bin $fish_user_paths
 set -x GOPATH /users/sam/go
 set -x PATH $PATH /usr/local/go/bin $GOPATH/bin
+set --universal FZF_DEFAULT_COMMAND 'fd'
 
 set -g posh_theme /Users/sam/theme.json
 set -g POWERLINE_COMMAND "oh-my-posh"

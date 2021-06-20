@@ -1,4 +1,4 @@
-let g:airline_theme='violet'
+let g:lightline = { 'colorscheme': 'plastic' }
 let g:NERDCreateDefaultMappings = 1
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
