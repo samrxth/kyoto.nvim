@@ -79,6 +79,7 @@ funcsave tv
 
 function updateDotsGit
   rsync -rv --exclude=.git ~/.config/nvim ~/Dotfiles/.config/
+  cp ~/theme.json ~/Dotfiles/theme.json
   cp ~/.config/fish/config.fish ~/Dotfiles/.config/fish/config.fish
   cp ~/.config/goneovim/settings.toml ~/Dotfiles/.config/goneovim/settings.toml
 end
