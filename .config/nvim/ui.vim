@@ -1,1 +1,1 @@
-colorscheme nord
+colorscheme doom-one

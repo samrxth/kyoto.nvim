@@ -2,8 +2,7 @@ let mapleader = ","
 
 call plug#begin('~/.config/nvim/plugged')
   "General
-  Plug 'ap/vim-buftabline'
-  Plug 'glepnir/spaceline.vim'
+  Plug 'romgrk/doom-one.vim'
   Plug 'preservim/nerdcommenter'
   Plug 'arcticicestudio/nord-vim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -15,11 +14,11 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'caenrique/nvim-toggle-terminal'
-  Plug 'zefei/vim-wintabs-powerline'
   Plug 'nvim-treesitter/playground'
   Plug 'norcalli/nvim.lua'
   Plug 'wakatime/vim-wakatime'
   Plug 'majutsushi/tagbar'
+  Plug 'akinsho/nvim-bufferline.lua'
   Plug 'vimwiki/vimwiki'
   Plug 'mhinz/vim-startify'
   Plug 'francoiscabrol/ranger.vim'
