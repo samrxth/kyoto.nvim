@@ -29,6 +29,8 @@ cnoreabbrev q bd
 cnoreabbrev wq w<bar>bd
 cnoreabbrev Wq w<bar>bd
 cnoreabbrev WQ w<bar>bd
+cnoreabbrev Qa qa
+cnoreabbrev Wqa wqa
 cnoreabbrev W w
 cnoreabbrev Q q
 nnoremap y "*y

@@ -10,7 +10,6 @@ set updatetime=300
 set encoding=UTF-8
 set mouse=a
 set number
-set mouse=a
 set whichwrap+=<,>,[,]
 "" Searching
 set hlsearch
