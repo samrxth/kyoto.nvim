@@ -1,3 +1,5 @@
+filetype plugin on
+set relativenumber
 set termguicolors
 set hidden
 set nobackup

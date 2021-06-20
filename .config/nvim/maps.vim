@@ -1,3 +1,4 @@
+let mapleader = ","
 nnoremap Q <Nop>
 nnoremap <silent>[b :BufferLineCycleNext<CR>
 nnoremap <silent>b] :BufferLineCyclePrev<CR>

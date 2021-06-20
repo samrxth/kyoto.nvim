@@ -1,5 +1,3 @@
-let mapleader = ","
-
 call plug#begin('~/.config/nvim/plugged')
   "General
   Plug 'chrisbra/vim-diff-enhanced'
@@ -22,7 +20,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'akinsho/nvim-bufferline.lua'
   Plug 'vimwiki/vimwiki'
   Plug 'mhinz/vim-startify'
-  Plug 'francoiscabrol/ranger.vim'
+  Plug'francoiscabrol/ranger.vim'
   Plug 'rbgrouleff/bclose.vim'
 
   
@@ -36,14 +34,10 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
 
-
-
-
-filetype plugin on
+source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/ui.vim
 source ~/.config/nvim/maps.vim
 source ~/.config/nvim/au.vim
 source ~/.config/nvim/set.vim
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/coc-conf.vim
-set relativenumber

@@ -21,7 +21,7 @@ let g:nord_bold = 0
 let g:python3_host_prog = '/usr/local/bin/python3'
 let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open:
 let g:indentLine_enabled = 1
-let g:indentLine_char_list = ['▏']
+let g:indentLine_char_list = ['?']
 let g:indentLine_setConceal = 1
 let g:one_allow_italics = 1
 let g:vimwiki_list = [{'path':'~/Documents/vimwiki'},
@@ -96,7 +96,7 @@ end
 -- Left side
 gls.left[1] = {
   FirstElement = {
-    provider = function() return '▋' end,
+    provider = function() return '?' end,
     highlight = { colors.cyan, colors.section_bg }
   },
 }
@@ -120,7 +120,7 @@ gls.left[2] = {
       return alias_mode..' '
     end,
     highlight = { colors.bg, colors.bg },
-    separator = "  ",
+    separator = "?  ",
     separator_highlight = {colors.bg, colors.section_bg},
   },
 }
@@ -136,13 +136,13 @@ gls.left[4] = {
     provider = 'FileName',
     condition = buffer_not_empty,
     highlight = { colors.fg, colors.section_bg },
-    separator = " ",
+    separator = "? ",
     separator_highlight = {colors.section_bg, colors.bg},
   }
 }
 gls.left[5] = {
   GitIcon = {
-    provider = function() return '  ' end,
+    provider = function() return ' ? ' end,
     condition = in_git_repo,
     highlight = {colors.red,colors.bg},
   }
@@ -165,7 +165,7 @@ gls.left[7] = {
   DiffAdd = {
     provider = 'DiffAdd',
     condition = checkwidth,
-    icon = ' ',
+    icon = '? ',
     highlight = { colors.green, colors.bg },
   }
 }
@@ -173,7 +173,7 @@ gls.left[8] = {
   DiffModified = {
     provider = 'DiffModified',
     condition = checkwidth,
-    icon = ' ',
+    icon = '? ',
     highlight = { colors.orange, colors.bg },
   }
 }
@@ -181,13 +181,13 @@ gls.left[9] = {
   DiffRemove = {
     provider = 'DiffRemove',
     condition = checkwidth,
-    icon = ' ',
+    icon = '? ',
     highlight = { colors.red,colors.bg },
   }
 }
 gls.left[10] = {
   LeftEnd = {
-    provider = function() return ' ' end,
+    provider = function() return '? ' end,
     condition = buffer_not_empty,
     highlight = {colors.section_bg,colors.bg}
   }
@@ -195,7 +195,7 @@ gls.left[10] = {
 gls.left[11] = {
   DiagnosticError = {
     provider = 'DiagnosticError',
-    icon = '  ',
+    icon = ' ? ',
     highlight = {colors.red,colors.section_bg}
   }
 }
@@ -208,7 +208,7 @@ gls.left[12] = {
 gls.left[13] = {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
-    icon = '  ',
+    icon = ' ? ',
     highlight = {colors.orange,colors.section_bg},
   }
 }
@@ -221,9 +221,9 @@ gls.left[14] = {
 gls.left[15] = {
   DiagnosticInfo = {
     provider = 'DiagnosticInfo',
-    icon = '  ',
+    icon = ' ? ',
     highlight = {colors.blue,colors.section_bg},
-    separator = ' ',
+    separator = '? ',
     separator_highlight = { colors.section_bg, colors.bg },
   }
 }
@@ -233,7 +233,7 @@ gls.right[1]= {
   FileFormat = {
     provider = function() return vim.bo.filetype end,
     highlight = { colors.fg,colors.section_bg },
-    separator = ' ',
+    separator = '? ',
     separator_highlight = { colors.section_bg,colors.bg },
   }
 }
@@ -247,7 +247,7 @@ gls.right[2] = {
 }
 -- gls.right[3] = {
 --   Heart = {
---     provider = function() return ' ' end,
+--     provider = function() return '? ' end,
 --     highlight = { colors.red, colors.section_bg },
 --     separator = ' | ',
 --     separator_highlight = { colors.bg, colors.section_bg },
@@ -259,7 +259,7 @@ gls.short_line_left[1] = {
   BufferType = {
     provider = 'FileTypeName',
     highlight = { colors.fg, colors.section_bg },
-    separator = ' ',
+    separator = '? ',
     separator_highlight = { colors.section_bg, colors.bg },
   }
 }
@@ -268,7 +268,7 @@ gls.short_line_right[1] = {
   BufferIcon = {
     provider= 'BufferIcon',
     highlight = { colors.yellow, colors.section_bg },
-    separator = ' ',
+    separator = '? ',
     separator_highlight = { colors.section_bg, colors.bg },
   }
 }
@@ -303,8 +303,8 @@ require("telescope").setup {
             "--smart-case"
         },
         prompt_position = "bottom",
-        prompt_prefix = " ",
-        selection_caret = " ",
+        prompt_prefix = "? ",
+        selection_caret = "? ",
         entry_prefix = "  ",
         initial_mode = "insert",
         selection_strategy = "reset",
@@ -329,7 +329,7 @@ require("telescope").setup {
         results_height = 1,
         results_width = 0.8,
         border = {},
-        borderchars = {"─", "│", "─", "│", "╭", "╮", "╯", "╰"},
+        borderchars = {"?", "?", "?", "?", "?", "?", "?", "?"},
         color_devicons = true,
         use_less = true,
         set_env = {["COLORTERM"] = "truecolor"}, -- default = nil,
@@ -350,11 +350,11 @@ require("telescope").setup {
 require "bufferline".setup {
     options = {
         offsets = {{filetype = "NvimTree", text = "", padding = 1}},
-        buffer_close_icon = "",
-        modified_icon = "",
-        close_icon = "",
-        left_trunc_marker = "",
-        right_trunc_marker = "",
+        buffer_close_icon = "?",
+        modified_icon = "?",
+        close_icon = "?",
+        left_trunc_marker = "?",
+        right_trunc_marker = "?",
         max_name_length = 14,
         max_prefix_length = 13,
         tab_size = 20,
