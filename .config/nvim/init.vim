@@ -4,7 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
   "General
   Plug 'chrisbra/vim-diff-enhanced'
   Plug 'romgrk/doom-one.vim'
-  Plug 'karb94/neoscroll.nvim'
+  Plug 'psliwka/vim-smoothie'
   Plug 'preservim/nerdcommenter'
   Plug 'arcticicestudio/nord-vim'
   Plug 'wincent/terminus'
