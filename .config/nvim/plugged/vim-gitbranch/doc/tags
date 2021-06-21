@@ -1,9 +1,0 @@
-gitbranch	gitbranch.txt	/*gitbranch*
-gitbranch#name()	gitbranch.txt	/*gitbranch#name()*
-gitbranch-changelog	gitbranch.txt	/*gitbranch-changelog*
-gitbranch-contents	gitbranch.txt	/*gitbranch-contents*
-gitbranch-function	gitbranch.txt	/*gitbranch-function*
-gitbranch-introduction	gitbranch.txt	/*gitbranch-introduction*
-gitbranch.txt	gitbranch.txt	/*gitbranch.txt*
-gitbranch.vim	gitbranch.txt	/*gitbranch.vim*
-vim-gitbranch	gitbranch.txt	/*vim-gitbranch*

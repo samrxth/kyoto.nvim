@@ -1,3 +1,0 @@
-local compat = {}
-
-return compat

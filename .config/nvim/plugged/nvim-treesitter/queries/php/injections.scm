@@ -1,3 +1,0 @@
-(text) @html
-
-(comment) @comment
