@@ -1,28 +1,18 @@
 call plug#begin('~/.config/nvim/plugged')
   "General
-  Plug 'chrisbra/vim-diff-enhanced'
-  Plug 'romgrk/doom-one.vim'
-  Plug 'psliwka/vim-smoothie'
-  Plug 'preservim/nerdcommenter'
-  Plug 'arcticicestudio/nord-vim'
+  Plug 'ayu-theme/ayu-vim'
+  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
   Plug 'wincent/terminus'
   Plug 'kyazdani42/nvim-web-devicons' " for file icons
   Plug 'kyazdani42/nvim-tree.lua'
-  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'caenrique/nvim-toggle-terminal'
-  Plug 'norcalli/nvim.lua'
   Plug 'wakatime/vim-wakatime'
-  Plug 'majutsushi/tagbar'
-  Plug 'akinsho/nvim-bufferline.lua'
+  Plug 'glepnir/dashboard-nvim'
   Plug 'vimwiki/vimwiki'
-  Plug 'mhinz/vim-startify'
-  Plug'francoiscabrol/ranger.vim'
-  Plug 'rbgrouleff/bclose.vim'
-
   
   "TypeScript and JavaScript
   Plug 'leafgarland/typescript-vim'
@@ -36,8 +26,8 @@ call plug#end()
 
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/ui.vim
-source ~/.config/nvim/maps.vim
 source ~/.config/nvim/au.vim
 source ~/.config/nvim/set.vim
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/coc-conf.vim
+source ~/.config/nvim/maps.vim

@@ -8,5 +8,5 @@ autocmd BufDelete * if empty(filter(tabpagebuflist(), '!buflisted(v:val)')) | St
 augroup ProjectDrawer
   autocmd!
 augroup END
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 autocmd BufRead,BufNewFile *.md,*.wiki,*.txt setlocal spell
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync

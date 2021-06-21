@@ -1,1 +1,2 @@
-colorscheme doom-one
+let g:ayucolor="mirage" " for mirage version of theme
+colorscheme ayu
