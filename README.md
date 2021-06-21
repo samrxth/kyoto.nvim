@@ -2,6 +2,10 @@
 
 A fork of NvChad with the same looks but supporting coc.nvim as its LSP.
 
+## Install
+- Clone the repo
+- Run install.sh
+
 ## Screenshots
 ![Telescope](./photos/telescope.png) 
 ![Auto complete](./photos/auto-complete.png) 
