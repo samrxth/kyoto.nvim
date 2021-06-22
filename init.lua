@@ -22,7 +22,6 @@ base16(base16.themes["onedark"], true)
 require "highlights"
 
 g.indentLine_enabled = 1
-g.indent_blankline_char = "‚ñè"
 
 g.indent_blankline_filetype_exclude = {"help", "terminal", "dashboard"}
 g.indent_blankline_buftype_exclude = {"terminal"}
