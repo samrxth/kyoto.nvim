@@ -4,6 +4,7 @@ A fork of NvChad with the same looks but supporting coc.nvim as its LSP.
 
 ## Install
 - Clone the repo
+- cd into the directory(very important)
 - Run install.sh
 
 ## Screenshots
