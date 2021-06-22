@@ -1,12 +1,4 @@
-lua require("init")
-let mapleader=","
-let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
-let g:nvim_tree_update_cwd = 1
-let g:nvim_tree_side = 'right'
-let g:nvim_tree_auto_ignore_ft = [ 'startify', 'dashboard' ]
-
 set relativenumber
-
 command! Conf :e ~/.config/nvim/init.vim
 command! Cdconf :cd ~/.config/nvim
 
@@ -39,20 +31,3 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
-
-
-let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-pairs',
-  \ 'coc-tsserver',
-  \ 'coc-eslint',
-  \ 'coc-json',
-  \ 'coc-emmet',
-  \ 'coc-tailwindcss',
-  \ 'coc-tabnine',
-  \ ]
-
-
-let g:python3_host_prog = '/usr/local/bin/python3'
-
