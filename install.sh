@@ -40,7 +40,7 @@ fi
 cp -r init.lua ~/.config/nvim/ && cp -r maps.vim ~/.config/nvim/ && cp -r lua ~/.config/nvim/
 
 
-echo "neovim will open with some errors , just press enter" && sleep 1
+echo "neovim will open with some errors, just press enter" && sleep 1
 
 # install all plugins
 nvim +PackerInstall 
