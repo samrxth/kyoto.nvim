@@ -1,5 +1,4 @@
 #!/bin/sh
-cd $basename
 get_platform() {
   case "$(uname -s)" in
   Linux*) platform=Linux ;;
