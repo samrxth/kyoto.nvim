@@ -36,8 +36,8 @@ require("nvim-autopairs").setup()
 
 require "whichkey"
 require "dashboard"
+require("mappings")
 require("nvim_comment").setup()
-vim.cmd("source ~/.config/nvim/viml.vim")
 
 -- Set some global variables
 g.coc_global_extensions = {
