@@ -1,5 +1,5 @@
 let mapleader = ","
-set relativenumber
+
 command! Conf :e ~/.config/nvim/init.vim
 command! Cdconf :cd ~/.config/nvim
 

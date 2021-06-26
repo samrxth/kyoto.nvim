@@ -2,7 +2,6 @@ local cmd = vim.cmd
 local g = vim.g
 local vim = vim
 
-
 -- load all plugins
 require "pluginList"
 require "misc-utils"
@@ -38,7 +37,7 @@ require("nvim-autopairs").setup()
 require "whichkey"
 require "dashboard"
 require("nvim_comment").setup()
-vim.cmd("source ~/.config/nvim/maps.vim")
+vim.cmd("source ~/.config/nvim/viml.vim")
 
 -- Set some global variables
 g.coc_global_extensions = {
@@ -53,3 +52,4 @@ g.coc_global_extensions = {
   }
 g.python3_host_prog = '/usr/local/bin/python3'
 
+vim.o.relativenumber = true
