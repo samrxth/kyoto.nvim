@@ -1,12 +1,14 @@
+local M = {}
+
+M.config = function()
 local g = vim.g
 
 vim.o.termguicolors = true
 
-g.nvim_tree_ignore = { '.git', 'node_modules', '.cache' }
-g.nvim_tree_update_cwd = 1
-g.nvim_tree_side = 'right'
-g.nvim_tree_auto_ignore_ft = { 'startify', 'dashboard' }
+--nvimtree
+g.nvim_tree_side = "left"
 g.nvim_tree_width = 25
+g.nvim_tree_ignore = {".git", "node_modules", ".cache"}
 g.nvim_tree_auto_open = 0
 g.nvim_tree_auto_close = 0
 g.nvim_tree_quit_on_open = 0
@@ -14,8 +16,7 @@ g.nvim_tree_follow = 1
 g.nvim_tree_indent_markers = 1
 g.nvim_tree_hide_dotfiles = 1
 g.nvim_tree_git_hl = 1
-g.nvim_tree_root_folder_modifier = ":t"
-g.nvim_tree_tab_open = 0
+g.nvim_tree_root_folder_modifier = ":~"
 g.nvim_tree_allow_resize = 1
 
 g.nvim_tree_show_icons = {
@@ -25,25 +26,42 @@ g.nvim_tree_show_icons = {
 }
 
 g.nvim_tree_icons = {
-    default = "",
-    symlink = "",
-    git = {
-        unstaged = "✗",
-        staged = "✓",
-        unmerged = "",
-        renamed = "➜",
-        untracked = "★",
-        deleted = "",
-        ignored = "◌"
-    },
-    folder = {
-        default = "",
-        open = "",
-        symlink = "",
-        empty = "",
-        empty_open = "",
-        symlink_open = ""
-    }
+    default = '',
+    symlink = '',
+    git  = {
+      unstaged = "",
+      staged = "✓",
+      unmerged = "",
+      renamed = "",
+      untracked = "",
+      deleted = "",
+      ignored = ""
+      },
+    folder  = {
+      default = "",
+      open = "",
+      empty = "",
+      empty_open = "",
+      symlink = "",
+      symlink_open = "",
+      },
+      lsp  = {
+        hint = "",
+        info = "",
+        warning = "",
+        error = "",
+        }
 }
- 
-local tree_cb = require "nvim-tree.config".nvim_tree_callback
+
+-- hide line numbers , statusline in specific buffers!
+vim.api.nvim_exec(
+    [[
+   au BufEnter term://* setlocal nonumber
+   au BufEnter,BufWinEnter,WinEnter,CmdwinEnter * if bufname('%') == "NvimTree" | set laststatus=0 | else | set laststatus=2 | endif
+   au BufEnter term://* set laststatus=0
+]],
+    false
+)
+end
+
+return M
