@@ -1,10 +1,8 @@
+require "options"
 -- load all plugins
 require "pluginList"
 
-local g = vim.g
-
-g.mapleader = " "
-g.auto_save = false
+local vim = vim
 
 require "statusline"
 require "top-bufferline"
@@ -13,4 +11,4 @@ require "dashboard-conf"
 require "telescope-conf"
 require "general"
 
-vim.cmd("source ~/.config/nvim/general.vim")
+vim.cmd("source ~/.config/nvim/mappings.vim")
