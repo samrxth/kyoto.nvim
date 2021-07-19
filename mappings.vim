@@ -53,6 +53,8 @@ nnoremap <leader>dc :e ~/.config/nvim/init.lua<CR>
 nnoremap <leader>ff :Telescope find_files hidden=true<CR>
 nnoremap <leader>fb :Telescope buffers<CR>
 nnoremap <leader>fh :Telescope help_tags<CR>
+nnoremap <leader>fi :Telescope live_grep<CR>
+nnoremap <leader>fg :Telescope git_status<CR>
 nnoremap <leader>fo :Telescope oldfiles<CR>
 nnoremap <leader>nn :Telescope file_browser<CR>
 
