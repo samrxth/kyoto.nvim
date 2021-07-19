@@ -1,62 +1,54 @@
 local packer = require("packer")
 local use = packer.use
 
-return packer.startup(
-    function()
-        use "wbthomason/packer.nvim"
+return packer.startup(function()
+    use "wbthomason/packer.nvim"
 
-        use "wakatime/vim-wakatime"
+    use "andrejlevkovitch/vim-lua-format"
 
-        use "liuchengxu/vista.vim"
+    use "wakatime/vim-wakatime"
 
-        use "folke/tokyonight.nvim"
+    use "liuchengxu/vista.vim"
 
-        use "folke/which-key.nvim"
+    use "folke/tokyonight.nvim"
 
-        use {
-          'lewis6991/gitsigns.nvim',
-          requires = {
-            'nvim-lua/plenary.nvim'
-          }
-        }
+    use "lambdalisue/gina.vim"
 
-        use "ful1e5/onedark.nvim"
+    use "folke/which-key.nvim"
 
-        use "jiangmiao/auto-pairs"
+    use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
 
-        use({
-          "hoob3rt/lualine.nvim",
-          requires = "nvim-web-devicons",
-        })
+    use({"hoob3rt/lualine.nvim", requires = "nvim-web-devicons"})
 
-        use "mlaursen/vim-react-snippets"
+    use "jiangmiao/auto-pairs"
 
-        use "jremmen/vim-ripgrep"
+    use "mlaursen/vim-react-snippets"
 
-        use "lukas-reineke/indent-blankline.nvim"
+    use "jremmen/vim-ripgrep"
 
-        use "lambdalisue/gina.vim"
+    use "lukas-reineke/indent-blankline.nvim"
 
-        use "prettier/vim-prettier"
+    use "prettier/vim-prettier"
 
-        use "kyazdani42/nvim-web-devicons"
+    use "kyazdani42/nvim-web-devicons"
 
-        use "vimwiki/vimwiki"
+    use "vimwiki/vimwiki"
 
-        use "glepnir/dashboard-nvim"
+    use "glepnir/dashboard-nvim"
 
-        use {
-          "nvim-telescope/telescope.nvim",
-          requires = {{"nvim-lua/popup.nvim"}, {'nvim-lua/plenary.nvim'}}
-        }
-
-        use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
-
-        use "neoclide/coc.nvim"
-    end,
-    {
-        display = {
-            border = {"┌", "─", "┐", "│", "┘", "─", "└", "│"}
-        }
+    use {
+        "nvim-telescope/telescope.nvim",
+        requires = {{"nvim-lua/popup.nvim"}, {'nvim-lua/plenary.nvim'}}
     }
-)
+
+    use {
+        'akinsho/nvim-bufferline.lua',
+        requires = 'kyazdani42/nvim-web-devicons'
+    }
+
+    use "neoclide/coc.nvim"
+end, {
+    display = {
+        border = {"┌", "─", "┐", "│", "┘", "─", "└", "│"}
+    }
+})

@@ -1,6 +1,7 @@
 vim.g.coc_global_extensions = {
   'coc-snippets',
   'coc-pairs',
+  'coc-explorer',
   'coc-jedi',
   'coc-tsserver',
   'coc-eslint',

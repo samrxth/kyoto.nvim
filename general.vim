@@ -52,5 +52,6 @@ augroup terminalsettings
 			\ startinsert
 	endif
 augroup end
+autocmd BufWrite *.lua call LuaFormat()
 
 colorscheme tokyonight
