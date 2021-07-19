@@ -8,7 +8,6 @@ vim.g.coc_global_extensions = {
   'coc-emmet',
   'coc-tailwindcss',
   'coc-tabnine',
-  'coc-explorer',
   'coc-vimlsp',
   'coc-html',
   'coc-css',

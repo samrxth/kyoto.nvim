@@ -54,7 +54,7 @@ nnoremap <leader>ff :Telescope find_files hidden=true<CR>
 nnoremap <leader>fb :Telescope buffers<CR>
 nnoremap <leader>fh :Telescope help_tags<CR>
 nnoremap <leader>fo :Telescope oldfiles<CR>
-nnoremap <leader>nn :CocCommand explorer<CR>
+nnoremap <leader>nn :Telescope file_browser<CR>
 
 function! Save_popup()
   let option_num = input("  1. Save your code and format with Prettier  \n  2. Save your code \n  3. Cancel\nChoose your option: ")
