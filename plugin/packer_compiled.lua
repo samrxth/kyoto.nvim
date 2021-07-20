@@ -105,6 +105,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
+  nvim_utils = {
+    loaded = true,
+    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/nvim_utils"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/packer.nvim"

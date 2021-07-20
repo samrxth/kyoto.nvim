@@ -9,5 +9,6 @@ require "coc-config"
 require "dashboard-conf"
 require "telescope-conf"
 require "general"
+require "au"
 
 vim.cmd("source ~/.config/nvim/mappings.vim")

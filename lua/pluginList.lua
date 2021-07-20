@@ -4,6 +4,8 @@ local use = packer.use
 return packer.startup(function()
     use "wbthomason/packer.nvim"
 
+    use "norcalli/nvim_utils"
+
     use "andrejlevkovitch/vim-lua-format"
 
     use "wakatime/vim-wakatime"
@@ -50,5 +52,6 @@ return packer.startup(function()
 end, {
     display = {
         border = {"┌", "─", "┐", "│", "┘", "─", "└", "│"}
-    }
+    },
+    config = {display = {open_fn = require('packer.util').float}}
 })

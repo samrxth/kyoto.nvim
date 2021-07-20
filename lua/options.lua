@@ -33,8 +33,3 @@ g.loaded_matchparen = 0
 g.loaded_spec = 0
 g.python3_host_prog = "/usr/local/bin/python3"
 g.indentLine_fileTypeExclude = {'dashboard', 'coc-explorer'}
-
-vim.cmd [[
-colorscheme tokyonight
-set nu rnu
-]]
