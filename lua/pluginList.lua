@@ -4,6 +4,8 @@ local use = packer.use
 return packer.startup(function()
     use "wbthomason/packer.nvim"
 
+    use "rmagatti/auto-session"
+
     use "norcalli/nvim_utils"
 
     use "nvim-treesitter/nvim-treesitter"
