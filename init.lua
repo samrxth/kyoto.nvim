@@ -1,6 +1,5 @@
 require "options"
 -- load all plugins
-require "pluginList"
 
 local vim = vim
 
