@@ -30,8 +30,6 @@ return packer.startup(function()
 
     use "mlaursen/vim-react-snippets"
 
-    use "jremmen/vim-ripgrep"
-
     use "lukas-reineke/indent-blankline.nvim"
 
     use "prettier/vim-prettier"

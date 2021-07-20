@@ -73,6 +73,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/auto-pairs"
   },
+  ["auto-session"] = {
+    loaded = true,
+    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/auto-session"
+  },
   ["coc.nvim"] = {
     loaded = true,
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/coc.nvim"
@@ -80,10 +84,6 @@ _G.packer_plugins = {
   ["dashboard-nvim"] = {
     loaded = true,
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
-  },
-  ["gina.vim"] = {
-    loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/gina.vim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -100,6 +100,10 @@ _G.packer_plugins = {
   ["nvim-bufferline.lua"] = {
     loaded = true,
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -129,6 +133,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
   },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
   ["vim-lua-format"] = {
     loaded = true,
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/vim-lua-format"
@@ -140,10 +148,6 @@ _G.packer_plugins = {
   ["vim-react-snippets"] = {
     loaded = true,
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/vim-react-snippets"
-  },
-  ["vim-ripgrep"] = {
-    loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/vim-ripgrep"
   },
   ["vim-wakatime"] = {
     loaded = true,
