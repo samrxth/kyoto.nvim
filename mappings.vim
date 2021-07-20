@@ -57,7 +57,7 @@ nnoremap <leader>fi :Telescope live_grep<CR>
 nnoremap <leader>fg :Telescope git_status<CR>
 nnoremap <leader>fo :Telescope oldfiles<CR>
 nnoremap <leader>nn :Telescope file_browser hidden=true<CR>
-nnoremap <leader>nf :CocCommand explorer<CR>
+nnoremap <leader>nf :NvimTreeToggle<CR>
 
 function! Save_popup()
   let option_num = input("  1. Save your code and format with Prettier  \n  2. Save your code \n  3. Cancel\nChoose your option: ")
@@ -106,4 +106,5 @@ function! ChooseTerm(termname, slider)
 endfunction
 
 nnoremap <leader>cd :CocDiagnostics<CR>
+nnoremap <leader>r <Plug>(coc-rename)
 nnoremap <leader>bb :Gitsigns toggle_current_line_blame<CR>

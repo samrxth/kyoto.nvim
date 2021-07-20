@@ -1,5 +1,5 @@
 vim.cmd [[
-colorscheme tokyonight
+colorscheme onedark
 set nu rnu
 ]]
 
