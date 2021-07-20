@@ -6,8 +6,6 @@ return packer.startup(function()
 
     use "norcalli/nvim_utils"
 
-    use "navarasu/onedark.nvim"
-
     use "nvim-treesitter/nvim-treesitter"
 
     use "andrejlevkovitch/vim-lua-format"
@@ -20,11 +18,9 @@ return packer.startup(function()
 
     use "tpope/vim-fugitive"
 
-    use "kyazdani42/nvim-tree.lua"
-
     use "folke/which-key.nvim"
 
-    use {"lewis6991/gitsigns.nvim", requires = {"nvim-lua/plenary.nvim"}}
+    use {"lewis6991/gitsigns.nvim", requires = {'nvim-lua/plenary.nvim'}}
 
     use({"hoob3rt/lualine.nvim", requires = "nvim-web-devicons"})
 

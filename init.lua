@@ -10,6 +10,5 @@ require "dashboard-conf"
 require "telescope-conf"
 require "general"
 require "au"
-require "nvim-tree-conf"
 
 vim.cmd("source ~/.config/nvim/mappings.vim")
