@@ -11,6 +11,11 @@ kyoto.nvim is a fast ⚡, simple and minimal Neovim configuration that aims to r
 
 ## Screenshots
 
+<img src="./screenshots/general-open-file.png" alt="">
+<img src="./screenshots/go-to-definition.png" alt="">
+<img src="./screenshots/quick-doc.png" alt="">
+<img src="./screenshots/telescope.png" alt="">
+
 ## Supported Languages
 
 Find a list of supported languages [here](https://github.com/kabouzeid/nvim-lspinstall/tree/main/lua/lspinstall/servers). To install any of them run
