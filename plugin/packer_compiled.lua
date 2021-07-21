@@ -73,14 +73,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/auto-pairs"
   },
-  ["auto-session"] = {
-    loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/auto-session"
-  },
-  ["coc.nvim"] = {
-    loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/coc.nvim"
-  },
   ["dashboard-nvim"] = {
     loaded = true,
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
@@ -100,6 +92,14 @@ _G.packer_plugins = {
   ["nvim-bufferline.lua"] = {
     loaded = true,
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
+  },
+  ["nvim-compe"] = {
+    loaded = true,
+    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/nvim-compe"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,

@@ -2,6 +2,7 @@ local opt = vim.opt
 local g = vim.g
 
 g.mapleader = " "
+g.user_emmet_leader_key = "<Space>"
 opt.ruler = false
 opt.hidden = true
 opt.ignorecase = true

@@ -4,17 +4,25 @@ local use = packer.use
 return packer.startup(function()
     use "wbthomason/packer.nvim"
 
-    use "rmagatti/auto-session"
+    use "onsails/lspkind-nvim"
+
+    use "glepnir/lspsaga.nvim"
+
+    use "mattn/emmet-vim"
 
     use "norcalli/nvim_utils"
 
+    use "kabouzeid/nvim-lspinstall"
+
     use "nvim-treesitter/nvim-treesitter"
+
+    use "hrsh7th/nvim-compe"
+
+    use "neovim/nvim-lspconfig"
 
     use "andrejlevkovitch/vim-lua-format"
 
     use "wakatime/vim-wakatime"
-
-    use "liuchengxu/vista.vim"
 
     use "folke/tokyonight.nvim"
 
@@ -49,8 +57,6 @@ return packer.startup(function()
         "akinsho/nvim-bufferline.lua",
         requires = "kyazdani42/nvim-web-devicons"
     }
-
-    use "neoclide/coc.nvim"
 end, {
     display = {
         border = {"┌", "─", "┐", "│", "┘", "─", "└", "│"}
