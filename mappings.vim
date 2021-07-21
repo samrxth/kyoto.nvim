@@ -117,4 +117,4 @@ nnoremap <silent><leader>cc <cmd>lua require'lspsaga.diagnostic'.show_cursor_dia
 nnoremap <silent> [e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>
 nnoremap <silent> ]e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>
 
-nnoremap <leader>h :Trouble<CR>
+nnoremap <leader>h :TroubleToggle<CR>
