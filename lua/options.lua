@@ -1,6 +1,7 @@
 local opt = vim.opt
 local g = vim.g
 
+g.kyoto_nvim_tree_show_git = false
 g.mapleader = " "
 g.user_emmet_leader_key = ","
 g.nvim_tree_side = 'right'
@@ -50,4 +51,4 @@ g.loaded_matchit = 0
 g.loaded_matchparen = 0
 g.loaded_spec = 0
 g.python3_host_prog = "/usr/local/bin/python3"
-g.indentLine_fileTypeExclude = {'dashboard', 'coc-explorer'}
+g.indentLine_fileTypeExclude = {'dashboard', 'NvimTree'}
