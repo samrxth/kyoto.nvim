@@ -95,7 +95,6 @@ nnoremap <leader>bb :Gitsigns toggle_current_line_blame<CR>
 nnoremap <leader>nn :NvimTreeToggle<CR>
 
 " compe completion
-inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
