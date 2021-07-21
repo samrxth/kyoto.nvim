@@ -1,7 +1,3 @@
-local autocmds = {
-    terminal = {
-        {"TermOpen", "*", "setlocal nonumber norelativenumber | startinsert"}
-    }
-}
-
-nvim_create_augroups(autocmds)
+vim.cmd [[
+autocmd TermOpen * setlocal nonumber norelativenumber | startinsert
+]]
