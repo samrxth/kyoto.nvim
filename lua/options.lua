@@ -2,7 +2,7 @@ local opt = vim.opt
 local g = vim.g
 
 g.mapleader = " "
-g.user_emmet_leader_key = "<Space>"
+g.user_emmet_leader_key = ","
 g.nvim_tree_side = 'right'
 g.nvim_tree_auto_ignore_ft = { 'startify', 'dashboard' }
 g.nvim_tree_ignore = { '.git', 'node_modules', '.cache' }
