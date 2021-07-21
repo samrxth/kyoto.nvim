@@ -1,6 +1,7 @@
 local opt = vim.opt
 local g = vim.g
 
+g.kyoto_nvim_tree_show_git = false
 g.mapleader = " "
 g.user_emmet_leader_key = ","
 g.nvim_tree_side = 'right'
