@@ -6,6 +6,8 @@ return packer.startup(function()
 
     use "onsails/lspkind-nvim"
 
+    use "kyazdani42/nvim-tree.lua"
+
     use "glepnir/lspsaga.nvim"
 
     use "mattn/emmet-vim"

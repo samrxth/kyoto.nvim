@@ -44,7 +44,7 @@ nnoremap <leader>fh :Telescope help_tags<CR>
 nnoremap <leader>fi :Telescope live_grep<CR>
 nnoremap <leader>fg :Telescope git_status<CR>
 nnoremap <leader>fo :Telescope oldfiles<CR>
-nnoremap <leader>nn :Telescope file_browser hidden=true<CR>
+nnoremap <leader>fn :Telescope file_browser hidden=true<CR>
 
 function! Save_popup()
   let option_num = input("  1. Save your code and format with Prettier  \n  2. Save your code \n  3. Cancel\nChoose your option: ")
@@ -92,6 +92,7 @@ function! ChooseTerm(termname, slider)
 endfunction
 
 nnoremap <leader>bb :Gitsigns toggle_current_line_blame<CR>
+nnoremap <leader>nn :NvimTreeToggle<CR>
 
 " compe completion
 inoremap <silent><expr> <C-Space> compe#complete()
