@@ -26,20 +26,20 @@ g.dashboard_custom_header = custom_header
 
 g.dashboard_custom_section = {
     a = {
-        description = {"📁  Find File                 SPC f f"},
+        description = {"  Find File                  SPC f f"},
         command = "Telescope find_files"
     },
     b = {
-        description = {"  Recents                   SPC f o"},
+        description = {"  Recents                    SPC f o"},
         command = "Telescope oldfiles"
     },
     e = {
-        description = {"洛 New buffer                SPC g g"},
-        command = ":enew"
+        description = {"洛 New Buffer                 SPC g g"},
+        command = "enew"
     },
     f = {
-        description = {"💻  Go to configuration       SPC d c"},
-        command = ":e ~/.config/nvim/init.lua"
+        description = {"  Edit Configuration         SPC d c"},
+        command = "e ~/.config/nvim/init.lua"
     }
 }
 
