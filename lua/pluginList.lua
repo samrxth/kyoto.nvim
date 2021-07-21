@@ -24,8 +24,6 @@ return packer.startup(function()
 
     use "andrejlevkovitch/vim-lua-format"
 
-    use "wakatime/vim-wakatime"
-
     use "folke/tokyonight.nvim"
 
     use "tpope/vim-fugitive"
