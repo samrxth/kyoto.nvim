@@ -17,7 +17,7 @@ return packer.startup(function()
     use "tpope/vim-fugitive"
     use "folke/which-key.nvim"
     use {"lewis6991/gitsigns.nvim", requires = {'nvim-lua/plenary.nvim'}}
-    use ({"hoob3rt/lualine.nvim", requires = "nvim-web-devicons"})
+    use({"hoob3rt/lualine.nvim", requires = "nvim-web-devicons"})
     use "jiangmiao/auto-pairs"
     use "mlaursen/vim-react-snippets"
     use "lukas-reineke/indent-blankline.nvim"
@@ -25,6 +25,17 @@ return packer.startup(function()
     use "kyazdani42/nvim-web-devicons"
     use "vimwiki/vimwiki"
     use "glepnir/dashboard-nvim"
+    use {
+        "folke/todo-comments.nvim",
+        requires = "nvim-lua/plenary.nvim",
+        config = function()
+            require("todo-comments").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    }
     use {
         "nvim-telescope/telescope.nvim",
         requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
