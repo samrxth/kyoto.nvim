@@ -1,7 +1,6 @@
 # 🦚 kyoto.nvim
 
-kyoto.nvim is a fast ⚡, simple and minimal Neovim configuration that aims to
-replace Graphical IDEs such as Visual Studio Code and Sublime Text.
+kyoto.nvim is a fast ⚡, simple and minimal Neovim configuration that aims to replace Graphical IDEs such as Visual Studio Code and Sublime Text.
 
 ## Features
 
@@ -12,12 +11,12 @@ replace Graphical IDEs such as Visual Studio Code and Sublime Text.
 
 ## Screenshots
 
-<!-- Insert Screenshots here !-->
-
 ## Supported Languages
 
-<!-- Insert Supported Languages !-->
-
+Find a list of supported languages [here](https://github.com/kabouzeid/nvim-lspinstall/tree/main/lua/lspinstall/servers). To install any of them run
+```
+:LspInstall <language server name>
+```
 ## Notable Plugins
 
 - packer.nvim
