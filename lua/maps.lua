@@ -12,6 +12,13 @@ nnoremap <leader>a ggVG
 nnoremap bd :bd<CR>
 tnoremap <Esc> <C-\><C-n>
 
+function! Init_NvimTree()
+  packadd nvim-tree.lua
+  NvimTreeToggle
+endfunction
+
+nnoremap <Leader>nt :call Init_NvimTree()<CR>
+
 cnoreabbrev wq w<bar>bd
 cnoreabbrev Wq w<bar>bd
 cnoreabbrev WQ w<bar>bd
