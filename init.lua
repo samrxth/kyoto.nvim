@@ -1,6 +1,6 @@
 require('packer').startup(function()
   use 'wbthomason/packer.nvim'
-  use 'lambsdddalisue/fern.vim'
+  use 'lambdalisue/fern.vim'
   use 'lambdalisue/nerdfont.vim'
   use 'lambdalisue/fern-renderer-nerdfont.vim'
   use 'folke/tokyonight.nvim'
