@@ -16,9 +16,9 @@ return packer.startup(function()
         "folke/tokyonight.nvim",
         config = function()
             vim.cmd [[
-        colorscheme tokyonight
-        set nu rnu
-      ]]
+                colorscheme tokyonight
+                set nu rnu
+            ]]
         end
     }
 
