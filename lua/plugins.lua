@@ -26,4 +26,5 @@ require('packer').startup(function()
   use "jiangmiao/auto-pairs"
   -- for lua development
   use "folke/lua-dev.nvim"
+  use "glepnir/dashboard-nvim"
 end)

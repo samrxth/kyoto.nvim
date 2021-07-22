@@ -1,4 +1,26 @@
 vim.cmd [[
+inoremap <C-a> <C-o>0
+inoremap <C-b> <C-o>$
+nnoremap <leader>y "*y
+vnoremap <leader>y "*y
+nnoremap <leader>x "*x
+vnoremap <leader>x "*x
+nnoremap <leader>p "*p
+nnoremap gn :bn<CR>
+nnoremap gp :bp<CR>
+nnoremap <leader>a ggVG
+nnoremap bd :bd<CR>
+tnoremap <Esc> <C-\><C-n>
+
+cnoreabbrev wq w<bar>bd
+cnoreabbrev Wq w<bar>bd
+cnoreabbrev WQ w<bar>bd
+cnoreabbrev Qa qa
+cnoreabbrev Wqa wqa
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev B buffer
+nnoremap Q <Nop>
 nnoremap <leader>nn :Fern -drawer . -toggle<CR>
 let g:fern#renderer = "nerdfont"
 function! Init_fern() abort
