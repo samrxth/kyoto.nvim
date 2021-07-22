@@ -1,3 +1,4 @@
+require "pluginList"
 require "options"
 require "statusline"
 require "top-bufferline"

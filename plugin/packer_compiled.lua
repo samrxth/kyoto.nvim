@@ -82,6 +82,7 @@ _G.packer_plugins = {
     path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/emmet-vim"
   },
   ["gitsigns.nvim"] = {
+    config = { "\27LJ\1\2:\0\0\2\0\3\0\a4\0\0\0%\1\1\0>\0\2\0027\0\2\0002\1\0\0>\0\2\1G\0\1\0\nsetup\rgitsigns\frequire\0" },
     loaded = true,
     path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
@@ -129,10 +130,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
-  nvim_utils = {
-    loaded = true,
-    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/nvim_utils"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/packer.nvim"
@@ -150,8 +147,14 @@ _G.packer_plugins = {
     path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
+    config = { "\27LJ\1\2\\\0\0\2\0\3\0\0054\0\0\0007\0\1\0%\1\2\0>\0\2\1G\0\1\0=        colorscheme tokyonight\n        set nu rnu\n      \bcmd\bvim\0" },
     loaded = true,
     path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
+  },
+  ["trouble.nvim"] = {
+    config = { "\27LJ\1\0029\0\0\2\0\3\0\a4\0\0\0%\1\1\0>\0\2\0027\0\2\0002\1\0\0>\0\2\1G\0\1\0\nsetup\ftrouble\frequire\0" },
+    loaded = true,
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/trouble.nvim"
   },
   ["vim-fugitive"] = {
     loaded = true,
@@ -174,12 +177,29 @@ _G.packer_plugins = {
     path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/vimwiki"
   },
   ["which-key.nvim"] = {
+    config = { "\27LJ\1\2;\0\0\2\0\3\0\a4\0\0\0%\1\1\0>\0\2\0027\0\2\0002\1\0\0>\0\2\1G\0\1\0\nsetup\14which-key\frequire\0" },
     loaded = true,
     path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/which-key.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: tokyonight.nvim
+time([[Config for tokyonight.nvim]], true)
+try_loadstring("\27LJ\1\2\\\0\0\2\0\3\0\0054\0\0\0007\0\1\0%\1\2\0>\0\2\1G\0\1\0=        colorscheme tokyonight\n        set nu rnu\n      \bcmd\bvim\0", "config", "tokyonight.nvim")
+time([[Config for tokyonight.nvim]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\1\0029\0\0\2\0\3\0\a4\0\0\0%\1\1\0>\0\2\0027\0\2\0002\1\0\0>\0\2\1G\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\1\2:\0\0\2\0\3\0\a4\0\0\0%\1\1\0>\0\2\0027\0\2\0002\1\0\0>\0\2\1G\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\1\2;\0\0\2\0\3\0\a4\0\0\0%\1\1\0>\0\2\0027\0\2\0002\1\0\0>\0\2\1G\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
 if should_profile then save_profiles() end
 
 end)

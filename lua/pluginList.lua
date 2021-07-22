@@ -12,11 +12,37 @@ return packer.startup(function()
     use "hrsh7th/nvim-compe"
     use "neovim/nvim-lspconfig"
     use "andrejlevkovitch/vim-lua-format"
-    use "folke/tokyonight.nvim"
+    use {
+        "folke/tokyonight.nvim",
+        config = function()
+            vim.cmd [[
+        colorscheme tokyonight
+        set nu rnu
+      ]]
+        end
+    }
+
     use "tpope/vim-fugitive"
-    use "folke/which-key.nvim"
-    use {"lewis6991/gitsigns.nvim", requires = {'nvim-lua/plenary.nvim'}}
-    use({"hoob3rt/lualine.nvim", requires = "nvim-web-devicons"})
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            require'which-key'.setup {}
+        end
+    }
+
+    use {
+        "lewis6991/gitsigns.nvim",
+        requires = {'nvim-lua/plenary.nvim'},
+        config = function()
+            require'gitsigns'.setup {}
+        end
+    }
+
+    use({
+        "hoob3rt/lualine.nvim",
+        requires = "nvim-web-devicons"
+    })
+
     use "jiangmiao/auto-pairs"
     use "mlaursen/vim-react-snippets"
     use "lukas-reineke/indent-blankline.nvim"
@@ -31,6 +57,9 @@ return packer.startup(function()
     use {
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons",
+        config = function()
+            require'trouble'.setup {}
+        end
     }
 
     use {
@@ -41,5 +70,9 @@ end, {
     display = {
         border = {"┌", "─", "┐", "│", "┘", "─", "└", "│"}
     },
-    config = {display = {open_fn = require("packer.util").float}}
+    config = {
+        display = {
+            open_fn = require("packer.util").float
+        }
+    }
 })
