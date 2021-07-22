@@ -1,0 +1,22 @@
+[package]
+name = "kyoto-installer"
+version = "0.1.0"
+authors = ["Tejas Ravishankar <xtremedevx@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ansi_term = "0.12.1"
+colored = "2.0.0"
+indicatif = "0.16.2"
+tokio = { version = "1.8.2", features = ["macros", "rt-multi-thread"] }
+reqwest = "0.11.4"
+futures = "0.3.15"
+zip = "0.5.13"
+
+[profile.release]
+opt-level = 'z'
+lto = true
+codegen-units = 1
+panic = 'abort'
