@@ -12,12 +12,13 @@ nnoremap <leader>a ggVG
 nnoremap bd :bd<CR>
 tnoremap <Esc> <C-\><C-n>
 
-function! Init_NvimTree()
-  packadd nvim-tree.lua
+function! ToggleNvimTree()
+  if exists(":NvimTreeToggle") == 0
+    silent! packadd nvim-tree.lua
+  endif
+
   NvimTreeToggle
 endfunction
-
-nnoremap <Leader>nt :call Init_NvimTree()<CR>
 
 cnoreabbrev wq w<bar>bd
 cnoreabbrev Wq w<bar>bd
@@ -60,7 +61,7 @@ map <Right> <NOP>
 nnoremap <leader>` :call ChooseTerm("term-slider", 1)<CR>
 nnoremap <leader><CR> :call ChooseTerm("term-pane", 0)<CR>
 
-nnoremap <leader>nn :NvimTreeToggle<CR>
+nnoremap <silent> <leader>nn :call ToggleNvimTree()<CR>
  
 function! ChooseTerm(termname, slider)
     let pane = bufwinnr(a:termname)
