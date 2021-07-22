@@ -1,12 +1,8 @@
-require "pluginList"
 require "options"
 require "statusline"
+require "maps"
 require "top-bufferline"
-require "dashboard-conf"
-require "telescope-conf"
-require "general"
-require "au"
-require "lsp-config"
 require "compe-config"
-
-vim.cmd("source ~/.config/nvim/mappings.vim")
+require "telescope-conf"
+require "lsp-config"
+require "dashboard-config"

@@ -1,6 +1,4 @@
-command! Conf :e ~/.config/nvim/init.vim
-command! Cdconf :cd ~/.config/nvim
-
+vim.cmd [[
 inoremap <C-a> <C-o>0
 inoremap <C-b> <C-o>$
 nnoremap <leader>y "*y
@@ -23,7 +21,19 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev B buffer
 nnoremap Q <Nop>
+nnoremap <leader>nn :Fern -drawer . -toggle<CR>
+let g:fern#renderer = "nerdfont"
+function! Init_fern() abort
+  nmap <buffer> <Plug>(fern-action-open) <Plug>(fern-action-open:select)
+  nmap <buffer> d <Plug>(fern-action-remove)
+  setlocal nonumber norelativenumber 
+endfunction
 
+augroup fern-custom
+  autocmd! *
+  autocmd FileType fern call Init_fern()
+augroup END
+colorscheme tokyonight
 if bufwinnr(1)
   nnoremap <silent> <C-H> :vertical resize -4<CR>
   nnoremap <silent> <C-L> :vertical resize +4><CR>
@@ -46,17 +56,6 @@ nnoremap <leader>fg :Telescope git_status<CR>
 nnoremap <leader>fo :Telescope oldfiles<CR>
 nnoremap <leader>fn :Telescope file_browser hidden=true<CR>
 
-function! Save_popup()
-  let option_num = input("  1. Save your code and format with Prettier  \n  2. Save your code \n  3. Cancel\nChoose your option: ")
-  if option_num == '1'
-    execute "w"
-    execute "PrettierAsync"
-  elseif option_num == '2'
-    execute 'w'
-  endif
-endfunction
-
-nnoremap <leader>og :call Save_popup()<CR>
 map <Up> <NOP>
 map <Down> <NOP>
 map <Left> <NOP>
@@ -91,9 +90,6 @@ function! ChooseTerm(termname, slider)
     endif
 endfunction
 
-nnoremap <leader>bb :Gitsigns toggle_current_line_blame<CR>
-nnoremap <leader>nn :NvimTreeToggle<CR>
-
 " compe completion
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
@@ -116,5 +112,5 @@ nnoremap <silent><leader>cd <cmd>lua require'lspsaga.diagnostic'.show_line_diagn
 nnoremap <silent><leader>cc <cmd>lua require'lspsaga.diagnostic'.show_cursor_diagnostics()<CR>
 nnoremap <silent> [e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>
 nnoremap <silent> ]e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>
+]]
 
-nnoremap <leader>h :TroubleToggle<CR>
