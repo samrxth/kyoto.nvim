@@ -1,7 +1,5 @@
-require('packer').startup(function()
+require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use 'lambdalisue/fern.vim'
-  use 'lambdalisue/nerdfont.vim'
   use "onsails/lspkind-nvim"
   use {"kyazdani42/nvim-tree.lua", opt = true, cmd = {'NvimTreeToggle'}}
 
@@ -10,7 +8,6 @@ require('packer').startup(function()
   use "nvim-treesitter/nvim-treesitter"
   use "hrsh7th/nvim-compe"
   use "neovim/nvim-lspconfig"
-  use 'lambdalisue/fern-renderer-nerdfont.vim'
   use 'folke/tokyonight.nvim'
   use {
     'hoob3rt/lualine.nvim',
