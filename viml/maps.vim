@@ -111,6 +111,8 @@ nnoremap <silent><leader>cc <cmd>lua require'lspsaga.diagnostic'.show_cursor_dia
 nnoremap <silent> [e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>
 nnoremap <silent> ]e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>
 
+nnoremap <leader>h :TroubleToggle<CR>
+
 augroup terminalsettings
 	autocmd!
 	if has('nvim')
@@ -119,3 +121,5 @@ augroup terminalsettings
 			\ startinsert
 	endif
 augroup end
+
+set nu rnu

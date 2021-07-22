@@ -27,5 +27,9 @@ require('packer').startup(function(use)
   use "jiangmiao/auto-pairs"
   -- for lua development
   use "folke/lua-dev.nvim"
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+  }
   use {"glepnir/dashboard-nvim", opt = true, cmd = {'Dashboard', 'DashboardChangeColorscheme', 'DashboardFindFile', 'DashboardFindHistory', 'DashboardFindWord', 'DashboardJumpMarks', 'DashboardNewfile'}}
 end)
