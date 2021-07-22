@@ -9,9 +9,9 @@ g.nvim_tree_auto_ignore_ft = { 'startify', 'dashboard' }
 g.nvim_tree_ignore = { '.git', 'node_modules', '.cache' }
 
 -- uncomment this out if you are experiencing issues with nvim-tree.lua
--- g.kyoto_nvimtree_patch = 1
+g.kyoto_nvimtree_patch = 1
 
-if os.getenv("GIT") == "0" or g.kyoto_nvim_tree_show_git == false then
+if os.getenv("GIT") == "0" or g.kyoto_nvim_tree_show_git == 1 then
   g.nvim_tree_git_hl = 0
   g.nvim_tree_gitignore = 0
   g.nvim_tree_show_icons = {
