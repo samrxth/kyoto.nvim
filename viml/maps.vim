@@ -1,4 +1,3 @@
-vim.cmd [[
 inoremap <C-a> <C-o>0
 inoremap <C-b> <C-o>$
 nnoremap <leader>y "*y
@@ -11,6 +10,14 @@ nnoremap gp :bp<CR>
 nnoremap <leader>a ggVG
 nnoremap bd :bd<CR>
 tnoremap <Esc> <C-\><C-n>
+
+function! ToggleNvimTree()
+  if exists(":NvimTreeToggle") == 0
+    silent! packadd nvim-tree.lua
+  endif
+
+  NvimTreeToggle
+endfunction
 
 cnoreabbrev wq w<bar>bd
 cnoreabbrev Wq w<bar>bd
@@ -53,7 +60,7 @@ map <Right> <NOP>
 nnoremap <leader>` :call ChooseTerm("term-slider", 1)<CR>
 nnoremap <leader><CR> :call ChooseTerm("term-pane", 0)<CR>
 
-nnoremap <leader>nn :NvimTreeToggle<CR>
+nnoremap <silent> <leader>nn :call ToggleNvimTree()<CR>
  
 function! ChooseTerm(termname, slider)
     let pane = bufwinnr(a:termname)
@@ -103,5 +110,12 @@ nnoremap <silent><leader>cd <cmd>lua require'lspsaga.diagnostic'.show_line_diagn
 nnoremap <silent><leader>cc <cmd>lua require'lspsaga.diagnostic'.show_cursor_diagnostics()<CR>
 nnoremap <silent> [e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>
 nnoremap <silent> ]e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>
-]]
 
+augroup terminalsettings
+	autocmd!
+	if has('nvim')
+		autocmd TermOpen *
+			\ setlocal nonumber norelativenumber |
+			\ startinsert
+	endif
+augroup end

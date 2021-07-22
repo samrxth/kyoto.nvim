@@ -1,5 +1,11 @@
 local g = vim.g
 
+if g.kyoto_dashboard == 0 then
+  return
+end
+
+vim.cmd "packadd dashboard-nvim"
+
 g.dashboard_default_executive = "telescope"
 
 local custom_header = {
