@@ -1,4 +1,3 @@
-vim.cmd [[
 inoremap <C-a> <C-o>0
 inoremap <C-b> <C-o>$
 nnoremap <leader>y "*y
@@ -111,5 +110,12 @@ nnoremap <silent><leader>cd <cmd>lua require'lspsaga.diagnostic'.show_line_diagn
 nnoremap <silent><leader>cc <cmd>lua require'lspsaga.diagnostic'.show_cursor_diagnostics()<CR>
 nnoremap <silent> [e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>
 nnoremap <silent> ]e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>
-]]
 
+augroup terminalsettings
+	autocmd!
+	if has('nvim')
+		autocmd TermOpen *
+			\ setlocal nonumber norelativenumber |
+			\ startinsert
+	endif
+augroup end
