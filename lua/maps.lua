@@ -21,18 +21,7 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev B buffer
 nnoremap Q <Nop>
-nnoremap <leader>nn :Fern -drawer . -toggle<CR>
-let g:fern#renderer = "nerdfont"
-function! Init_fern() abort
-  nmap <buffer> <Plug>(fern-action-open) <Plug>(fern-action-open:select)
-  nmap <buffer> d <Plug>(fern-action-remove)
-  setlocal nonumber norelativenumber 
-endfunction
 
-augroup fern-custom
-  autocmd! *
-  autocmd FileType fern call Init_fern()
-augroup END
 colorscheme tokyonight
 if bufwinnr(1)
   nnoremap <silent> <C-H> :vertical resize -4<CR>
@@ -63,6 +52,8 @@ map <Right> <NOP>
 
 nnoremap <leader>` :call ChooseTerm("term-slider", 1)<CR>
 nnoremap <leader><CR> :call ChooseTerm("term-pane", 0)<CR>
+
+nnoremap <leader>nn :NvimTreeToggle<CR>
  
 function! ChooseTerm(termname, slider)
     let pane = bufwinnr(a:termname)
