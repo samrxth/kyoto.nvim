@@ -1,6 +1,6 @@
 require('packer').startup(function()
   use 'wbthomason/packer.nvim'
-  use 'lambdalisue/fern.vim'
+  use 'lambsdddalisue/fern.vim'
   use 'lambdalisue/nerdfont.vim'
   use 'lambdalisue/fern-renderer-nerdfont.vim'
   use 'folke/tokyonight.nvim'
@@ -34,8 +34,9 @@ opt.shiftwidth = 2
 opt.smartindent = true
 opt.background = "dark"
 
+require("mappings")
+
 vim.cmd [[
-nnoremap <leader>nn :Fern -drawer . -toggle<CR>
 let g:fern#renderer = "nerdfont"
 function! Init_fern() abort
   nmap <buffer> <Plug>(fern-action-open) <Plug>(fern-action-open:select)
