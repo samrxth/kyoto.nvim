@@ -4,6 +4,8 @@ local g = vim.g
 
 g.mapleader = " "
 
+g.kyoto_dashboard = 1
+
 vim.g.tokyonight_style = "storm"
 
 opt.ruler = false

@@ -30,5 +30,5 @@ require('packer').startup(function()
   use "jiangmiao/auto-pairs"
   -- for lua development
   use "folke/lua-dev.nvim"
-  use "glepnir/dashboard-nvim"
+  use {"glepnir/dashboard-nvim", opt = true, cmd = {'Dashboard', 'DashboardChangeColorscheme', 'DashboardFindFile', 'DashboardFindHistory', 'DashboardFindWord', 'DashboardJumpMarks', 'DashboardNewfile'}}
 end)
