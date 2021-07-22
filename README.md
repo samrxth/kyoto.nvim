@@ -1,7 +1,7 @@
-# kyoto.nvim
 <p align="center">
   <img src="./assets/logos/kyoto-logo-removebg.png" alt="">
 </p>
+# kyoto.nvim
 
 kyoto.nvim is a fast ⚡, simple and minimal Neovim configuration that aims to replace Graphical IDEs such as Visual Studio Code and Sublime Text.
 
