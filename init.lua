@@ -1,5 +1,6 @@
 local vim = vim
 
+require "kyotorc"
 require "options"
 require "statusline"
 require "top-bufferline"

@@ -10,7 +10,7 @@ nnoremap <silent>gp :bp<CR>
 nnoremap <silent><leader>a ggVG
 nnoremap <silent>bd :bd<CR>
 tnoremap <silent><Esc> <C-\><C-n>
-
+nnoremap <leader>gg :enew<CR>
 function! ToggleNvimTree()
   if exists(":NvimTreeToggle") == 0
     silent! packadd nvim-tree.lua
@@ -40,7 +40,7 @@ if bufwinnr(1)
   tnoremap <silent> <C-K> :resize +4<CR>
 endif
 
-nnoremap <silent><leader>dc :e ~/.config/nvim/init.lua<CR>
+nnoremap <silent><leader>dc :e ~/.config/nvim/lua/kyotorc.lua<CR>
 
 " Telescope
 nnoremap <silent><leader>ff :Telescope find_files hidden=true<CR>

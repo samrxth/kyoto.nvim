@@ -46,7 +46,7 @@ g.dashboard_custom_section = {
   },
   f = {
     description = {"  Edit Configuration         SPC d c"},
-    command = "e ~/.config/nvim/init.lua"
+    command = "e ~/.config/nvim/lua/kyotorc.lua"
   }
 }
 
