@@ -7,7 +7,9 @@ use std::{
 };
 
 use colored::Colorize;
+use flate2::read::GzDecoder;
 use indicatif::{ProgressBar, ProgressStyle};
+use tar::Archive;
 
 pub fn check_pip_installed() -> bool {
     match process::Command::new("pip3")
@@ -171,6 +173,52 @@ pub async fn install_nvim() {
             }
             progress_bar.inc(1);
         }
+    } else if cfg!(target_os = "macos") {
+        let tgz = File::open(file_name).unwrap();
+        let tar = GzDecoder::new(tgz);
+        let mut archive = Archive::new(tar);
+
+        let progress_bar = ProgressBar::new(archive.entries().unwrap().count() as u64);
+
+        progress_bar.set_style(
+            ProgressStyle::default_bar()
+                .template("[{wide_bar:.cyan/blue/magenta}] {bytes}/{total_bytes} [ extracting ]")
+                .progress_chars("=>-"),
+        );
+
+        for (_, file) in archive.entries().unwrap().enumerate() {
+            let mut file = file.unwrap();
+            file.unpack(format!(
+                "{}{}",
+                format!("{}/.config/nvim/", std::env::var("HOME").unwrap()),
+                file.path().unwrap().display().to_string()
+            ))
+            .unwrap();
+            progress_bar.inc(1);
+        }
+    } else if cfg!(target_os = "linux") {
+        let tgz = File::open(file_name).unwrap();
+        let tar = GzDecoder::new(tgz);
+        let mut archive = Archive::new(tar);
+
+        let progress_bar = ProgressBar::new(archive.entries().unwrap().count() as u64);
+
+        progress_bar.set_style(
+            ProgressStyle::default_bar()
+                .template("[{wide_bar:.cyan/blue/magenta}] {bytes}/{total_bytes} [ extracting ]")
+                .progress_chars("=>-"),
+        );
+
+        for (_, file) in archive.entries().unwrap().enumerate() {
+            let mut file = file.unwrap();
+            file.unpack(format!(
+                "{}{}",
+                format!("{}/.config/nvim/", std::env::var("HOME").unwrap()),
+                file.path().unwrap().display().to_string()
+            ))
+            .unwrap();
+            progress_bar.inc(1);
+        }
     }
 }
 
@@ -220,6 +268,7 @@ async fn main() {
             println!("{}: installing node-js", "note".bright_magenta());
             install_nodejs().await;
         }
+
         resume_installation();
     }
 }
