@@ -6,6 +6,9 @@ g.mapleader = "<Space>"
 
 g.kyoto_dashboard = 1
 
+-- extra plugins to install
+g.kyoto_extra_plugins = {}
+
 opt.ruler = false
 opt.hidden = true
 opt.ignorecase = true
@@ -42,5 +45,5 @@ if os.getenv("GIT") == "0" or g.kyoto_nvim_tree_show_git == false then
 end
 
 vim.cmd [[
-colorscheme tokyonight
+  colorscheme tokyonight
 ]]

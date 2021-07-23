@@ -57,5 +57,9 @@ require("packer").startup(
     use "simrat39/symbols-outline.nvim"
     use "folke/which-key.nvim"
     use "tpope/vim-fugitive"
+
+    for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
+      use plugin
+    end
   end
 )
