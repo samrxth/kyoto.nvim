@@ -19,14 +19,6 @@ function! ToggleNvimTree()
   NvimTreeToggle
 endfunction
 
-function! ToggleNvimComment()
-  if exists(":CommentToggle") == 0
-    silent! packadd nvim-comment
-  endif
-
-  CommentToggle
-endfunction
-
 cnoreabbrev wq w<bar>bd
 cnoreabbrev Wq w<bar>bd
 cnoreabbrev WQ w<bar>bd
@@ -66,6 +58,8 @@ map <Right> <NOP>
 
 nnoremap <leader>` :call ChooseTerm("term-slider", 1)<CR>
 nnoremap <leader><CR> :call ChooseTerm("term-pane", 0)<CR>
+nnoremap <leader>to :lua require('lspsaga.floaterm').open_float_terminal()<CR>
+nnoremap <leader>tc :lua require('lspsaga.floaterm').close_float_terminal()<CR>
 
 nnoremap <silent> <leader>nn :call ToggleNvimTree()<CR>
  
@@ -131,8 +125,5 @@ augroup terminalsettings
 	endif
 augroup end
 
-" nvim-comment
-
-nnoremap <silent> <leader>cc :call ToggleNvimComment()<CR>
-
 set nu rnu
+
