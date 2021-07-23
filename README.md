@@ -18,7 +18,7 @@
 
 ## Supported Languages
 
-Find a list of supported languages [here](https://github.com/kabouzeid/nvim-lspinstall/tree/main/lua/lspinstall/servers). To install any of them run
+You can find a list of supported languages [here](https://github.com/kabouzeid/nvim-lspinstall/tree/main/lua/lspinstall/servers). To install any of them run
 ```
 :LspInstall <language server name>
 ```
