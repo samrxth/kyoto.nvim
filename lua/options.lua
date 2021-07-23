@@ -2,11 +2,9 @@ local vim = vim
 local opt = vim.opt
 local g = vim.g
 
-g.mapleader = " "
+g.mapleader = "<Space>"
 
 g.kyoto_dashboard = 1
-
-vim.g.tokyonight_style = "storm"
 
 opt.ruler = false
 opt.hidden = true
@@ -42,3 +40,7 @@ if os.getenv("GIT") == "0" or g.kyoto_nvim_tree_show_git == false then
       files = 1
   }
 end
+
+vim.cmd [[
+colorscheme tokyonight
+]]

@@ -1,7 +1,7 @@
-require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
+require("packer").startup(function(use)
+  use "wbthomason/packer.nvim"
   use "onsails/lspkind-nvim"
-  use {"kyazdani42/nvim-tree.lua", opt = true, cmd = {'NvimTreeToggle'}}
+  use {"kyazdani42/nvim-tree.lua", opt = true, cmd = {"NvimTreeToggle"}}
 
   use "glepnir/lspsaga.nvim"
   use "kabouzeid/nvim-lspinstall"
@@ -10,8 +10,8 @@ require('packer').startup(function(use)
   use "neovim/nvim-lspconfig"
   use 'folke/tokyonight.nvim'
   use {
-    'hoob3rt/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    "hoob3rt/lualine.nvim",
+    requires = {"kyazdani42/nvim-web-devicons", opt = true}
   }
 
   use {
@@ -27,5 +27,23 @@ require('packer').startup(function(use)
   use "jiangmiao/auto-pairs"
   -- for lua development
   use "folke/lua-dev.nvim"
-  use {"glepnir/dashboard-nvim", opt = true, cmd = {'Dashboard', 'DashboardChangeColorscheme', 'DashboardFindFile', 'DashboardFindHistory', 'DashboardFindWord', 'DashboardJumpMarks', 'DashboardNewfile'}}
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+  }
+  use {
+    "glepnir/dashboard-nvim",
+    opt = true,
+    cmd = {"Dashboard", "DashboardChangeColorscheme",
+    "DashboardFindFile", "DashboardFindHistory",
+    "DashboardFindWord", "DashboardJumpMarks",
+    "DashboardNewfile"}
+  }
+  use "yuttie/comfortable-motion.vim"
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
 end)

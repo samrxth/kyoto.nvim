@@ -29,7 +29,6 @@ cnoreabbrev Q q
 cnoreabbrev B buffer
 nnoremap Q <Nop>
 
-colorscheme tokyonight
 if bufwinnr(1)
   nnoremap <silent> <C-H> :vertical resize -4<CR>
   nnoremap <silent> <C-L> :vertical resize +4><CR>
@@ -111,6 +110,10 @@ nnoremap <silent><leader>cc <cmd>lua require'lspsaga.diagnostic'.show_cursor_dia
 nnoremap <silent> [e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>
 nnoremap <silent> ]e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>
 
+nnoremap <leader>h :TroubleToggle<CR>
+
+nnoremap <leader>bb :Gitsigns toggle_current_line_blame<CR>
+
 augroup terminalsettings
 	autocmd!
 	if has('nvim')
@@ -119,3 +122,5 @@ augroup terminalsettings
 			\ startinsert
 	endif
 augroup end
+
+set nu rnu

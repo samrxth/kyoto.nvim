@@ -1,3 +1,4 @@
+local vim = vim
 local g = vim.g
 
 if g.kyoto_dashboard == 0 then
@@ -49,4 +50,4 @@ g.dashboard_custom_section = {
     }
 }
 
-g.dashboard_custom_footer = {"   ", "Neovim v0.6"}
+g.dashboard_custom_footer = {"KYOTO.NVIM"}

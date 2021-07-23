@@ -73,13 +73,15 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/auto-pairs"
   },
-  ["fern-renderer-nerdfont.vim"] = {
+  ["comfortable-motion.vim"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/fern-renderer-nerdfont.vim"
+    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/comfortable-motion.vim"
   },
-  ["fern.vim"] = {
-    loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/fern.vim"
+  ["dashboard-nvim"] = {
+    commands = { "Dashboard", "DashboardChangeColorscheme", "DashboardFindFile", "DashboardFindHistory", "DashboardFindWord", "DashboardJumpMarks", "DashboardNewfile" },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/sam/.local/share/nvim/site/pack/packer/opt/dashboard-nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -89,13 +91,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
   },
+  ["lua-dev.nvim"] = {
+    loaded = true,
+    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/lua-dev.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/lualine.nvim"
-  },
-  ["nerdfont.vim"] = {
-    loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/nerdfont.vim"
   },
   ["nvim-bufferline.lua"] = {
     loaded = true,
@@ -114,8 +116,10 @@ _G.packer_plugins = {
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
   ["nvim-tree.lua"] = {
-    loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+    commands = { "NvimTreeToggle" },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/sam/.local/share/nvim/site/pack/packer/opt/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -144,10 +148,43 @@ _G.packer_plugins = {
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/Users/sam/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/trouble.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+if vim.fn.exists(":Dashboard") ~= 2 then
+vim.cmd [[command! -nargs=* -range -bang -complete=file Dashboard lua require("packer.load")({'dashboard-nvim'}, { cmd = "Dashboard", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+end
+if vim.fn.exists(":DashboardChangeColorscheme") ~= 2 then
+vim.cmd [[command! -nargs=* -range -bang -complete=file DashboardChangeColorscheme lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardChangeColorscheme", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+end
+if vim.fn.exists(":DashboardFindFile") ~= 2 then
+vim.cmd [[command! -nargs=* -range -bang -complete=file DashboardFindFile lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardFindFile", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+end
+if vim.fn.exists(":DashboardFindHistory") ~= 2 then
+vim.cmd [[command! -nargs=* -range -bang -complete=file DashboardFindHistory lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardFindHistory", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+end
+if vim.fn.exists(":DashboardFindWord") ~= 2 then
+vim.cmd [[command! -nargs=* -range -bang -complete=file DashboardFindWord lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardFindWord", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+end
+if vim.fn.exists(":DashboardJumpMarks") ~= 2 then
+vim.cmd [[command! -nargs=* -range -bang -complete=file DashboardJumpMarks lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardJumpMarks", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+end
+if vim.fn.exists(":DashboardNewfile") ~= 2 then
+vim.cmd [[command! -nargs=* -range -bang -complete=file DashboardNewfile lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardNewfile", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+end
+if vim.fn.exists(":NvimTreeToggle") ~= 2 then
+vim.cmd [[command! -nargs=* -range -bang -complete=file NvimTreeToggle lua require("packer.load")({'nvim-tree.lua'}, { cmd = "NvimTreeToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+end
+time([[Defining lazy-load commands]], false)
+
 if should_profile then save_profiles() end
 
 end)
