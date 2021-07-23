@@ -10,7 +10,7 @@ nnoremap <silent>gp :bp<CR>
 nnoremap <silent><leader>a ggVG
 nnoremap <silent>bd :bd<CR>
 tnoremap <silent><Esc> <C-\><C-n>
-nnoremap <leader>gg :enew<CR>
+nnoremap <leader>en :enew<CR>
 function! ToggleNvimTree()
   if exists(":NvimTreeToggle") == 0
     silent! packadd nvim-tree.lua
