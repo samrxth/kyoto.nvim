@@ -111,7 +111,7 @@ nnoremap <silent> [e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_pr
 nnoremap <silent> ]e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>
 
 nnoremap <leader>h :TroubleToggle<CR>
-
+nnoremap <leader>so :SymbolsOutline<CR>
 nnoremap <leader>bb :Gitsigns toggle_current_line_blame<CR>
 
 augroup terminalsettings

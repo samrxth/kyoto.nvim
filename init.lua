@@ -8,6 +8,7 @@ require "telescope-config"
 require "lsp-config"
 require "dashboard-config"
 require "gitsigns-config"
+require "which-key-config"
 
 vim.defer_fn(function()
   require("plugins")
