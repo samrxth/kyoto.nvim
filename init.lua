@@ -1,18 +1,19 @@
 local vim = vim
 
-require "kyotorc"
+vim.cmd [[ source ~/.config/nvim/viml/general.vim ]]
 require "options"
-require "statusline"
-require "top-bufferline"
-require "compe-config"
-require "telescope-config"
-require "lsp-config"
+require "kyotorc"
 require "dashboard-config"
-require "gitsigns-config"
-require "which-key-config"
 
 vim.defer_fn(function()
-  require("plugins")
+  require "statusline"
+  require "top-bufferline"
+  require "compe-config"
+  require "telescope-config"
+  require "lsp-config"
+  require "gitsigns-config"
+  require "which-key-config"
+  require "plugins"
+  vim.cmd [[ source ~/.config/nvim/viml/maps.vim ]]
 end, 0)
 
-vim.cmd [[ source ~/.config/nvim/viml/maps.vim ]]

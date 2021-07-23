@@ -118,15 +118,3 @@ nnoremap <silent><leader>bb :Gitsigns toggle_current_line_blame<CR>
 
 nnoremap <leader>C :Commentary<CR>
 vnoremap <leader>C :Commentary<CR>
-
-augroup terminalsettings
-	autocmd!
-	if has('nvim')
-		autocmd TermOpen *
-			\ setlocal nonumber norelativenumber |
-			\ startinsert
-	endif
-augroup end
-
-set nu rnu
-
