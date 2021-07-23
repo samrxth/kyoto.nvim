@@ -1,4 +1,4 @@
-<h1 align="center">kyoto.nvim</h1>
+<h1 align="center">🦚 kyoto.nvim</h1>
 
 <p align="center">kyoto.nvim is a fast ⚡, simple and minimal Neovim configuration that aims to replace Graphical IDEs such as Visual Studio Code and Sublime Text.</p>
 
