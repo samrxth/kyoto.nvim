@@ -61,9 +61,7 @@ require("packer").startup(
     use "folke/which-key.nvim"
     use "tpope/vim-fugitive"
 
-    use {"terrortylor/nvim-comment", config = function()
-      require('nvim_comment').setup()
-    end, opt = true}
+    use "tpope/vim-commentary"
 
     for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
       use(plugin)

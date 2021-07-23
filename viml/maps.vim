@@ -1,15 +1,15 @@
-inoremap <C-a> <C-o>0
-inoremap <C-b> <C-o>$
-nnoremap <leader>y "*y
-vnoremap <leader>y "*y
-nnoremap <leader>x "*x
-vnoremap <leader>x "*x
-nnoremap <leader>p "*p
-nnoremap gn :bn<CR>
-nnoremap gp :bp<CR>
-nnoremap <leader>a ggVG
-nnoremap bd :bd<CR>
-tnoremap <Esc> <C-\><C-n>
+inoremap <silent><C-a> <C-o>0
+inoremap <silent><C-b> <C-o>$
+nnoremap <silent><leader>y "*y
+vnoremap <silent><leader>y "*y
+nnoremap <silent><leader>x "*x
+vnoremap <silent><leader>x "*x
+nnoremap <silent><leader>p "*p
+nnoremap <silent>gn :bn<CR>
+nnoremap <silent>gp :bp<CR>
+nnoremap <silent><leader>a ggVG
+nnoremap <silent>bd :bd<CR>
+tnoremap <silent><Esc> <C-\><C-n>
 
 function! ToggleNvimTree()
   if exists(":NvimTreeToggle") == 0
@@ -40,21 +40,21 @@ if bufwinnr(1)
   tnoremap <silent> <C-K> :resize +4<CR>
 endif
 
-nnoremap <leader>dc :e ~/.config/nvim/init.lua<CR>
+nnoremap <silent><leader>dc :e ~/.config/nvim/init.lua<CR>
 
 " Telescope
-nnoremap <leader>ff :Telescope find_files hidden=true<CR>
-nnoremap <leader>fb :Telescope buffers<CR>
-nnoremap <leader>fh :Telescope help_tags<CR>
-nnoremap <leader>fi :Telescope live_grep<CR>
-nnoremap <leader>fg :Telescope git_status<CR>
-nnoremap <leader>fo :Telescope oldfiles<CR>
-nnoremap <leader>fn :Telescope file_browser hidden=true<CR>
+nnoremap <silent><leader>ff :Telescope find_files hidden=true<CR>
+nnoremap <silent><leader>fb :Telescope buffers<CR>
+nnoremap <silent><leader>fh :Telescope help_tags<CR>
+nnoremap <silent><leader>fi :Telescope live_grep<CR>
+nnoremap <silent><leader>fg :Telescope git_status<CR>
+nnoremap <silent><leader>fo :Telescope oldfiles<CR>
+nnoremap <silent><leader>fn :Telescope file_browser hidden=true<CR>
 
-map <Up> <NOP>
-map <Down> <NOP>
-map <Left> <NOP>
-map <Right> <NOP>
+map <silent><Up> <NOP>
+map <silent><Down> <NOP>
+map <silent><Left> <NOP>
+map <silent><Right> <NOP>
 
 nnoremap <leader>` :call ChooseTerm("term-slider", 1)<CR>
 nnoremap <leader><CR> :call ChooseTerm("term-pane", 0)<CR>
@@ -112,9 +112,12 @@ nnoremap <silent><leader>cc <cmd>lua require'lspsaga.diagnostic'.show_cursor_dia
 nnoremap <silent> [e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>
 nnoremap <silent> ]e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>
 
-nnoremap <leader>h :TroubleToggle<CR>
-nnoremap <leader>so :SymbolsOutline<CR>
-nnoremap <leader>bb :Gitsigns toggle_current_line_blame<CR>
+nnoremap <silent><leader>h :TroubleToggle<CR>
+nnoremap <silent><leader>so :SymbolsOutline<CR>
+nnoremap <silent><leader>bb :Gitsigns toggle_current_line_blame<CR>
+
+nnoremap <leader>C :Commentary<CR>
+vnoremap <leader>C :Commentary<CR>
 
 augroup terminalsettings
 	autocmd!
