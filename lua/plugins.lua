@@ -56,5 +56,6 @@ require("packer").startup(
     }
     use "simrat39/symbols-outline.nvim"
     use "folke/which-key.nvim"
+    use "tpope/vim-fugitive"
   end
 )
