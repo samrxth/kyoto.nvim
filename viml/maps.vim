@@ -29,7 +29,6 @@ cnoreabbrev Q q
 cnoreabbrev B buffer
 nnoremap Q <Nop>
 
-colorscheme tokyonight
 if bufwinnr(1)
   nnoremap <silent> <C-H> :vertical resize -4<CR>
   nnoremap <silent> <C-L> :vertical resize +4><CR>
@@ -112,6 +111,8 @@ nnoremap <silent> [e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_pr
 nnoremap <silent> ]e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>
 
 nnoremap <leader>h :TroubleToggle<CR>
+
+nnoremap <leader>bb :Gitsigns toggle_current_line_blame<CR>
 
 augroup terminalsettings
 	autocmd!
