@@ -34,6 +34,7 @@ require("packer").startup(
       "folke/trouble.nvim",
       requires = "kyazdani42/nvim-web-devicons"
     }
+
     use {
       "glepnir/dashboard-nvim",
       opt = true,
@@ -47,6 +48,7 @@ require("packer").startup(
         "DashboardNewfile"
       }
     }
+
     use "yuttie/comfortable-motion.vim"
     use {
       "lewis6991/gitsigns.nvim",
@@ -54,12 +56,17 @@ require("packer").startup(
         "nvim-lua/plenary.nvim"
       }
     }
+
     use "simrat39/symbols-outline.nvim"
     use "folke/which-key.nvim"
     use "tpope/vim-fugitive"
 
+    use {"terrortylor/nvim-comment", config = function()
+      require('nvim_comment').setup()
+    end, opt = true}
+
     for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
-      use plugin
+      use(plugin)
     end
   end
 )

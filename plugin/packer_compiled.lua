@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/sam/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/sam/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/sam/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/sam/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/sam/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/dulguuncodes/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?.lua;/home/dulguuncodes/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?/init.lua;/home/dulguuncodes/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?.lua;/home/dulguuncodes/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/dulguuncodes/.cache/nvim/packer_hererocks/2.0.5/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -71,117 +71,146 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["auto-pairs"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/auto-pairs"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/auto-pairs"
   },
   ["comfortable-motion.vim"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/comfortable-motion.vim"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/comfortable-motion.vim"
   },
   ["dashboard-nvim"] = {
     commands = { "Dashboard", "DashboardChangeColorscheme", "DashboardFindFile", "DashboardFindHistory", "DashboardFindWord", "DashboardJumpMarks", "DashboardNewfile" },
     loaded = false,
     needs_bufread = false,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/opt/dashboard-nvim"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/opt/dashboard-nvim"
+  },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/formatter.nvim"
+  },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
   },
   ["lspsaga.nvim"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
   },
   ["lua-dev.nvim"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/lua-dev.nvim"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/lua-dev.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/lualine.nvim"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
   ["nvim-bufferline.lua"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
+  },
+  ["nvim-comment"] = {
+    config = { "\27LJ\1\2:\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\17nvim_comment\frequire\0" },
+    loaded = true,
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/nvim-comment"
   },
   ["nvim-compe"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["nvim-lspinstall"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
   ["nvim-tree.lua"] = {
     commands = { "NvimTreeToggle" },
     loaded = false,
     needs_bufread = false,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/opt/nvim-tree.lua"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/opt/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/popup.nvim"
+  },
+  ["symbols-outline.nvim"] = {
+    loaded = true,
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
   },
   ["trouble.nvim"] = {
     loaded = true,
-    path = "/Users/sam/.local/share/nvim/site/pack/packer/start/trouble.nvim"
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/trouble.nvim"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/dulguuncodes/.local/share/nvim/site/pack/packer/start/which-key.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-comment
+time([[Config for nvim-comment]], true)
+try_loadstring("\27LJ\1\2:\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\17nvim_comment\frequire\0", "config", "nvim-comment")
+time([[Config for nvim-comment]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
+if vim.fn.exists(":DashboardNewfile") ~= 2 then
+vim.cmd [[command! -nargs=* -range -bang -complete=file DashboardNewfile lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardNewfile", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+end
+if vim.fn.exists(":DashboardFindHistory") ~= 2 then
+vim.cmd [[command! -nargs=* -range -bang -complete=file DashboardFindHistory lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardFindHistory", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+end
 if vim.fn.exists(":Dashboard") ~= 2 then
 vim.cmd [[command! -nargs=* -range -bang -complete=file Dashboard lua require("packer.load")({'dashboard-nvim'}, { cmd = "Dashboard", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+end
+if vim.fn.exists(":NvimTreeToggle") ~= 2 then
+vim.cmd [[command! -nargs=* -range -bang -complete=file NvimTreeToggle lua require("packer.load")({'nvim-tree.lua'}, { cmd = "NvimTreeToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+end
+if vim.fn.exists(":DashboardJumpMarks") ~= 2 then
+vim.cmd [[command! -nargs=* -range -bang -complete=file DashboardJumpMarks lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardJumpMarks", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+end
+if vim.fn.exists(":DashboardFindWord") ~= 2 then
+vim.cmd [[command! -nargs=* -range -bang -complete=file DashboardFindWord lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardFindWord", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
 end
 if vim.fn.exists(":DashboardChangeColorscheme") ~= 2 then
 vim.cmd [[command! -nargs=* -range -bang -complete=file DashboardChangeColorscheme lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardChangeColorscheme", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
 end
 if vim.fn.exists(":DashboardFindFile") ~= 2 then
 vim.cmd [[command! -nargs=* -range -bang -complete=file DashboardFindFile lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardFindFile", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
-end
-if vim.fn.exists(":DashboardFindHistory") ~= 2 then
-vim.cmd [[command! -nargs=* -range -bang -complete=file DashboardFindHistory lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardFindHistory", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
-end
-if vim.fn.exists(":DashboardFindWord") ~= 2 then
-vim.cmd [[command! -nargs=* -range -bang -complete=file DashboardFindWord lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardFindWord", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
-end
-if vim.fn.exists(":DashboardJumpMarks") ~= 2 then
-vim.cmd [[command! -nargs=* -range -bang -complete=file DashboardJumpMarks lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardJumpMarks", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
-end
-if vim.fn.exists(":DashboardNewfile") ~= 2 then
-vim.cmd [[command! -nargs=* -range -bang -complete=file DashboardNewfile lua require("packer.load")({'dashboard-nvim'}, { cmd = "DashboardNewfile", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
-end
-if vim.fn.exists(":NvimTreeToggle") ~= 2 then
-vim.cmd [[command! -nargs=* -range -bang -complete=file NvimTreeToggle lua require("packer.load")({'nvim-tree.lua'}, { cmd = "NvimTreeToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
 end
 time([[Defining lazy-load commands]], false)
 

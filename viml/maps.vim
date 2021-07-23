@@ -19,6 +19,14 @@ function! ToggleNvimTree()
   NvimTreeToggle
 endfunction
 
+function! ToggleNvimComment()
+  if exists(":CommentToggle") == 0
+    silent! packadd nvim-comment
+  endif
+
+  CommentToggle
+endfunction
+
 cnoreabbrev wq w<bar>bd
 cnoreabbrev Wq w<bar>bd
 cnoreabbrev WQ w<bar>bd
@@ -122,5 +130,9 @@ augroup terminalsettings
 			\ startinsert
 	endif
 augroup end
+
+" nvim-comment
+
+nnoremap <silent> <leader>cc :call ToggleNvimComment()<CR>
 
 set nu rnu
