@@ -24,10 +24,11 @@ Find a list of supported languages [here](https://github.com/kabouzeid/nvim-lspi
 ```
 ## Notable Plugins
 
-- packer.nvim
 - nvim-tree.lua
 - lspsaga.nvim
 - tokyonight.nvim
 - dashboard-nvim
 - telescope.nvim
 - nvim-bufferline.lua
+- fugitive.vim
+- lualine.nvim
