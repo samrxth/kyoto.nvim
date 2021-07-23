@@ -25,29 +25,29 @@ local custom_header = {
   "       / @ , @. () \\",
   "      /,o O' o O o, \\",
   "   _-'. 'o _o _O_o-o.`-_",
-  "   `\"\"\"---......---\"\"\"`",
-  "    K Y O T O    N V I M     ",
+  '   `"""---......---"""`',
+  "    K Y O T O    N V I M     "
 }
 
 g.dashboard_custom_header = custom_header
 
 g.dashboard_custom_section = {
-    a = {
-        description = {"  Find File                  SPC f f"},
-        command = "Telescope find_files"
-    },
-    b = {
-        description = {"  Recents                    SPC f o"},
-        command = "Telescope oldfiles"
-    },
-    e = {
-        description = {"洛 New Buffer                 SPC g g"},
-        command = "enew"
-    },
-    f = {
-        description = {"  Edit Configuration         SPC d c"},
-        command = "e ~/.config/nvim/init.lua"
-    }
+  a = {
+    description = {"  Find File                  SPC f f"},
+    command = "Telescope find_files"
+  },
+  b = {
+    description = {"  Recents                    SPC f o"},
+    command = "Telescope oldfiles"
+  },
+  e = {
+    description = {"洛 New Buffer                 SPC g g"},
+    command = "enew"
+  },
+  f = {
+    description = {"  Edit Configuration         SPC d c"},
+    command = "e ~/.config/nvim/init.lua"
+  }
 }
 
 g.dashboard_custom_footer = {"KYOTO.NVIM"}
