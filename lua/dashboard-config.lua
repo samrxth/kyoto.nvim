@@ -41,7 +41,7 @@ g.dashboard_custom_section = {
     command = "Telescope oldfiles"
   },
   e = {
-    description = {"洛 New Buffer                 SPC e n"},
+    description = {"洛 New Buffer                 SPC g g"},
     command = "enew"
   },
   f = {
