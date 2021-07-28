@@ -6,7 +6,6 @@ require("gitsigns").setup {
     topdelete = {hl = "DiffDelete", text = "‾", numhl = "GitSignsDeleteNr"},
     changedelete = {hl = "DiffChange", text = "~", numhl = "GitSignsChangeNr"}
   },
-  numhl = true,
   watch_index = {
     interval = 100
   },

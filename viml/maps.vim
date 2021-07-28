@@ -116,5 +116,5 @@ nnoremap <silent><leader>h :TroubleToggle<CR>
 nnoremap <silent><leader>so :SymbolsOutline<CR>
 nnoremap <silent><leader>bb :Gitsigns toggle_current_line_blame<CR>
 
-nnoremap <leader>C :Commentary<CR>
-vnoremap <leader>C :Commentary<CR>
+nnoremap <leader>/ :Commentary<CR>
+vnoremap <leader>/ :Commentary<CR>

@@ -41,8 +41,7 @@ require("lualine").setup {
     lualine_b = {"branch"},
     lualine_c = {{"diagnostics", sources = {"nvim_lsp"}}, "filename"},
     lualine_x = {"filetype", lsp_progress},
-    lualine_y = {"progress"},
-    lualine_z = {clock}
+    lualine_y = {clock}
   },
   inactive_sections = {
     lualine_a = {},

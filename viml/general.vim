@@ -6,5 +6,3 @@ augroup terminalsettings
 			\ startinsert
 	endif
 augroup end
-
-set nu rnu
