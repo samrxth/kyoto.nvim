@@ -59,8 +59,7 @@ require("packer").startup(
 
     use "simrat39/symbols-outline.nvim"
     use "folke/which-key.nvim"
-    use "tpope/vim-fugitive"
-
     use "tpope/vim-commentary"
+    use "kdheepak/lazygit.nvim"
   end
 )
