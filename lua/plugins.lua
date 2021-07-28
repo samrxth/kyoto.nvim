@@ -28,8 +28,6 @@ require("packer").startup(
     }
 
     use "jiangmiao/auto-pairs"
-    -- for lua development
-    use "folke/lua-dev.nvim"
     use {
       "folke/trouble.nvim",
       requires = "kyazdani42/nvim-web-devicons"
@@ -49,7 +47,6 @@ require("packer").startup(
       }
     }
 
-    use "yuttie/comfortable-motion.vim"
     use {
       "lewis6991/gitsigns.nvim",
       requires = {

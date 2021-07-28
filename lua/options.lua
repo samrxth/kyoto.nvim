@@ -25,6 +25,8 @@ opt.expandtab = true
 opt.shiftwidth = 2
 opt.smartindent = true
 opt.background = "dark"
+opt.whichwrap:append("<>hl")
+
 g.mapleader = " "
 g.user_emmet_leader_key = ","
 g.nvim_tree_side = "right"
