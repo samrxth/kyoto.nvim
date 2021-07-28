@@ -32,5 +32,5 @@ vim.defer_fn(function()
   -- we can load packer last since we already have it compiled
   require "plugins"
   -- auto-commands
-  vim.cmd [[ source ~/.config/nvim/viml/general.vim ]]
+  vim.cmd [[ source ~/.config/nvim/viml/autocmd.vim ]]
 end, 0)
