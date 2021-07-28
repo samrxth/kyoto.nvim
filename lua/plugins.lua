@@ -62,9 +62,5 @@ require("packer").startup(
     use "tpope/vim-fugitive"
 
     use "tpope/vim-commentary"
-
-    for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
-      use(plugin)
-    end
   end
 )
