@@ -58,5 +58,6 @@ require("packer").startup(
     use "folke/which-key.nvim"
     use "tpope/vim-commentary"
     use "kdheepak/lazygit.nvim"
+    use "yuttie/comfortable-motion.vim"
   end
 )
