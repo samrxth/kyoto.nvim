@@ -12,7 +12,7 @@ vim.defer_fn(function()
   require "globals"
   -- autocomplete configuration
   require "plugins.compe-config"
-  -- Langauge serer configuration
+  -- Langauge server configuration
   require "lsp-config"
   -- general configurations
   require "options"

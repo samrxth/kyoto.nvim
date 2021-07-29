@@ -10,6 +10,9 @@ vim.cmd "packadd dashboard-nvim"
 g.dashboard_default_executive = "telescope"
 
 local custom_header = {
+  "",
+  "",
+  "",
   "            _/_",
   "          -'a\\",
   "            ||",
