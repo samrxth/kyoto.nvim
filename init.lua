@@ -5,12 +5,12 @@ local vim = vim
 vim.cmd [[set nu rnu]]
 
 -- startscreen
-require "dashboard-config"
+require "plugins.dashboard-config"
 
 -- load after startup
 vim.defer_fn(function()
   -- autocomplete configuration
-  require "compe-config"
+  require "plugins.compe-config"
   -- Langauge serer configuration
   require "lsp-config"
   -- general configurations
@@ -18,15 +18,17 @@ vim.defer_fn(function()
   -- user configurations
   require "kyotorc"
   -- lualine configuration
-  require "statusline"
+  require "plugins.statusline"
   -- nvim-bufferline.lua configuration
-  require "top-bufferline"
+  require "plugins.top-bufferline"
   -- fuzzy finder configuration
-  require "telescope-config"
+  require "plugins.telescope-config"
   -- Git changes(showing in line number) configuration
-  require "gitsigns-config"
+  require "plugins.gitsigns-config"
   -- configuration to help you remember keybindings
-  require "which-key-config"
+  require "plugins.which-key-config"
+  -- extra plugins(with shorter configs)
+  require "plugins.misc"
   -- source our mappings last(may change)
   vim.cmd [[ source ~/.config/nvim/viml/maps.vim]]
   -- we can load packer last since we already have it compiled

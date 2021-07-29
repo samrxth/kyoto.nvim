@@ -34,7 +34,9 @@ vim.cmd([[autocmd User LspProgressUpdate let &ro = &ro]])
 require("lualine").setup {
   options = {
     theme = "tokyonight",
-    icons_enabled = true
+    icons_enabled = true,
+    section_separators = {'', ''},
+    component_separators = {'', ''},
   },
   sections = {
     lualine_a = {"mode"},
