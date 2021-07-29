@@ -9,14 +9,13 @@ require "plugins.dashboard-config"
 
 -- load after startup
 vim.defer_fn(function()
+  require "globals"
   -- autocomplete configuration
   require "plugins.compe-config"
   -- Langauge serer configuration
   require "lsp-config"
   -- general configurations
   require "options"
-  -- user configurations
-  require "kyotorc"
   -- lualine configuration
   require "plugins.statusline"
   -- nvim-bufferline.lua configuration
@@ -32,7 +31,9 @@ vim.defer_fn(function()
   -- source our mappings last(may change)
   vim.cmd [[ source ~/.config/nvim/viml/maps.vim]]
   -- we can load packer last since we already have it compiled
-  require "plugins"
+  require "pluginList"
   -- auto-commands
   vim.cmd [[ source ~/.config/nvim/viml/autocmd.vim ]]
+  -- user configurations
+  require "kyotorc"
 end, 0)
