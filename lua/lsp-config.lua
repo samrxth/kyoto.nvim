@@ -17,7 +17,6 @@ vim.fn.sign_define("LspDiagnosticsSignWarning", {text = "", numhl = "LspDiagn
 vim.fn.sign_define("LspDiagnosticsSignInformation", {text = "", numhl = "LspDiagnosticsDefaultInformation"})
 vim.fn.sign_define("LspDiagnosticsSignHint", {text = "", numhl = "LspDiagnosticsDefaultHint"})
 
-require("lua-dev").setup {}
 require("trouble").setup {}
 -- require("formatter").setup(
 --   {
