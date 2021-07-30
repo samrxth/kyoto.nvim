@@ -2,7 +2,8 @@ local vim = vim
 
 -- line-numbers must be declared before dashboard
 -- init because otherwise dashboard shows line numbers
-vim.cmd [[set nu rnu]]
+vim.opt.nu = true
+vim.opt.rnu = true
 
 -- startscreen
 require "plugins.dashboard-config"
