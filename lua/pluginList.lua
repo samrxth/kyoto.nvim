@@ -1,10 +1,9 @@
+
 require("packer").startup(
   function(use)
     use "wbthomason/packer.nvim"
     use "onsails/lspkind-nvim"
     use {"kyazdani42/nvim-tree.lua", opt = true, cmd = {"NvimTreeToggle"}}
-
-    use "mhartington/formatter.nvim"
 
     use "glepnir/lspsaga.nvim"
     use "kabouzeid/nvim-lspinstall"
@@ -59,5 +58,9 @@ require("packer").startup(
     use "tpope/vim-commentary"
     use "kdheepak/lazygit.nvim"
     use "yuttie/comfortable-motion.vim"
+    use {
+      "mhartington/formatter.nvim",
+      opt = true
+    }
   end
 )
