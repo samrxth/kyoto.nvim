@@ -1,3 +1,4 @@
+
 local vim = vim
 local function clock()
   return " " .. os.date("%H:%M")
@@ -37,8 +38,8 @@ require("lualine").setup {
     icons_enabled = true,
     -- section_separators = { "", "" },
     -- component_separators = { "", "" },
-    section_separators = { "", "" },
-    component_separators = { "", "" },
+    section_separators = {"", ""},
+    component_separators = {"", ""}
   },
   sections = {
     lualine_a = {"mode"},

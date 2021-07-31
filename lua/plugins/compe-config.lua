@@ -1,3 +1,4 @@
+
 local vim = vim
 vim.o.completeopt = "menu,menuone,noselect"
 

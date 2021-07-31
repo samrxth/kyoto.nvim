@@ -1,2 +1,3 @@
+
 require("lspkind").init()
-require("trouble").setup ()
+require("trouble").setup()

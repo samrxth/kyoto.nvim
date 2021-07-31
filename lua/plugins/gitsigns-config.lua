@@ -1,3 +1,4 @@
+
 require("gitsigns").setup {
   signs = {
     add = {hl = "DiffAdd", text = "│", numhl = "GitSignsAddNr"},
