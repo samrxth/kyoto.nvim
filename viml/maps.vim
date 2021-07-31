@@ -27,6 +27,17 @@ nnoremap <silent> <c-c> :if (&hlsearch == 1) \| set nohlsearch \| else \| set hl
 " Do not make Q go to ex-mode
 nnoremap Q <Nop>
 
+" Wrap selection with '' 
+vnoremap <leader>' <esc>`>a'<esc>`<i'<esc>
+" Wrap selection with ""
+vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
+" Wrap selection with ()
+vnoremap <leader>( <esc>`>a)<esc>`<i(<esc>
+" Wrap selection with []
+vnoremap <leader>[ <esc>`>a]<esc>`<i[<esc>
+" Wrap selection with {}
+vnoremap <leader>{ <esc>`>a}<esc>`<i{<esc>
+
 " These are all terminal shorthands
 " I've made them to recognize common typos
 cnoreabbrev wq w<bar>bd
