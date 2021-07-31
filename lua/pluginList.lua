@@ -62,5 +62,10 @@ require("packer").startup(
       "mhartington/formatter.nvim",
       opt = true
     }
+    use {
+      "folke/twilight.nvim",
+      opt = true
+    }
+    use "gelguy/wilder.nvim"
   end
 )

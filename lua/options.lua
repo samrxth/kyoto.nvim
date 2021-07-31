@@ -27,6 +27,8 @@ opt.shiftwidth = 2
 opt.smartindent = true
 opt.background = "dark"
 opt.whichwrap:append("<>hl")
+opt.pumheight = 20
+vim.cmd [[set wildcharm=<Tab>]]
 
 g.mapleader = " "
 g.user_emmet_leader_key = ","
@@ -35,16 +37,13 @@ g.nvim_tree_auto_ignore_ft = {"startify", "dashboard"}
 g.nvim_tree_ignore = {".git", "node_modules", ".cache"}
 
 -- uncomment this out if you are experiencing issues with nvim-tree.lua
--- g.kyoto_nvim_tree_show_git = false
-if os.getenv("GIT") == "0" or g.kyoto_nvim_tree_show_git == false then
-  g.nvim_tree_git_hl = 0
-  g.nvim_tree_gitignore = 0
-  g.nvim_tree_show_icons = {
-    git = 0,
-    folders = 1,
-    files = 1
-  }
-end
+-- g.nvim_tree_git_hl = 0
+-- g.nvim_tree_gitignore = 0
+-- g.nvim_tree_show_icons = {
+--   git = 0,
+--   folders = 1,
+--   files = 1
+-- }
 
 vim.cmd [[
   colorscheme tokyonight
