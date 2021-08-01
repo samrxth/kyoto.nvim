@@ -1,4 +1,3 @@
-
 local vim = vim
 
 -- line-numbers must be declared before dashboard

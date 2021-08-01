@@ -1,4 +1,3 @@
-
 require("bufferline").setup(
   {
     options = {
