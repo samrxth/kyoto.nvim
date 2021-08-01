@@ -2,3 +2,4 @@
 plugin/
 startup.log
 lua/kyotorc/*
+# kyotorc is ignored since private configs don't update on force/rebase pull

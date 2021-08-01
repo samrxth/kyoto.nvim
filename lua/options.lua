@@ -28,6 +28,7 @@ opt.smartindent = true
 opt.background = "dark"
 opt.whichwrap:append("<>hl")
 opt.pumheight = 20
+opt.foldmethod = "manual"
 vim.cmd [[set wildcharm=<Tab>]]
 
 g.mapleader = " "

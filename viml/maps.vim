@@ -99,7 +99,7 @@ function! ChooseTerm(termname, slider)
 endfunction
 
 " Goto private config
-nnoremap <silent><leader>dc :e ~/.config/nvim/lua/kyotorc.lua<CR>
+nnoremap <silent><leader>dc :e ~/.config/nvim/lua/kyotorc/init.lua<CR>
 
 " Telescope
 " Fuzzy file finder
