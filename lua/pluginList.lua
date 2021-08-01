@@ -66,5 +66,8 @@ require("packer").startup(
       opt = true
     }
     use "gelguy/wilder.nvim"
+    for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
+      use(plugin)
+    end
   end
 )

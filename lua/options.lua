@@ -6,9 +6,6 @@ g.mapleader = "<Space>"
 
 g.kyoto_dashboard = 1
 
--- extra plugins to install
-g.kyoto_extra_plugins = {}
-
 opt.ruler = false
 opt.hidden = true
 opt.ignorecase = true
