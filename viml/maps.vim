@@ -17,7 +17,7 @@ nnoremap <silent><leader>p "*p
 " Select everything
 nnoremap <silent><leader>a ggVG
 " Delete a buffer
-nnoremap <silent>bd :bd<CR>
+nnoremap <silent><leader>bd :bd<CR>
 " Escape in terminal mode takes you to normal mode
 tnoremap <silent><leader><Esc> <C-\><C-n>
 " Create a new blank buffer
@@ -43,6 +43,8 @@ vnoremap <leader>{ <esc>`>a}<esc>`<i{<esc>
 cnoreabbrev wq w<bar>bd
 cnoreabbrev Wq w<bar>bd
 cnoreabbrev WQ w<bar>bd
+cnoreabbrev wqa1 wqa!
+cnoreabbrev qa1 qa!
 cnoreabbrev Qa qa
 cnoreabbrev Wqa wqa
 cnoreabbrev W w
