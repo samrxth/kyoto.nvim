@@ -1,6 +1,8 @@
 <h1 align="center">🦚 kyoto.nvim</h1>
 
 <p align="center">kyoto.nvim is a fast ⚡, simple and minimal Neovim configuration that aims to replace Graphical IDEs such as Visual Studio Code and Sublime Text.</p>
+<div>
+	
 [![Lua](https://img.shields.io/badge/Made%20with%20Lua-blueviolet.svg?style=for-the-badge&logo=lua)]()
 	
 </div>
@@ -23,6 +25,7 @@
 [![Last Commit](https://img.shields.io/github/last-commit/siduck76/NvChad.svg?style=flat-square&label=Last%20Commit&color=58eb34)](https://github.com/siduck76/NvChad/pulse) 
 	      
   </div>
+
 
 ## Features
 
