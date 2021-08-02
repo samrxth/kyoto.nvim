@@ -6,20 +6,17 @@
   [![Lua](https://img.shields.io/badge/Made%20with%20Lua-blueviolet.svg?style=for-the-badge&logo=lua)]()
 </div>
 <div align="center">
-  <a href="https://github.com/samrath2007/kyoto.nvim">
   <img
     src="https://img.shields.io/github/repo-size/samrath2007/kyoto.nvim?style=flat-square&label=Repo"
     alt="GitHub repository size"
     />
-  </a>
-  <a href="https://github.com/samrath2007/kyoto.nvim/blob/main/LICENSE"
-    ><img
+   <img
     src="https://img.shields.io/github/license/samrath2007/kyoto.nvim?style=flat-square&logo=GNU&label=License"
     alt="License"
     />
-  [![Neovim Minimum Version](https://img.shields.io/badge/Neovim-0.5+-blueviolet.svg?style=flat-square&logo=Neovim&logoColor=white)](https://github.com/neovim/neovim)
-  [![GitHub Issues](https://img.shields.io/github/issues/samrath2007/kyoto.nvim.svg?style=flat-square&label=Issues&color=fc0330)](https://github.com/siduck76/NvChad/issues)
-  [![Last Commit](https://img.shields.io/github/last-commit/samrath2007/kyoto.nvim.svg?style=flat-square&label=Last%20Commit&color=58eb34)](https://github.com/siduck76/NvChad/pulse) 
+  [Neovim Minimum Version](https://img.shields.io/badge/Neovim-0.5+-blueviolet.svg?style=flat-square&logo=Neovim&logoColor=white)
+  [GitHub Issues](https://img.shields.io/github/issues/samrath2007/kyoto.nvim.svg?style=flat-square&label=Issues&color=fc0330)]
+  [Last Commit](https://img.shields.io/github/last-commit/samrath2007/kyoto.nvim.svg?style=flat-square&label=Last%20Commit&color=58eb34)]
 </div>
 
 ## Features
