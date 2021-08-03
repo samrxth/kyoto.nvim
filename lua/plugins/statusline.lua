@@ -1,4 +1,5 @@
 local vim = vim
+
 local function clock()
   return " " .. os.date("%H:%M")
 end
@@ -29,16 +30,16 @@ local function lsp_progress()
   return table.concat(status, " | ") .. " " .. spinners[frame + 1]
 end
 
-vim.cmd([[autocmd User LspProgressUpdate let &ro = &ro]])
+vim.cmd "autocmd User LspProgressUpdate let &ro = &ro"
 
 require("lualine").setup {
   options = {
     theme = "tokyonight",
     icons_enabled = true,
-    -- section_separators = { "", "" },
-    -- component_separators = { "", "" },
-    section_separators = {"", ""},
-    component_separators = {"", ""}
+    section_separators = {"", ""},
+    component_separators = {"", ""}
+    -- section_separators = {"", ""},
+    -- component_separators = {"", ""}
   },
   sections = {
     lualine_a = {"mode"},

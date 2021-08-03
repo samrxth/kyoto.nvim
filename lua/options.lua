@@ -1,10 +1,5 @@
 local vim = vim
 local opt = vim.opt
-local g = vim.g
-
-g.mapleader = "<Space>"
-
-g.kyoto_dashboard = 1
 
 opt.ruler = false
 opt.hidden = true
@@ -25,26 +20,9 @@ opt.background = "dark"
 opt.whichwrap:append("<>hl")
 opt.pumheight = 20
 opt.foldmethod = "manual"
-vim.cmd [[set wildcharm=<Tab>]]
+vim.cmd "set wildcharm=<Tab>"
 
-g.mapleader = " "
-g.user_emmet_leader_key = ","
-g.nvim_tree_side = "right"
-g.nvim_tree_auto_ignore_ft = {"startify", "dashboard"}
-g.nvim_tree_ignore = {".git", "node_modules", ".cache"}
-
--- uncomment this out if you are experiencing issues with nvim-tree.lua
--- g.nvim_tree_git_hl = 0
--- g.nvim_tree_gitignore = 0
--- g.nvim_tree_show_icons = {
---   git = 0,
---   folders = 1,
---   files = 1
--- }
-
-vim.cmd [[
-  colorscheme tokyonight
-]]
+vim.cmd "colorscheme tokyonight"
 
 local disabled_built_ins = {
   "netrw",
@@ -68,5 +46,5 @@ local disabled_built_ins = {
 }
 
 for _, plugin in pairs(disabled_built_ins) do
-  g["loaded_" .. plugin] = 1
+  vim.g["loaded_" .. plugin] = 1
 end

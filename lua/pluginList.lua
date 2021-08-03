@@ -66,6 +66,14 @@ require("packer").startup(
       opt = true
     }
     use "gelguy/wilder.nvim"
+    use {"maxmellon/vim-jsx-pretty", opt = true}
+    use {
+      "folke/zen-mode.nvim",
+      opt = true
+    }
+
+    use {"tweekmonster/startuptime.vim", opt = true}
+
     for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
       use(plugin)
     end
