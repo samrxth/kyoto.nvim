@@ -19,9 +19,11 @@
 ## Supported Languages
 
 You can find a list of supported languages [here](https://github.com/kabouzeid/nvim-lspinstall/tree/main/lua/lspinstall/servers). To install any of them run
+
 ```
 :LspInstall <language server name>
 ```
+
 ## Notable Plugins
 
 - nvim-tree.lua
@@ -32,3 +34,10 @@ You can find a list of supported languages [here](https://github.com/kabouzeid/n
 - nvim-bufferline.lua
 - fugitive.vim
 - lualine.nvim
+
+
+## Discord
+
+##### Doubts? join our <a href="https://discord.com/invite/2ZtCvPYUv5">discord server</a>
+
+<a href="https://discord.com/invite/2ZtCvPYUv5"><img src="https://invidget.switchblade.xyz/2ZtCvPYUv5"/></a>
