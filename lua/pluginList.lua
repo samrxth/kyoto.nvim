@@ -74,6 +74,8 @@ require("packer").startup(
 
     use {"tweekmonster/startuptime.vim", opt = true}
 
+    use {"vimwiki/vimwiki", opt = true}
+
     for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
       use(plugin)
     end
