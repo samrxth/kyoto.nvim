@@ -1,3 +1,5 @@
+local vim = vim
+
 require("packer").startup(
   function(use)
     use "wbthomason/packer.nvim"
@@ -75,6 +77,10 @@ require("packer").startup(
     use {"tweekmonster/startuptime.vim", opt = true}
 
     use {"vimwiki/vimwiki", opt = true}
+
+    use "ray-x/lsp_signature.nvim"
+
+    use "creativenull/diagnosticls-nvim"
 
     for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
       use(plugin)
