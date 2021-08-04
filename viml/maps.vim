@@ -23,7 +23,7 @@ tnoremap <silent><leader><Esc> <C-\><C-n>
 " Create a new blank buffer
 nnoremap <leader>gg :enew<CR>
 " Toggle search highlight
-nnoremap <silent> <c-c> :if (&hlsearch == 1) \| set nohlsearch \| else \| set hlsearch \| endif<cr>
+nnoremap <silent> <C-C> :if (&hlsearch == 1) \| set nohlsearch \| else \| set hlsearch \| endif<cr>
 " Do not make Q go to ex-mode
 nnoremap Q <Nop>
 
