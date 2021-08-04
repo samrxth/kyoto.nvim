@@ -80,7 +80,9 @@ require("packer").startup(
 
     use "ray-x/lsp_signature.nvim"
 
-    use "creativenull/diagnosticls-nvim"
+    use {"creativenull/diagnosticls-nvim", opt = true}
+
+    use {"folke/lua-dev.nvim", opt = true}
 
     for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
       use(plugin)

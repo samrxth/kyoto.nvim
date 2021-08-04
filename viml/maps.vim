@@ -152,7 +152,7 @@ nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_sag
 nnoremap <silent> gs <cmd>lua require('lsopsaga.signaturehelp').signature_help()<CR>
 " Rename symbols
 nnoremap <silent>gr <cmd>lua require('lspsaga.rename').rename()<CR>
-" Preview definitions
+" Preview definition
 nnoremap <silent> gd <cmd>lua require'lspsaga.provider'.preview_definition()<CR>
 " Show suggestions/errors/warnings for the line
 nnoremap <silent><leader>cd <cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>
@@ -161,6 +161,9 @@ nnoremap <silent><leader>cc <cmd>lua require'lspsaga.diagnostic'.show_cursor_dia
 nnoremap <silent> ]e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>
 " Jump to the previous diagnostic suggestion
 nnoremap <silent> [e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>
+
+" Jump to definition
+nnoremap <silent> gD <cmd>lua vim.lsp.buf.definition()<CR>
 
 " Toggle error menu
 nnoremap <silent><leader>h :TroubleToggle<CR>
@@ -193,3 +196,5 @@ nnoremap <silent> <leader>lg :LazyGit<CR>
 cmap <expr> <Tab> wilder#in_context() ? wilder#next() : "\<Tab>"
 " Wilder iterate through results
 cmap <expr> <S-Tab> wilder#in_context() ? wilder#previous() : "\<S-Tab>"
+
+command LoadPacker lua require 'pluginList'

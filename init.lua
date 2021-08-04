@@ -29,8 +29,6 @@ require "plugins.which-key-config"
 require "plugins.misc"
 -- source our mappings last(may change)
 vim.cmd "source ~/.config/nvim/viml/maps.vim"
--- we can load packer last since we already have it compiled
-require "pluginList"
 -- auto-commands
 vim.cmd "source ~/.config/nvim/viml/autocmd.vim"
 -- user configurations
