@@ -108,13 +108,9 @@ require("packer").startup(
 
     use {"tweekmonster/startuptime.vim", opt = true}
 
-    use {"vimwiki/vimwiki", opt = true}
-
     use "ray-x/lsp_signature.nvim"
 
     use {"creativenull/diagnosticls-nvim", opt = true}
-
-    use {"folke/lua-dev.nvim", opt = true}
 
     -- Packer can manage itself
     use {"wbthomason/packer.nvim"}
