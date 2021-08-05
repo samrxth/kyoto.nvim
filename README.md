@@ -2,6 +2,8 @@
 
 <p align="center">kyoto.nvim is a fast ⚡, functional and beautiful Neovim configuration.</p>
 
+### Installation
+Find an [installation guide here](https://github.com/samrath2007/kyoto.nvim/wiki/Installation).
 ## Features
 
 - LSP Support (with Autocomplete)
