@@ -1,7 +1,9 @@
 <h1 align="center">🦚 kyoto.nvim</h1>
 
-<p align="center">kyoto.nvim is a fast ⚡, simple and minimal Neovim configuration that aims to replace Graphical IDEs such as Visual Studio Code and Sublime Text.</p>
+<p align="center">kyoto.nvim is a fast ⚡, functional and beautiful Neovim configuration.</p>
 
+### Installation
+Find an [installation guide here](https://github.com/samrath2007/kyoto.nvim/wiki/Installation).
 ## Features
 
 - LSP Support (with Autocomplete)
