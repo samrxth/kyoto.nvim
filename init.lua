@@ -15,14 +15,6 @@ require "plugins.compe-config"
 require "lsp-config"
 -- general configurations
 require "options"
--- lualine configuration
-require "plugins.statusline"
--- nvim-bufferline.lua configuration
-require "plugins.top-bufferline"
--- fuzzy finder configuration
-require "plugins.telescope-config"
--- Git changes(showing in line number) configuration
-require "plugins.gitsigns-config"
 -- configuration to help you remember keybindings
 require "plugins.which-key-config"
 -- nvim tree
@@ -35,3 +27,4 @@ vim.cmd "source ~/.config/nvim/viml/maps.vim"
 vim.cmd "source ~/.config/nvim/viml/autocmd.vim"
 -- user configurations
 pcall(require, "kyotorc")
+
