@@ -8,28 +8,48 @@ require("packer").startup(
 
     use "glepnir/lspsaga.nvim"
     use "kabouzeid/nvim-lspinstall"
-    use "nvim-treesitter/nvim-treesitter"
+    use {
+      "nvim-treesitter/nvim-treesitter",
+      event = 'BufRead',
+      run = ':TSUpdate'
+    }
     use "hrsh7th/nvim-compe"
     use "neovim/nvim-lspconfig"
     use "folke/tokyonight.nvim"
     use {
       "hoob3rt/lualine.nvim",
+      event = "BufWinEnter",
+      config = function()
+        require "plugins.statusline"
+      end,
       requires = {"kyazdani42/nvim-web-devicons", opt = true}
     }
 
     use {
       "nvim-telescope/telescope.nvim",
+      cmd = "Telescope",
+      config = function()
+        require "plugins.telescope-config"
+      end,
       requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
     }
 
     use {
       "akinsho/nvim-bufferline.lua",
+      event = "BufWinEnter",
+      config = function()
+        require "plugins.top-bufferline"
+      end,
       requires = "kyazdani42/nvim-web-devicons"
     }
 
     use "jiangmiao/auto-pairs"
     use {
       "folke/trouble.nvim",
+      cmd = "TroubleToggle",
+      config = function()
+        require("trouble").setup()
+      end,
       requires = "kyazdani42/nvim-web-devicons"
     }
 
@@ -49,6 +69,10 @@ require("packer").startup(
 
     use {
       "lewis6991/gitsigns.nvim",
+      event = "BufReadPre",
+      config = function()
+        require "plugins.gitsigns-config"
+      end,
       requires = {
         "nvim-lua/plenary.nvim"
       }
@@ -61,6 +85,7 @@ require("packer").startup(
     use "yuttie/comfortable-motion.vim"
     use {
       "mhartington/formatter.nvim",
+      cmd = "Format",
       opt = true
     }
     use {
