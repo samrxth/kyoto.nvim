@@ -91,11 +91,6 @@ require("packer").startup(
     use "kdheepak/lazygit.nvim"
     use "yuttie/comfortable-motion.vim"
     use {
-      "mhartington/formatter.nvim",
-      cmd = "Format",
-      opt = true
-    }
-    use {
       "folke/twilight.nvim",
       opt = true
     }
@@ -114,6 +109,7 @@ require("packer").startup(
 
     -- Packer can manage itself
     use {"wbthomason/packer.nvim"}
+
     for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
       use(plugin)
     end

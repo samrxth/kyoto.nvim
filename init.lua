@@ -23,5 +23,4 @@ vim.cmd "source ~/.config/nvim/viml/maps.vim"
 -- auto-commands
 vim.cmd "source ~/.config/nvim/viml/autocmd.vim"
 -- user configurations
-pcall(require, "kyotorc")
-
+require "kyotorc"
