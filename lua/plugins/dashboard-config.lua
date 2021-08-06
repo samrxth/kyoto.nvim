@@ -1,9 +1,9 @@
 local vim = vim
 local g = vim.g
 
-vim.cmd "packadd dashboard-nvim"
-
 g.dashboard_default_executive = "telescope"
+
+vim.cmd "packadd dashboard-nvim"
 
 local custom_header = {
   "",
