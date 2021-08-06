@@ -14,11 +14,11 @@ g.kyoto_lsp_configs = {
     settings = {
       Lua = {
         diagnostics = {
-          globals = {"vim"}
-        }
-      }
-    }
-  }
+          globals = { "vim" },
+        },
+      },
+    },
+  },
 }
 
 -- uncomment this out if you are experiencing issues with nvim-tree.lua

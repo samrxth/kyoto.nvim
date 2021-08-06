@@ -1,0 +1,2 @@
+#!/bin/sh
+stylua init.lua lua/

@@ -1,7 +1,7 @@
 local vim = vim
 vim.o.completeopt = "menu,menuone,noselect"
 
-require "compe".setup {
+require("compe").setup({
   enabled = true,
   autocomplete = true,
   preselect = "enable",
@@ -19,6 +19,6 @@ require "compe".setup {
     nvim_lsp = true,
     nvim_lua = true,
     spell = true,
-    tags = true
-  }
-}
+    tags = true,
+  },
+})
