@@ -4,10 +4,6 @@
 
 ### Installation
 Find an [installation guide here](https://github.com/samrath2007/kyoto.nvim/wiki/Installation).
-
-### Contributing
-Find an [contributing guide here](https://github.com/samrath2007/kyoto.nvim/wiki/Contributing).
-
 ## Features
 
 - LSP Support (with Autocomplete)
