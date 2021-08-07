@@ -31,7 +31,7 @@ g.kyoto_lsp_configs = {
 -- }
 --
 vim.cmd("packadd nvim-tree.lua")
-g.nvim_tree_side = "right"
+-- g.nvim_tree_side = "right"
 
 g.nvim_tree_ignore = { ".git", "node_modules", ".cache" } -- ignore mathcing patterns
 g.nvim_tree_auto_ignore_ft = { "dashboard" } -- don't open tree on specific fiypes.
