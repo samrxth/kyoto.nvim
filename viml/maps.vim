@@ -13,7 +13,7 @@ vnoremap <silent><leader>x "*x
 " Paste from the system clipboard(in normal mode)
 nnoremap <silent><leader>p "*p
 " Paste from the system clipboard(in visual mode)
-nnoremap <silent><leader>p "*p
+vnoremap <silent><leader>p "*p
 " Select everything
 nnoremap <silent><leader>a ggVG
 " Delete a buffer
