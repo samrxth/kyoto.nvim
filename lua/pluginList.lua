@@ -16,7 +16,6 @@ end
 require("packer").startup(function(use)
   use("onsails/lspkind-nvim")
   use({ "kyazdani42/nvim-tree.lua", opt = true, cmd = { "NvimTreeToggle" } })
-
   use("glepnir/lspsaga.nvim")
   use("kabouzeid/nvim-lspinstall")
   use({
@@ -110,7 +109,7 @@ require("packer").startup(function(use)
   use("ray-x/lsp_signature.nvim")
 
   -- Packer can manage itself
-  use({ "wbthomason/packer.nvim" })
+  use("wbthomason/packer.nvim")
 
   for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
     use(plugin)

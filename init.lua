@@ -14,8 +14,6 @@ require("lsp-config")
 require("options")
 -- configuration to help you remember keybindings
 require("plugins.which-key-config")
--- nvim tree
-require("plugins.nvimtree-config")
 -- extra plugins(with shorter configs)
 require("plugins.misc")
 -- source our mappings last(may change)
