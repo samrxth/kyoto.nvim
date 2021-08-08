@@ -23,8 +23,6 @@ opt.pumheight = 20
 opt.foldmethod = "manual"
 vim.cmd("set wildcharm=<Tab>")
 
-g.tokyonight_italic_functions = true
-g.tokyonight_italic_variables = true
 vim.cmd("colorscheme tokyonight")
 
 local disabled_built_ins = {
