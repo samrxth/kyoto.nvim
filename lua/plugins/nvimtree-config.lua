@@ -76,4 +76,6 @@ g.nvim_tree_bindings = {
 }
 
 -- hide statusline when nvim tree is opened
-vim.cmd([[au BufEnter,BufWinEnter,WinEnter,CmdwinEnter * if bufname('%') == "NvimTree" | set laststatus=0 | else | set laststatus=2 | endif]])
+vim.cmd(
+  [[au BufEnter,BufWinEnter,WinEnter,CmdwinEnter * if bufname('%') == "NvimTree" | set laststatus=0 | else | set laststatus=2 | endif]]
+)
