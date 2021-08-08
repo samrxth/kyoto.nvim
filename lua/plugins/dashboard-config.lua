@@ -1,7 +1,7 @@
 local vim = vim
 local g = vim.g
 
-vim.cmd "packadd dashboard-nvim"
+vim.cmd("packadd dashboard-nvim")
 
 g.dashboard_default_executive = "telescope"
 
@@ -25,28 +25,28 @@ local custom_header = {
   "      /,o O' o O o, \\",
   "   _-'. 'o _o _O_o-o.`-_",
   '   `"""---......---"""`',
-  "    K Y O T O    N V I M     "
+  "    K Y O T O    N V I M     ",
 }
 
 g.dashboard_custom_header = custom_header
 
 g.dashboard_custom_section = {
   a = {
-    description = {"  Find File                  SPC f f"},
-    command = "Telescope find_files"
+    description = { "  Find File                  SPC f f" },
+    command = "Telescope find_files",
   },
   b = {
-    description = {"  Recents                    SPC f o"},
-    command = "Telescope oldfiles"
+    description = { "  Recents                    SPC f o" },
+    command = "Telescope oldfiles",
   },
   e = {
-    description = {"洛 New Buffer                 SPC g g"},
-    command = "enew"
+    description = { "洛 New Buffer                 SPC g g" },
+    command = "enew",
   },
   f = {
-    description = {"  Edit Configuration         SPC d c"},
-    command = "e ~/.config/nvim/lua/kyotorc.lua"
-  }
+    description = { "  Edit Configuration         SPC d c" },
+    command = "e ~/.config/nvim/lua/kyotorc.lua",
+  },
 }
 
-g.dashboard_custom_footer = {"KYOTO.NVIM"}
+g.dashboard_custom_footer = { "KYOTO.NVIM" }

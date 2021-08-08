@@ -20,9 +20,9 @@ opt.background = "dark"
 opt.whichwrap:append("<>hl")
 opt.pumheight = 20
 opt.foldmethod = "manual"
-vim.cmd "set wildcharm=<Tab>"
+vim.cmd("set wildcharm=<Tab>")
 
-vim.cmd "colorscheme tokyonight"
+vim.cmd("colorscheme tokyonight")
 
 local disabled_built_ins = {
   "netrw",
@@ -42,7 +42,7 @@ local disabled_built_ins = {
   "logipat",
   "rrhelper",
   "spellfile_plugin",
-  "matchit"
+  "matchit",
 }
 
 for _, plugin in pairs(disabled_built_ins) do
