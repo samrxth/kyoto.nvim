@@ -3,7 +3,14 @@ local g = vim.g
 g.mapleader = " "
 
 -- Transparent background
-g.tokyonight_transparent = false
+-- g.tokyonight_transparent = true
+
+-- plugin config
+g.vimwiki_list = {
+  {
+    path = "~/Documents/vimwiki",
+  },
+}
 
 -- extra plugins to install (must only be strings)
 g.kyoto_extra_plugins = {}
