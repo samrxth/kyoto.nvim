@@ -15,11 +15,12 @@ g.vimwiki_list = {
 -- extra plugins to install (must only be strings)
 g.kyoto_extra_plugins = {}
 
--- uncomment this out if you are experiencing issues with nvim-tree.lua
--- g.nvim_tree_git_hl = 0
--- g.nvim_tree_gitignore = 0
--- g.nvim_tree_show_icons = {
---   git = 0,
---   folders = 1,
---   files = 1
--- }
+local chadtree_settings = {
+  view = {
+    width = 34,
+  },
+  theme = {
+    text_colour_set = "nord",
+  },
+}
+vim.api.nvim_set_var("chadtree_settings", chadtree_settings)

@@ -25,8 +25,6 @@ require("plugins.telescope")
 require("plugins.gitsigns")
 -- configuration to help you remember keybindings
 require("plugins.which-key")
--- nvim tree
-require("plugins.nvimtree")
 -- extra plugins(with shorter configs)
 require("plugins.misc")
 -- source our mappings last(may change)
