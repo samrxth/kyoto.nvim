@@ -7,10 +7,10 @@ vim.opt.nu = true
 vim.opt.rnu = true
 
 require("globals")
-require("plugins.dashboard-config")
+require("plugins.dashboard")
 
 -- autocomplete configuration
-require("plugins.compe-config")
+require("plugins.compe")
 -- Langauge server configuration
 require("lsp-config")
 -- general configurations
@@ -18,15 +18,15 @@ require("options")
 -- lualine configuration
 require("plugins.statusline")
 -- nvim-bufferline.lua configuration
-require("plugins.top-bufferline")
+require("plugins.bufferline")
 -- fuzzy finder configuration
-require("plugins.telescope-config")
+require("plugins.telescope")
 -- Git changes(showing in line number) configuration
-require("plugins.gitsigns-config")
+require("plugins.gitsigns")
 -- configuration to help you remember keybindings
-require("plugins.which-key-config")
+require("plugins.which-key")
 -- nvim tree
-require("plugins.nvimtree-config")
+require("plugins.nvimtree")
 -- extra plugins(with shorter configs)
 require("plugins.misc")
 -- source our mappings last(may change)
