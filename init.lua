@@ -1,5 +1,4 @@
 local vim = vim
-local g = vim.g
 
 -- line-numbers must be declared before dashboard
 -- init because otherwise dashboard shows line numbers

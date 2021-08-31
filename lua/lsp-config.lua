@@ -8,7 +8,11 @@ require("lsp_signature").setup()
 
 local servers = require("lspinstall").installed_servers()
 for _, server in pairs(servers) do
-  require("lspconfig")[server].setup({})
+  if vim.g.lsp_config[server] then
+    require("lspconfig")[server].setup(vim.g.lsp_config[server])
+    else
+    require("lspconfig")[server].setup({})
+  end
   require("lsp_signature").on_attach()
 end
 

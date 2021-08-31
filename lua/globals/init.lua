@@ -15,6 +15,18 @@ g.vimwiki_list = {
 -- extra plugins to install (must only be strings)
 g.kyoto_extra_plugins = {}
 
+g.lsp_config = {
+  lua = {
+    settings = {
+      Lua = {
+        diagnostics = {
+          globals = { "vim" },
+        },
+      },
+    },
+  },
+}
+
 local chadtree_settings = {
   view = {
     width = 34,
