@@ -70,8 +70,10 @@ tnoremap <silent> <C-K> :resize +4<CR>
 
 " Create/Toggle a terminal to the bottom
 nnoremap <silent><leader>` :call ChooseTerm("term-slider", 1)<CR>
+tnoremap <silent><leader>` <C-\><C-n>:call ChooseTerm("term-slider", 1)<CR>
 " Create/Toggle a terminal in a buffer 
 nnoremap <silent><leader><CR> :call ChooseTerm("term-pane", 0)<CR>
+tnoremap <silent><leader><CR> <C-\><C-n>:call ChooseTerm("term-pane", 0)<CR>
 
 " Terminal Toggle
 function! ChooseTerm(termname, slider)
@@ -117,23 +119,8 @@ nnoremap <silent><leader>fg :Telescope git_status<CR>
 " Fuzzy old-files finder
 nnoremap <silent><leader>fo :Telescope oldfiles<CR>
 
-" Open floating terminal
-nnoremap <leader>to :lua require('lspsaga.floaterm').open_float_terminal()<CR>
-" Close floating terminal
-nnoremap <leader>tc :lua require('lspsaga.floaterm').close_float_terminal()<CR>
-
 inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-" " compe completion
-" " Use enter to select
-" inoremap <silent><expr> <CR> compe#confirm('<CR>')
-" " Close compe-completion popup
-" inoremap <silent><expr> <C-e> compe#close('<C-e>')
-" " Scroll down compe auto-docs
-" inoremap <silent><expr> <C-f> compe#scroll({ 'delta': +4 })
-" " Scroll up compe auto-docs
-" inoremap <silent><expr> <C-d> compe#scroll({ 'delta': -4 })
 
 " Lspsaga
 " Symobols Finder
