@@ -6,7 +6,6 @@ require("packer").startup(function(use)
   use("glepnir/lspsaga.nvim")
   use("kabouzeid/nvim-lspinstall")
   use("nvim-treesitter/nvim-treesitter")
-  use("hrsh7th/nvim-compe")
   use("neovim/nvim-lspconfig")
   use("folke/tokyonight.nvim")
   use({
@@ -81,11 +80,11 @@ require("packer").startup(function(use)
 
   use({ "vimwiki/vimwiki", opt = true })
 
-  use("ray-x/lsp_signature.nvim")
-
   use({ "creativenull/diagnosticls-nvim", opt = true })
 
   use({ "folke/lua-dev.nvim", opt = true })
+
+  use("ms-jpq/coq_nvim")
 
   for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
     use(plugin)

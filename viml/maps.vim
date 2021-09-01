@@ -125,15 +125,15 @@ nnoremap <leader>tc :lua require('lspsaga.floaterm').close_float_terminal()<CR>
 inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-" compe completion
-" Use enter to select
-inoremap <silent><expr> <CR> compe#confirm('<CR>')
-" Close compe-completion popup
-inoremap <silent><expr> <C-e> compe#close('<C-e>')
-" Scroll down compe auto-docs
-inoremap <silent><expr> <C-f> compe#scroll({ 'delta': +4 })
-" Scroll up compe auto-docs
-inoremap <silent><expr> <C-d> compe#scroll({ 'delta': -4 })
+" " compe completion
+" " Use enter to select
+" inoremap <silent><expr> <CR> compe#confirm('<CR>')
+" " Close compe-completion popup
+" inoremap <silent><expr> <C-e> compe#close('<C-e>')
+" " Scroll down compe auto-docs
+" inoremap <silent><expr> <C-f> compe#scroll({ 'delta': +4 })
+" " Scroll up compe auto-docs
+" inoremap <silent><expr> <C-d> compe#scroll({ 'delta': -4 })
 
 " Lspsaga
 " Symobols Finder

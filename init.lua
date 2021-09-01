@@ -9,7 +9,7 @@ require("globals")
 require("plugins.dashboard")
 
 -- autocomplete configuration
-require("plugins.compe")
+-- require("plugins.compe")
 -- Langauge server configuration
 require("lsp-config")
 -- general configurations

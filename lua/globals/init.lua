@@ -36,3 +36,15 @@ local chadtree_settings = {
   },
 }
 vim.api.nvim_set_var("chadtree_settings", chadtree_settings)
+
+g.coq_settings = {
+  clients = {
+    tabnine = {
+      enabled = true,
+    },
+  },
+}
+
+g.coq_settings = {
+  auto_start = true,
+}
