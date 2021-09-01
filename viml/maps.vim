@@ -164,8 +164,17 @@ nnoremap <silent><leader>/ :Commentary<CR>
 " Toggle comment for selections
 vnoremap <silent><leader>/ :Commentary<CR>
 
-" Open CHADtree
-nnoremap <silent> <leader>nn :CHADopen<CR>
+function! ToggleNvimTree()
+   if exists(":NvimTreeToggle") == 0
+     " lazy load nvim-tree
+     silent! packadd nvim-tree.lua
+   endif
+
+   NvimTreeToggle
+ endfunction
+
+ " Call nvim-tree lazy load function
+ nnoremap <silent> <leader>nn :call ToggleNvimTree()<CR>
 
 "Open lazgit
 nnoremap <silent> <leader>lg :LazyGit<CR>

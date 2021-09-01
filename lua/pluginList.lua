@@ -2,7 +2,7 @@ local vim = vim
 
 require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
-
+  use({ "kyazdani42/nvim-tree.lua", opt = true, cmd = { "NvimTreeToggle" } })
   use("glepnir/lspsaga.nvim")
   use("kabouzeid/nvim-lspinstall")
   use("nvim-treesitter/nvim-treesitter")
@@ -48,12 +48,6 @@ require("packer").startup(function(use)
     requires = {
       "nvim-lua/plenary.nvim",
     },
-  })
-
-  use({
-    "ms-jpq/chadtree",
-    branch = "chad",
-    run = "python3 -m chadtree deps",
   })
 
   use("simrat39/symbols-outline.nvim")

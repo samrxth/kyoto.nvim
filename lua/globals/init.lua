@@ -27,17 +27,8 @@ g.lsp_config = {
   },
 }
 
-local chadtree_settings = {
-  view = {
-    width = 34,
-  },
-  theme = {
-    text_colour_set = "nord",
-  },
-}
-vim.api.nvim_set_var("chadtree_settings", chadtree_settings)
-
 g.coq_settings = {
+  auto_start = true,
   clients = {
     tabnine = {
       enabled = true,
@@ -45,6 +36,11 @@ g.coq_settings = {
   },
 }
 
-g.coq_settings = {
-  auto_start = true,
-}
+-- uncomment this out if you are experiencing issues with nvim-tree.lua
+-- g.nvim_tree_git_hl = 0
+-- g.nvim_tree_gitignore = 0
+-- g.nvim_tree_show_icons = {
+--   git = 0,
+--   folders = 1,
+--   files = 1
+-- }

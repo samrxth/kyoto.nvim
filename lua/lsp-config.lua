@@ -6,7 +6,6 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require("lspinstall").setup() -- important
-require("lsp_signature").setup()
 
 local servers = require("lspinstall").installed_servers()
 for _, server in pairs(servers) do
