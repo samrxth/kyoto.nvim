@@ -119,9 +119,6 @@ nnoremap <silent><leader>fg :Telescope git_status<CR>
 " Fuzzy old-files finder
 nnoremap <silent><leader>fo :Telescope oldfiles<CR>
 
-inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
 " Lspsaga
 " Symobols Finder
 nnoremap <silent> gh <cmd>lua require'lspsaga.provider'.lsp_finder()<CR>

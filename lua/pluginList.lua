@@ -12,23 +12,19 @@ require("packer").startup(function(use)
     "hoob3rt/lualine.nvim",
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
   })
-
   use({
     "nvim-telescope/telescope.nvim",
     requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } },
   })
-
   use({
     "akinsho/nvim-bufferline.lua",
     requires = "kyazdani42/nvim-web-devicons",
   })
-
   use("jiangmiao/auto-pairs")
   use({
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
   })
-
   use({
     "glepnir/dashboard-nvim",
     opt = true,
@@ -42,14 +38,12 @@ require("packer").startup(function(use)
       "DashboardNewfile",
     },
   })
-
   use({
     "lewis6991/gitsigns.nvim",
     requires = {
       "nvim-lua/plenary.nvim",
     },
   })
-
   use("simrat39/symbols-outline.nvim")
   use("folke/which-key.nvim")
   use("tpope/vim-commentary")
@@ -69,17 +63,11 @@ require("packer").startup(function(use)
     "folke/zen-mode.nvim",
     opt = true,
   })
-
   use({ "tweekmonster/startuptime.vim", opt = true })
-
   use({ "vimwiki/vimwiki", opt = true })
-
   use({ "creativenull/diagnosticls-nvim", opt = true })
-
   use({ "folke/lua-dev.nvim", opt = true })
-
   use("ms-jpq/coq_nvim")
-
   for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
     use(plugin)
   end

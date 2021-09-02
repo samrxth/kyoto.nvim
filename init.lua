@@ -8,8 +8,6 @@ vim.opt.rnu = true
 require("globals")
 require("plugins.dashboard")
 
--- autocomplete configuration
--- require("plugins.compe")
 -- Langauge server configuration
 require("lsp-config")
 -- general configurations
