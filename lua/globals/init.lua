@@ -27,7 +27,9 @@ g.lsp_config = {
   },
 }
 
-g.coq_settings = { auto_start = true }
+g.coq_settings = { auto_start = true, keymap = {
+  jump_to_mark = "<c-q>",
+} }
 
 -- uncomment this out if you are experiencing issues with nvim-tree.lua
 -- g.nvim_tree_git_hl = 0
