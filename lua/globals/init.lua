@@ -27,14 +27,7 @@ g.lsp_config = {
   },
 }
 
-g.coq_settings = {
-  auto_start = true,
-  clients = {
-    tabnine = {
-      enabled = true,
-    },
-  },
-}
+g.coq_settings = { auto_start = true }
 
 -- uncomment this out if you are experiencing issues with nvim-tree.lua
 -- g.nvim_tree_git_hl = 0
