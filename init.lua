@@ -1,3 +1,22 @@
+--          _/_
+--        -'a\\
+--          ||
+--          |J
+--          2_\\
+--         /:::\\
+--        |;ooo;|
+--        /Oo@ o\\
+--       '/o oOo\\`
+--       /@ O o @\\
+--      '/.o,()o,\\`
+--      /().O O  o\\
+--     / @ , @. () \\
+--    /,o O' o O o, \\
+-- _-'. 'o _o _O_o-o.`-_
+-- `"""---......---"""`
+--  K Y O T O    N V I M
+-- https://github.com/samrath2007/kyoto.nvim
+
 local vim = vim
 
 -- line-numbers must be declared before dashboard
