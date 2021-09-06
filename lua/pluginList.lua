@@ -68,6 +68,8 @@ require("packer").startup(function(use)
   use({ "folke/lua-dev.nvim", opt = true })
   use("ms-jpq/coq_nvim")
   use("ms-jpq/coq.artifacts")
+  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+  use({ "pantharshit00/vim-prisma", opt = true })
   for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
     use(plugin)
   end
