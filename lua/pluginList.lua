@@ -70,10 +70,6 @@ require("packer").startup(function(use)
   use("ms-jpq/coq.artifacts")
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
   use({ "pantharshit00/vim-prisma", opt = true })
-  use({
-    "ray-x/navigator.lua",
-    requires = { "ray-x/guihua.lua", run = "cd lua/fzy && make" },
-  })
   for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
     use(plugin)
   end
