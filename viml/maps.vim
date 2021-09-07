@@ -53,7 +53,7 @@ cnoreabbrev B buffer
 
 " Change buffer sizes 
 "
-" Make uffer narrower
+" Make buffer narrower
 nnoremap <silent> <C-H> :vertical resize -4<CR>
 " Make buffer wider
 nnoremap <silent> <C-L> :vertical resize +4><CR>
@@ -133,7 +133,7 @@ nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_sag
 " Scroll up in lspsaga menus
 nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
 " Show signature help(imo not thaat useful)
-nnoremap <silent> gs <cmd>lua require('lsopsaga.signaturehelp').signature_help()<CR>
+nnoremap <silent> gs <cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>
 " Rename symbols
 nnoremap <silent>gr <cmd>lua require('lspsaga.rename').rename()<CR>
 " Preview definition
