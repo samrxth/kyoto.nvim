@@ -42,8 +42,9 @@ You can find a list of supported languages [here](https://github.com/kabouzeid/n
 ## Sponsors
 
 <p>
-  <a href="https://github.com/InternNova-Labs/web/"><h2>InternNova</h2></a>
-  <img src="https://github.com/InternNova-Labs/web/blob/main/public/logo.png?raw=true" />
+  <a href="https://github.com/InternNova-Labs/web/"><h2>InternNova</h2>
+    <img src="https://github.com/InternNova-Labs/web/blob/main/public/logo.png?raw=true" />
+  </a>
 </p>
 
 
