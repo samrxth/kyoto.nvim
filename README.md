@@ -43,7 +43,7 @@ You can find a list of supported languages [here](https://github.com/kabouzeid/n
 
 <p>
   <a href="https://github.com/InternNova-Labs/web/"><h2>InternNova</h2></a>
-  <img src="https://github.com/InternNova-Labs/web/blob/main/public/logo.png?raw=true">
+  <img src="https://github.com/InternNova-Labs/web/blob/main/public/logo.png?raw=true" />
 </p>
 ## Discord
 
