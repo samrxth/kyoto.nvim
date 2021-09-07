@@ -27,6 +27,8 @@ vim.opt.rnu = true
 require("globals")
 require("plugins.dashboard")
 
+-- extra plugins(with shorter configs)
+require("plugins.misc")
 -- Langauge server configuration
 require("lsp-config")
 -- general configurations
@@ -41,8 +43,6 @@ require("plugins.telescope")
 require("plugins.gitsigns")
 -- configuration to help you remember keybindings
 require("plugins.which-key")
--- extra plugins(with shorter configs)
-require("plugins.misc")
 -- source our mappings last(may change)
 vim.cmd("source ~/.config/nvim/viml/maps.vim")
 -- auto-commands
