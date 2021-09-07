@@ -45,8 +45,9 @@ You can find a list of supported languages [here](https://github.com/kabouzeid/n
   <a href="https://github.com/InternNova-Labs/web/"><h2>InternNova</h2></a>
   <img src="https://github.com/InternNova-Labs/web/blob/main/public/logo.png?raw=true" />
 </p>
-## Discord
 
+
+## Discord
 ##### Doubts? join our <a href="https://discord.com/invite/2ZtCvPYUv5">discord server</a>
 
 <a href="https://discord.com/invite/2ZtCvPYUv5"><img src="https://invidget.switchblade.xyz/2ZtCvPYUv5"/></a>
