@@ -7,13 +7,19 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require("lspinstall").setup() -- important
 
+local function common_on_attach()
+  require("lsp_signature").on_attach({})
+end
+
 local servers = require("lspinstall").installed_servers()
 for _, server in pairs(servers) do
-  if vim.g.lsp_config[server] then
-    lsp[server].setup(coq.lsp_ensure_capabilities(vim.g.lsp_config[server]))
-  else
-    lsp[server].setup(coq.lsp_ensure_capabilities())
-  end
+  local client = lsp[server]
+  local config = vim.g.lsp_config[server] or client
+
+  lsp[server].setup(coq.lsp_ensure_capabilities({
+    on_attach = config.on_attach or common_on_attach,
+    settings = config.settings or {}
+  }))
 end
 
 vim.fn.sign_define(
