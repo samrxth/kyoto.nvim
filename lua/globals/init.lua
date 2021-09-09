@@ -4,6 +4,7 @@ g.mapleader = " "
 
 -- Transparent background
 -- g.tokyonight_transparent = true
+g.tokyonight_sidebars = { "terminal" }
 
 -- plugin config
 g.vimwiki_list = {
