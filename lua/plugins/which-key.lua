@@ -86,13 +86,16 @@ require("which-key").register({
     name = "+New Buffer",
     g = "New Buffer",
   },
+  h = "Trouble",
   l = "+LazyGit",
   n = {
     name = "+Explorer",
-    n = "Explorer"
+    n = "Explorer",
   },
   s = {
     name = "+SymbolsOutline",
-    o = "Toggle Symbols Outline"
-  }
-}, { prefix = "<leader>" })
+    o = "Toggle Symbols Outline",
+  },
+}, {
+  prefix = "<leader>",
+})
