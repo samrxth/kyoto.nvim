@@ -43,3 +43,59 @@ require("which-key").setup({
   triggers = "auto", -- automatically setup triggers
   -- triggers = {"<leader>"} -- or specifiy a list manually
 })
+
+require("which-key").register({
+  ["/"] = "Comment",
+  ["<CR>"] = "Open Terminal (Buffer)",
+  ["`"] = "Open Terminal (Horizontal)",
+  ["1"] = "Go to Buffer 1",
+  ["2"] = "Go to Buffer 2",
+  ["3"] = "Go to Buffer 3",
+  ["4"] = "Go to Buffer 4",
+  ["5"] = "Go to Buffer 5",
+  ["6"] = "Go to Buffer 6",
+  ["7"] = "Go to Buffer 7",
+  ["8"] = "Go to Buffer 8",
+  ["9"] = "Go to Buffer 9",
+  a = "Select all",
+  b = {
+    name = "+Buffer",
+    b = "Show blame for line",
+    d = "Delete a Buffer",
+  },
+  c = {
+    name = "+Code Action",
+    a = "Code Actions",
+    c = "Cursor Diagnostics",
+    d = "Line Diagnostics",
+  },
+  d = {
+    name = "+Kyoto.nvim",
+    c = "Edit kyotorc",
+  },
+  f = {
+    name = "+Search",
+    b = "Find Buffer",
+    f = "Find File",
+    g = "Find changed File",
+    h = "Find Help",
+    i = "Find Text",
+    o = "Find recent File",
+  },
+  g = {
+    name = "+New Buffer",
+    g = "New Buffer",
+  },
+  h = "Trouble",
+  l = "+LazyGit",
+  n = {
+    name = "+Explorer",
+    n = "Explorer",
+  },
+  s = {
+    name = "+SymbolsOutline",
+    o = "Toggle Symbols Outline",
+  },
+}, {
+  prefix = "<leader>",
+})
