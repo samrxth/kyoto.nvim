@@ -181,6 +181,30 @@ cmap <expr> <Tab> wilder#in_context() ? wilder#next() : "\<Tab>"
 " Wilder iterate through results
 cmap <expr> <S-Tab> wilder#in_context() ? wilder#previous() : "\<S-Tab>"
 
+" Debug keybindings "
+nnoremap <silent><leader>db <cmd>lua require"dap".toggle_breakpoint()<CR>
+nnoremap <silent><C-h> <cmd>lua require"dap".continue()<CR>
+nnoremap <silent><leader>dct <cmd>lua require"dap".continue()<CR>
+
+nnoremap <silent><C-l> <cmd>lua require"dap".step_out()<CR>
+nnoremap <silent><leader>dsv <cmd>lua require"dap".step_out()<CR>
+
+nnoremap <silent><C-j> <cmd>lua require"dap".step_into()<CR>
+nnoremap <silent><leader>dsi <cmd>lua require"dap".step_into()<CR>
+
+nnoremap <silent><C-k> <cmd>lua require"dap".step_over()<CR>
+nnoremap <silent><leader>dso <cmd>lua require"dap".step_over()<CR>
+
+nnoremap <silent><leader>dsc <cmd>lua require"dap.ui.variables".scopes()<CR>
+nnoremap <silent><leader>dhh <cmd>lua require"dap.ui.variables".hover()<CR>
+nnoremap <silent><leader>dhv <cmd>lua require"dap.ui.variables".visual_hover()<CR>
+nnoremap <silent><leader>duf <cmd>lua local widgets=require'dap.ui.widgets';widgets.centered_float(widgets.scopes)<CR>
+
+nnoremap <silent><leader>dsbr <cmd>lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>
+nnoremap <silent><leader>dsbm <cmd>lua require"dap".set_breakpoint(nil, nil, vim.fn.input("Log point message: "))<CR>
+
+nnoremap <silent><leader>dr <cmd>lua require"dap".repl.open()<CR>
+
 command LoadPacker lua require 'pluginList'
 
 nnoremap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>
