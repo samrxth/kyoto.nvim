@@ -43,6 +43,8 @@ require("plugins.gitsigns")
 require("plugins.which-key")
 -- extra plugins(with shorter configs)
 require("plugins.misc")
+-- Debug configuration
+require("plugins.debug")
 -- source our mappings last(may change)
 vim.cmd("source ~/.config/nvim/viml/maps.vim")
 -- auto-commands
