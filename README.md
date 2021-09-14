@@ -22,10 +22,20 @@ Find an [installation guide here](https://github.com/samrath2007/kyoto.nvim/wiki
 
 ## Supported Languages
 
+### LSP
+
 You can find a list of supported languages [here](https://github.com/kabouzeid/nvim-lspinstall/tree/main/lua/lspinstall/servers). To install any of them run
 
 ```
 :LspInstall <language server name>
+```
+
+### DAP
+
+You can find a list of supported Debuggers [here](https://github.com/Pocco81/DAPInstall.nvim#list-of-debuggers). To install any of them run
+
+```
+:DIInstall <debugger>
 ```
 
 ## Notable Plugins
