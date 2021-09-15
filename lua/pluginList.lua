@@ -73,6 +73,8 @@ require("packer").startup(function(use)
   use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
   use({ "Pocco81/DAPInstall" })
   use("p00f/nvim-ts-rainbow")
+  use("kristijanhusak/orgmode.nvim")
+  use("ms-jpq/coq.thirdparty")
   for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
     use(plugin)
   end
