@@ -90,11 +90,11 @@ require("which-key").register({
         name = "+More Breakpoint Options",
         r = "Breakpoint with condition",
         m = "Breakpoint with message",
-      }
+      },
     },
     u = {
       name = "+UI options",
-      f = "Float widgets"
+      f = "Float widgets",
     },
   },
   f = {
