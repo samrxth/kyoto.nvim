@@ -7,9 +7,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require("lspinstall").setup() -- important
 
-local function common_on_attach()
-  require("lsp_signature").on_attach({})
-end
+local function common_on_attach() end
 
 local servers = require("lspinstall").installed_servers()
 for _, server in pairs(servers) do
@@ -18,7 +16,7 @@ for _, server in pairs(servers) do
 
   lsp[server].setup(coq.lsp_ensure_capabilities({
     on_attach = config.on_attach or common_on_attach,
-    settings = config.settings or {}
+    settings = config.settings or {},
   }))
 end
 
