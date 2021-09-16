@@ -52,8 +52,8 @@ You can find a list of supported Debuggers [here](https://github.com/Pocco81/DAP
 ## Sponsors
 
 <p>
-  <a href="https://github.com/InternNova-Labs/web/"><h2>InternNova</h2>
-    <img src="https://github.com/InternNova-Labs/web/blob/main/public/logo.png?raw=true" />
+  <a href="https://github.com/InternNova-Labs/InternNova/"><h2>InternNova</h2>
+    <img src="https://github.com/InternNova-Labs/web/blob/main/public/images/logo.png?raw=true" />
   </a>
 </p>
 
