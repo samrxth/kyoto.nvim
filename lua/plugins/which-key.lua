@@ -110,16 +110,13 @@ require("which-key").register({
     name = "+New Buffer",
     g = "New Buffer",
   },
-  h = "Trouble",
+  h = "Errors Dashboard",
   k = {
     name = "+Kyoto.nvim",
     c = "Edit kyotorc",
   },
   l = "+LazyGit",
-  n = {
-    name = "+Explorer",
-    n = "Explorer",
-  },
+  n = "Explorer",
   o = {
     name = "+Orgmode",
     a = "Open agenda prompt",

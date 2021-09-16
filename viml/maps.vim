@@ -170,7 +170,7 @@ function! ToggleNvimTree()
  endfunction
 
 " Call nvim-tree lazy load function
-nnoremap <silent> <leader>nn :call ToggleNvimTree()<CR>
+nnoremap <silent> <leader>n :call ToggleNvimTree()<CR>
 
 "Open lazygit
 nnoremap <silent> <leader>lg :LazyGit<CR>
