@@ -75,6 +75,8 @@ require("packer").startup(function(use)
   use("p00f/nvim-ts-rainbow")
   use("kristijanhusak/orgmode.nvim")
   use("ms-jpq/coq.thirdparty")
+  use("lukas-reineke/indent-blankline.nvim")
+
   for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
     use(plugin)
   end
