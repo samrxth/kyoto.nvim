@@ -15,10 +15,8 @@ Find an [installation guide here](https://github.com/samrath2007/kyoto.nvim/wiki
 
 ## Screenshots
 
-<img src="./assets/screenshots/general-open-file.png" alt="">
-<img src="./assets/screenshots/go-to-definition.png" alt="">
-<img src="./assets/screenshots/quick-doc.png" alt="">
-<img src="./assets/screenshots/telescope.png" alt="">
+<img src="./assets/screenshots/ss1.png" alt="">
+<img src="./assets/screenshots/ss2.png" alt="">
 
 ## Supported Languages
 
