@@ -43,6 +43,8 @@ g.coq_settings = {
   },
 }
 
+g.kyotorc_ui = { theme = "onenord", statusline_style = "default" }
+
 -- uncomment this out if you are experiencing issues with nvim-tree.lua
 -- g.nvim_tree_git_hl = 0
 -- g.nvim_tree_gitignore = 0

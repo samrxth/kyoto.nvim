@@ -25,6 +25,8 @@ vim.opt.nu = true
 vim.opt.rnu = true
 
 require("globals")
+require("colors")
+require("colors.highlights")
 require("plugins.dashboard")
 
 -- Langauge server configuration
