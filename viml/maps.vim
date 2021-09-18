@@ -118,8 +118,14 @@ nnoremap <silent><leader>fi :Telescope live_grep<CR>
 nnoremap <silent><leader>fg :Telescope git_status<CR>
 " Fuzzy old-files finder
 nnoremap <silent><leader>fo :Telescope oldfiles<CR>
+" Fuzzy command finder
+nnoremap <silent><leader>fc :Telescope commands<CR>
+" Fuzzy current file word finder
+nnoremap <silent><leader>fz :Telescope current_buffer_fuzzy_find<CR>
+" Fuzzy workspace symbols
+nnoremap <silent><leader>fs :Telescope lsp_workspace_symbols<CR>
 
-" Symobols Finder
+" Symbols Finder
 nnoremap <silent> gh <cmd>lua require'lspsaga.provider'.lsp_finder()<CR>
 " Show code actions
 nnoremap <silent><leader>ca <cmd>lua require('lspsaga.codeaction').code_action()<CR>
@@ -150,8 +156,9 @@ nnoremap <silent> gD <cmd>lua vim.lsp.buf.definition()<CR>
 
 " Toggle error menu
 nnoremap <silent><leader>h :TroubleToggle<CR>
+
 " Show symbols outline
-nnoremap <silent><leader>so :SymbolsOutline<CR>
+nnoremap <silent><leader>so :Vista nvim_lsp<CR>
 " Show blame for line
 nnoremap <silent><leader>bb :Gitsigns toggle_current_line_blame<CR>
 

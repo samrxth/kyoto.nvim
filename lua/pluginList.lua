@@ -43,7 +43,7 @@ require("packer").startup(function(use)
       "nvim-lua/plenary.nvim",
     },
   })
-  use("simrat39/symbols-outline.nvim")
+  use("liuchengxu/vista.vim")
   use("folke/which-key.nvim")
   use("tpope/vim-commentary")
   use("kdheepak/lazygit.nvim")

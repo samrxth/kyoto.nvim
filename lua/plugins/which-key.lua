@@ -97,14 +97,18 @@ require("which-key").register({
       f = "Float widgets",
     },
   },
+  -- fc-commands, fz-current_buff_fuzzy_find, fs-workspacesymols;
   f = {
     name = "+Search",
-    b = "Find Buffer",
-    f = "Find File",
-    g = "Find changed File",
-    h = "Find Help",
-    i = "Find Text",
-    o = "Find recent File",
+    b = "Find buffer",
+    f = "Find file",
+    g = "Find changed file",
+    h = "Find help",
+    i = "Find text in current workspace",
+    o = "Find recent files",
+    c = "Find commands",
+    z = "Find text in current file",
+    s = "Find symbols in the current workspace"
   },
   g = {
     name = "+New Buffer",
@@ -139,8 +143,8 @@ require("which-key").register({
     ["$"] = "Archive headline",
   },
   s = {
-    name = "+SymbolsOutline",
-    o = "Toggle Symbols Outline",
+    name = "+SymbolsFinder",
+    o = "Toggle Symbols Finder",
   },
 }, {
   prefix = "<leader>",
