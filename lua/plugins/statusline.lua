@@ -353,6 +353,7 @@ components.active[3][10] = {
     bg = colors.one_bg,
   },
 }
+components.inactive = components.active
 
 require("feline").setup({
   colors = {
