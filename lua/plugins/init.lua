@@ -20,3 +20,5 @@ require("plugins.tree-sitter")
 require("plugins.orgmode")
 -- Error finder configurations
 require("plugins.trouble")
+-- Project management
+require("plugins.project")

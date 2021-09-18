@@ -36,14 +36,18 @@ g.dashboard_custom_section = {
     command = "Telescope find_files",
   },
   b = {
+    description = { "冷 Find Project               SPC f p" },
+    command = "Telescope projects",
+  },
+  c = {
     description = { "  Recents                    SPC f o" },
     command = "Telescope oldfiles",
   },
-  e = {
+  d = {
     description = { "洛 New Buffer                 SPC g g" },
     command = "enew",
   },
-  f = {
+  e = {
     description = { "  Edit Configuration         SPC d c" },
     command = "e ~/.config/nvim/lua/kyotorc.lua",
   },

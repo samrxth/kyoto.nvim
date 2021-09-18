@@ -129,6 +129,7 @@ require("packer").startup(function(use)
   use("ms-jpq/coq.thirdparty")
   use("lukas-reineke/indent-blankline.nvim")
   use("famiu/feline.nvim")
+  use("ahmedkhalf/project.nvim")
 
   for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
     use(plugin)

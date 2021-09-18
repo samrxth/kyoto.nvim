@@ -124,6 +124,8 @@ nnoremap <silent><leader>fc :Telescope commands<CR>
 nnoremap <silent><leader>fz :Telescope current_buffer_fuzzy_find<CR>
 " Fuzzy workspace symbols
 nnoremap <silent><leader>fs :Telescope lsp_workspace_symbols<CR>
+" Search projects (projects.nvim) 
+nnoremap <silent><leader>fp :Telescope projects<CR>
 
 " Symbols Finder
 nnoremap <silent> gh <cmd>lua require'lspsaga.provider'.lsp_finder()<CR>
