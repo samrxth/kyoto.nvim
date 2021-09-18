@@ -108,7 +108,7 @@ require("which-key").register({
     o = "Find recent files",
     c = "Find commands",
     z = "Find text in current file",
-    s = "Find symbols in the current workspace"
+    s = "Find symbols in the current workspace",
   },
   g = {
     name = "+New Buffer",
