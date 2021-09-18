@@ -51,3 +51,5 @@ g.coq_settings = {
 --   folders = 1,
 --   files = 1
 -- }
+--
+vim.opt.termguicolors = true
