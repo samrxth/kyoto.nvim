@@ -89,10 +89,10 @@ end
 -- [[ Plugin Highlights
 
 -- Dashboard
-fg("DashboardCenter", grey_fg)
-fg("DashboardFooter", grey_fg)
-fg("DashboardHeader", grey_fg)
-fg("DashboardShortcut", grey_fg)
+fg("DashboardCenter", nord_blue)
+fg("DashboardFooter", nord_blue)
+fg("DashboardHeader", nord_blue)
+fg("DashboardShortcut", nord_blue)
 
 -- Git signs
 fg_bg("DiffAdd", nord_blue, "none")
