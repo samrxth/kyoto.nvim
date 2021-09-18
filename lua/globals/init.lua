@@ -10,10 +10,6 @@ g.indent_blankline_buftype_exclude = { "terminal", "nofile" }
 
 g.mapleader = " "
 
--- Transparent background
--- g.tokyonight_transparent = true
-g.tokyonight_sidebars = { "terminal" }
-
 -- plugin config
 g.vimwiki_list = {
   {
@@ -24,6 +20,7 @@ g.vimwiki_list = {
 -- extra plugins to install (must only be strings)
 g.kyoto_extra_plugins = {}
 
+-- Configs for LSPs
 g.lsp_config = {
   lua = {
     settings = {
@@ -36,6 +33,7 @@ g.lsp_config = {
   },
 }
 
+-- COQ-nvim completion config
 g.coq_settings = {
   auto_start = "shut-up",
   keymap = {
@@ -43,7 +41,14 @@ g.coq_settings = {
   },
 }
 
-g.kyotorc_ui = { theme = "onenord", statusline_style = "default" }
+-- UI CONFIGS
+g.kyotorc_ui = {
+  -- find a list of themes at https://github.com/NvChad/nvim-base16.lua/tree/master/lua/themes
+  theme = "onenord",
+  -- Find a list of options at lua/statusline.lua(icon_styles var)
+  statusline_style = "default",
+  -- transparent = true,
+}
 
 -- uncomment this out if you are experiencing issues with nvim-tree.lua
 -- g.nvim_tree_git_hl = 0
@@ -53,5 +58,5 @@ g.kyotorc_ui = { theme = "onenord", statusline_style = "default" }
 --   folders = 1,
 --   files = 1
 -- }
---
+
 vim.opt.termguicolors = true
