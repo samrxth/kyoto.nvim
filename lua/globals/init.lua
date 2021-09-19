@@ -46,7 +46,7 @@ g.kyotorc_ui = {
   -- find a list of themes at https://github.com/NvChad/nvim-base16.lua/tree/master/lua/themes
   theme = "nord",
   -- Find a list of options at lua/statusline.lua(icon_styles var)
-  statusline_style = "default",
+  statusline_style = "arrow",
   -- transparent = true,
 }
 
