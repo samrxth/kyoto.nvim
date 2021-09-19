@@ -1,7 +1,7 @@
 " Go to the beginning of the line in insert mode
 inoremap <silent><C-a> <C-o>0
 " Go to the ending of the line in insert mode
-inoremap <silent><C-b> <C-o>$
+inoremap <silent><C-z> <C-o>$
 " Paste from the system clipboard(in normal mode)
 nnoremap <silent><leader>y "*y
 " Paste from the system clipboard(in visual mode)
