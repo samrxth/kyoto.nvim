@@ -40,12 +40,12 @@ You can find a list of supported Debuggers [here](https://github.com/Pocco81/DAP
 
 - nvim-tree.lua
 - lspsaga.nvim
-- tokyonight.nvim
+- nvim-base16.lua
 - dashboard-nvim
 - telescope.nvim
 - nvim-bufferline.lua
-- fugitive.vim
-- lualine.nvim
+- lazygit
+- feline.nvim
 
 ## Sponsors
 
