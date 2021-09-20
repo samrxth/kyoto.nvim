@@ -28,14 +28,6 @@ You can find a list of supported languages [here](https://github.com/kabouzeid/n
 :LspInstall <language server name>
 ```
 
-### DAP
-
-You can find a list of supported Debuggers [here](https://github.com/Pocco81/DAPInstall.nvim#list-of-debuggers). To install any of them run
-
-```
-:DIInstall <debugger>
-```
-
 ## Notable Plugins
 
 - nvim-tree.lua

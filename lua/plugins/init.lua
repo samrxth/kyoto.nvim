@@ -12,8 +12,6 @@ require("plugins.gitsigns")
 require("plugins.which-key")
 -- extra plugins(with shorter configs)
 require("plugins.misc")
--- Debug configuration
-require("plugins.debug")
 -- Treesitter configurations
 require("plugins.tree-sitter")
 -- Orgmode configurations

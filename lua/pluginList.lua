@@ -58,11 +58,6 @@ require("packer").startup(function(use)
   use("kabouzeid/nvim-lspinstall")
   use("nvim-treesitter/nvim-treesitter")
   use("neovim/nvim-lspconfig")
-  -- use("folke/tokyonight.nvim")
-  use({
-    "hoob3rt/lualine.nvim",
-    requires = { "kyazdani42/nvim-web-devicons", opt = true },
-  })
   use({
     "nvim-telescope/telescope.nvim",
     requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } },
@@ -99,7 +94,6 @@ require("packer").startup(function(use)
   use("folke/which-key.nvim")
   use("tpope/vim-commentary")
   use("kdheepak/lazygit.nvim")
-  use("yuttie/comfortable-motion.vim")
   use({
     "mhartington/formatter.nvim",
     opt = true,
@@ -108,22 +102,14 @@ require("packer").startup(function(use)
     "folke/twilight.nvim",
     opt = true,
   })
-  use("gelguy/wilder.nvim")
   use({ "maxmellon/vim-jsx-pretty", opt = true })
   use({
     "folke/zen-mode.nvim",
     opt = true,
   })
   use({ "tweekmonster/startuptime.vim", opt = true })
-  use({ "vimwiki/vimwiki", opt = true })
-  use({ "creativenull/diagnosticls-nvim", opt = true })
-  use({ "folke/lua-dev.nvim", opt = true })
   use("ms-jpq/coq_nvim")
   use("ms-jpq/coq.artifacts")
-  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
-  use({ "pantharshit00/vim-prisma", opt = true })
-  use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
-  use({ "Pocco81/DAPInstall" })
   use("p00f/nvim-ts-rainbow")
   use("kristijanhusak/orgmode.nvim")
   use("ms-jpq/coq.thirdparty")

@@ -69,34 +69,6 @@ require("which-key").register({
     c = "Cursor Diagnostics",
     d = "Line Diagnostics",
   },
-  d = {
-    name = "+DAP",
-    b = "Toggle Breakpoint",
-    c = "Continue",
-    h = {
-      name = "+Hover options",
-      h = "Hover variables",
-      v = "Visual hover variables",
-    },
-    r = "Open repl",
-    x = "Close dap-ui",
-    s = {
-      name = "+Step",
-      v = "Step out",
-      i = "Step into",
-      o = "Step over",
-      c = "Variable scopes",
-      b = {
-        name = "+More Breakpoint Options",
-        r = "Breakpoint with condition",
-        m = "Breakpoint with message",
-      },
-    },
-    u = {
-      name = "+UI options",
-      f = "Float widgets",
-    },
-  },
   -- fc-commands, fz-current_buff_fuzzy_find, fs-workspacesymols;
   f = {
     name = "+Search",
