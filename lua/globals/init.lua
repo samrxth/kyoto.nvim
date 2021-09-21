@@ -47,7 +47,7 @@ g.coq_settings = {
 -- UI CONFIGS
 g.kyotorc_ui = {
   -- find a list of themes at https://github.com/NvChad/nvim-base16.lua/tree/master/lua/themes
-  theme = "nord",
+  theme = "gruvbox",
   -- Find a list of options at lua/statusline.lua(icon_styles var)
   statusline_style = "arrow",
   -- transparent = true,
