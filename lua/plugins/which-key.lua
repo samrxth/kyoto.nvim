@@ -69,6 +69,7 @@ require("which-key").register({
     c = "Cursor Diagnostics",
     d = "Line Diagnostics",
   },
+  e = "Show Line diagnostics",
   -- fc-commands, fz-current_buff_fuzzy_find, fs-workspacesymols;
   f = {
     name = "+Search",
@@ -91,7 +92,7 @@ require("which-key").register({
     name = "+Kyoto.nvim",
     c = "Edit kyotorc",
   },
-  l = "+LazyGit",
+  lg = "LazyGit",
   n = "Explorer",
   o = {
     name = "+Orgmode",
@@ -117,6 +118,11 @@ require("which-key").register({
   s = {
     name = "+SymbolsFinder",
     o = "Toggle Symbols Finder",
+  },
+  w = {
+    name = "+WorkspaceFolders",
+    a = "Add workspace folder",
+    r = "Remove workspace folder",
   },
 }, {
   prefix = "<leader>",
