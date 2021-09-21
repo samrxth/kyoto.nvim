@@ -26,6 +26,8 @@ vim.opt.rnu = true
 
 -- Global variables
 require("globals")
+-- general configurations
+require("options")
 -- Plugin configurations
 require("plugins")
 -- Colors
@@ -34,8 +36,6 @@ require("colors.highlights")
 require("lsp-config")
 -- Plugin configurations
 require("plugins")
--- general configurations
-require("options")
 -- source our mappings last(may change)
 vim.cmd("source ~/.config/nvim/viml/maps.vim")
 -- auto-commands

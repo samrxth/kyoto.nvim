@@ -1,11 +1,14 @@
 local g = vim.g
 
+-- Ignore for indent levels
 g.indent_blankline_filetype_exclude = {
   "help",
   "packer",
   "dashboard",
   "nvim-tree",
 }
+
+-- Ignore for indent levels
 g.indent_blankline_buftype_exclude = { "terminal", "nofile" }
 
 g.mapleader = " "
@@ -58,5 +61,3 @@ g.kyotorc_ui = {
 --   folders = 1,
 --   files = 1
 -- }
-
-vim.opt.termguicolors = true
