@@ -29,7 +29,7 @@ return require("packer").startup({function(use)
       require "kyoto.cmp"
     end,
     requires = {
-      { "hrsh7th/cmp-vsnip",    after = "nvim-cmp" },
+      { "hrsh7th/vim-vsnip",    after = "nvim-cmp" },
       { "hrsh7th/cmp-buffer",   after = "nvim-cmp" },
       { "hrsh7th/cmp-nvim-lsp", after = "nvim-cmp" },
       { "hrsh7th/cmp-path",     after = "nvim-cmp" }

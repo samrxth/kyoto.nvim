@@ -1,11 +1,11 @@
 local lsp = require("lspconfig")
+local lspinstall = require("lspinstall")
+local configs = require("core.lsp.configs")
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require("lspinstall").setup() -- important
-
-local function common_on_attach(client, bufnr)
+local function common_on_attach(_, bufnr)
   local function buf_set_keymap(...)
     vim.api.nvim_buf_set_keymap(bufnr, ...)
   end
@@ -34,40 +34,56 @@ local function common_on_attach(client, bufnr)
   buf_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
 end
 
-local servers = require("lspinstall").installed_servers()
-for _, server in pairs(servers) do
-  local client = lsp[server]
-  local config = client
-  lsp[server].setup({
-    on_attach = config.on_attach or common_on_attach,
-    settings = config.settings or {},
+local function load_servers()
+  lspinstall.setup()
+  local servers = lspinstall.installed_servers()
+
+  for _, server in pairs(servers) do
+    local client = lsp[server]
+    local config = configs[server] or client
+
+    client.setup({
+      capabilities = capabilities,
+      filetypes = config.filetypes or client.filetypes,
+      on_attach = config.on_attach or common_on_attach,
+      settings = config.settings or {},
+    })
+  end
+end
+
+
+local function aux_set_signcolumn_sign(diag_type, sign)
+  vim.fn.sign_define(diag_type, {
+    text = sign,
+    numhl = diag_type
   })
 end
 
-vim.fn.sign_define(
-  "LspDiagnosticsSignError",
-  { text = "", numhl = "LspDiagnosticsDefaultError" }
-)
-vim.fn.sign_define(
-  "LspDiagnosticsSignWarning",
-  { text = "", numhl = "LspDiagnosticsDefaultWarning" }
-)
-vim.fn.sign_define(
-  "LspDiagnosticsSignInformation",
-  { text = "", numhl = "LspDiagnosticsDefaultInformation" }
-)
-vim.fn.sign_define(
-  "LspDiagnosticsSignHint",
-  { text = "", numhl = "LspDiagnosticsDefaultHint" }
-)
+local function setup_diagnostics()
+  aux_set_signcolumn_sign("LspDiagnosticsSignError",          "")
+  aux_set_signcolumn_sign("LspDiagnosticsSignWarning",        "")
+  aux_set_signcolumn_sign("LspDiagnosticsDefaultInformation", "")
+  aux_set_signcolumn_sign("LspDiagnosticsDefaultHint",        "")
 
--- set default prefix.
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics,
-  {
-    -- virtual_text = false,
+  vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
     virtual_text = { prefix = "" },
     signs = true,
     update_in_insert = false,
-  }
-)
+  })
+end
+
+-- Reload LSPInstall after installing a server
+function lspinstall.post_install_hook()
+	load_servers()
+	vim.cmd("bufdo e")
+end
+
+-- Start servers with defined configs and defaults
+local function setup_servers()
+	setup_diagnostics()
+	load_servers()
+end
+
+setup_servers()
+
