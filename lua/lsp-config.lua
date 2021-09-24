@@ -1,5 +1,4 @@
 local vim = vim
-local coq = require("coq")
 local lsp = require("lspconfig")
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -34,29 +33,19 @@ local function common_on_attach(client, bufnr)
   )
   buf_set_keymap("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
   buf_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
-  buf_set_keymap(
-    "n",
-    "<space>wa",
-    "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>",
-    opts
-  )
-  buf_set_keymap(
-    "n",
-    "<space>wr",
-    "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>",
-    opts
-  )
 end
 
 local servers = require("lspinstall").installed_servers()
 for _, server in pairs(servers) do
   local client = lsp[server]
   local config = vim.g.lsp_config[server] or client
-
-  lsp[server].setup(coq.lsp_ensure_capabilities({
+  capabilities = require("cmp_nvim_lsp").update_capabilities(
+    vim.lsp.protocol.make_client_capabilities()
+  )
+  lsp[server].setup({
     on_attach = config.on_attach or common_on_attach,
     settings = config.settings or {},
-  }))
+  })
 end
 
 vim.fn.sign_define(
@@ -86,32 +75,3 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     update_in_insert = false,
   }
 )
-
--- symbols for autocomplete
-vim.lsp.protocol.CompletionItemKind = {
-  "   (Text) ",
-  "   (Method)",
-  "   (Function)",
-  "   (Constructor)",
-  " ﴲ  (Field)",
-  "[] (Variable)",
-  "   (Class)",
-  " ﰮ  (Interface)",
-  "   (Module)",
-  " 襁 (Property)",
-  "   (Unit)",
-  "   (Value)",
-  " 練 (Enum)",
-  "   (Keyword)",
-  "   (Snippet)",
-  "   (Color)",
-  "   (File)",
-  "   (Reference)",
-  "   (Folder)",
-  "   (EnumMember)",
-  " ﲀ  (Constant)",
-  " ﳤ  (Struct)",
-  "   (Event)",
-  "   (Operator)",
-  "   (TypeParameter)",
-}

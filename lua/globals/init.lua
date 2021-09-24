@@ -13,13 +13,6 @@ g.indent_blankline_buftype_exclude = { "terminal", "nofile" }
 
 g.mapleader = " "
 
--- plugin config
-g.vimwiki_list = {
-  {
-    path = "~/Documents/vimwiki",
-  },
-}
-
 -- extra plugins to install (must only be strings)
 g.kyoto_extra_plugins = {}
 
@@ -36,18 +29,10 @@ g.lsp_config = {
   },
 }
 
--- COQ-nvim completion config
-g.coq_settings = {
-  auto_start = "shut-up",
-  keymap = {
-    jump_to_mark = "<c-q>",
-  },
-}
-
 -- UI CONFIGS
 g.kyotorc_ui = {
   -- find a list of themes at https://github.com/NvChad/nvim-base16.lua/tree/master/lua/themes
-  theme = "gruvbox",
+  theme = "nord",
   -- Find a list of options at lua/statusline.lua(icon_styles var)
   statusline_style = "arrow",
   -- transparent = true,
@@ -61,3 +46,27 @@ g.kyotorc_ui = {
 --   folders = 1,
 --   files = 1
 -- }
+g.vimwiki_list = {
+  {
+    path = "~/Documents/vimwiki",
+    syntax = "markdown",
+    ext = ".md",
+    custom_wiki2html = "vimwiki_markdown",
+    template_ext = ".md",
+  },
+  {
+    path = "~/Documents/vimwiki/coding",
+    syntax = "markdown",
+    ext = ".md",
+    custom_wiki2html = "vimwiki_markdown",
+    template_ext = ".md",
+  },
+  {
+    path = "~/code/internnova-docs",
+    syntax = "markdown",
+    ext = ".md",
+    path_html = "~/code/internnova-docs/",
+    custom_wiki2html = "vimwiki_markdown",
+    template_ext = ".md",
+  },
+}

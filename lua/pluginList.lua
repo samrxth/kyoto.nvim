@@ -108,15 +108,14 @@ require("packer").startup(function(use)
     opt = true,
   })
   use({ "tweekmonster/startuptime.vim", opt = true })
-  use("ms-jpq/coq_nvim")
-  use("ms-jpq/coq.artifacts")
   use("p00f/nvim-ts-rainbow")
-  use("kristijanhusak/orgmode.nvim")
-  use("ms-jpq/coq.thirdparty")
   use("lukas-reineke/indent-blankline.nvim")
   use("famiu/feline.nvim")
   use("ahmedkhalf/project.nvim")
-
+  use({ "vimwiki/vimwiki", opt = true })
+  use("hrsh7th/nvim-cmp")
+  use("hrsh7th/cmp-nvim-lsp")
+  use("hrsh7th/cmp-buffer")
   for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
     use(plugin)
   end

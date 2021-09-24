@@ -2,4 +2,5 @@
 plugin/
 startup.log
 lua/kyotorc/*
+lua/personal-globals.lua
 # kyotorc is ignored since private configs don't update on force/rebase pull

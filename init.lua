@@ -26,6 +26,8 @@ vim.opt.rnu = true
 
 -- Global variables
 require("globals")
+-- Personal global variables
+pcall(require, "personal-globals")
 -- general configurations
 require("options")
 -- Plugin configurations
@@ -41,4 +43,4 @@ vim.cmd("source ~/.config/nvim/viml/maps.vim")
 -- auto-commands
 vim.cmd("source ~/.config/nvim/viml/autocmd.vim")
 -- user configurations
-require("kyotorc")
+pcall(require, "kyotorc")

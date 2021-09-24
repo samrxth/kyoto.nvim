@@ -6,7 +6,7 @@ require("gitsigns").setup({
     topdelete = { hl = "DiffDelete", text = "‾", numhl = "GitSignsDeleteNr" },
     changedelete = { hl = "DiffChange", text = "~", numhl = "GitSignsChangeNr" },
   },
-  watch_index = {
+  watch_gitdir = {
     interval = 100,
   },
   sign_priority = 5,

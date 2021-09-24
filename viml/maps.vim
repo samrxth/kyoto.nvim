@@ -1,3 +1,7 @@
+" Make tab and shift tab navigate autocomplete menus
+inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
+
 " Go to the beginning of the line in insert mode
 inoremap <silent><C-a> <C-o>0
 " Go to the ending of the line in insert mode
