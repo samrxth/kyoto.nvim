@@ -24,6 +24,5 @@ require("core.globals")
 require("core.plugins")
 
 require("core.lsp")
-
 local base16 = require("base16")
-base16(base16.themes("nord"), true)
+base16(base16.themes(_G.), true)

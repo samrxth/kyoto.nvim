@@ -7,6 +7,6 @@ utils.map("n", "<Leader>ff", ":Telescope find_files hidden=true<CR>", opts)
 
 _G.kyoto = {
   syntax_highlighting = {"javascript", "lua", "c"},
-  popup_borders = "rounded"
+  theme = "nord"
 }
 
