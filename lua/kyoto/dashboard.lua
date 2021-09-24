@@ -37,7 +37,7 @@ vim.g.dashboard_custom_section = {
     command = "Telescope oldfiles",
   },
   d = {
-    description = { "洛 New Buffer                  SPC g g" },
+    description = { " 洛 New Buffer                 SPC g g" },
     command = "enew",
   },
   e = {
