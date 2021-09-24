@@ -1,10 +1,3 @@
-local vim = vim
-local g = vim.g
-
-vim.cmd("packadd dashboard-nvim")
-
-g.dashboard_default_executive = "telescope"
-
 local custom_header = {
   "",
   "",
@@ -28,9 +21,9 @@ local custom_header = {
   "    K Y O T O    N V I M     ",
 }
 
-g.dashboard_custom_header = custom_header
-
-g.dashboard_custom_section = {
+vim.g.dashboard_default_executive = "telescope"
+vim.g.dashboard_custom_header = custom_header
+vim.g.dashboard_custom_section = {
   a = {
     description = { "  Find File                  SPC f f" },
     command = "Telescope find_files",
@@ -44,7 +37,7 @@ g.dashboard_custom_section = {
     command = "Telescope oldfiles",
   },
   d = {
-    description = { "洛 New Buffer                 SPC g g" },
+    description = { "洛 New Buffer                  SPC g g" },
     command = "enew",
   },
   e = {
@@ -53,4 +46,4 @@ g.dashboard_custom_section = {
   },
 }
 
-g.dashboard_custom_footer = { "KYOTO.NVIM" }
+vim.g.dashboard_custom_footer = { "KYOTO.NVIM" }
