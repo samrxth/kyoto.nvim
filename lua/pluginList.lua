@@ -98,15 +98,6 @@ require("packer").startup(function(use)
     "mhartington/formatter.nvim",
     opt = true,
   })
-  use({
-    "folke/twilight.nvim",
-    opt = true,
-  })
-  use({ "maxmellon/vim-jsx-pretty", opt = true })
-  use({
-    "folke/zen-mode.nvim",
-    opt = true,
-  })
   use({ "tweekmonster/startuptime.vim", opt = true })
   use("p00f/nvim-ts-rainbow")
   use("lukas-reineke/indent-blankline.nvim")
@@ -114,6 +105,7 @@ require("packer").startup(function(use)
   use("ahmedkhalf/project.nvim")
   use({ "vimwiki/vimwiki", opt = true })
   use("hrsh7th/nvim-cmp")
+  use("hrsh7th/cmp-path")
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-buffer")
   for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
