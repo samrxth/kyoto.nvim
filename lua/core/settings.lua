@@ -1,4 +1,3 @@
-local vim = vim
 local opt = vim.opt
 
 opt.ruler = false
@@ -21,8 +20,6 @@ opt.whichwrap:append("<>hl")
 opt.pumheight = 20
 opt.foldmethod = "manual"
 vim.cmd("set wildcharm=<Tab>")
-
--- vim.cmd("colorscheme tokyonight")
 
 local disabled_built_ins = {
   "netrw",

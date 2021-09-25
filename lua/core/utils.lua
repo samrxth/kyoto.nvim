@@ -1,5 +1,8 @@
 local M = {}
 
-M.map = vim.api.nvim_set_keymap
+M.keybindings = {
+  map = vim.api.nvim_set_keymap,
+  opts = { silent = true, noremap = true }
+}
 
 return M

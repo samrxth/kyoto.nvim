@@ -18,9 +18,8 @@
 -- https://github.com/samrath2007/kyoto.nvim
 
 require("kyotorc")
-
 require("core.settings")
-require("core.globals")
+require("core.defaults")
 require("core.plugins")
 
 require("core.lsp")

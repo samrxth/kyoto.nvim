@@ -15,18 +15,26 @@ return require("packer").startup({function(use)
     "kyazdani42/nvim-tree.lua",
     cmd = "NvimTreeToggle",
     config = function()
-      require "kyoto.nvimtree"
+      require("kyoto.nvimtree")
+    end,
+    setup = function()
+      _G.kyoto.keybindings.plugins.nvimtree()
     end
   })
 
   use("neovim/nvim-lspconfig")
   use("kabouzeid/nvim-lspinstall")
-  use("glepnir/lspsaga.nvim")
+  use({
+    "glepnir/lspsaga.nvim",
+    config = function()
+      require("kyoto.lspsaga")
+    end
+  })
   use {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     config = function()
-      require "kyoto.cmp"
+      require("kyoto.cmp")
     end,
     requires = {
       { "hrsh7th/vim-vsnip",    after = "nvim-cmp" },
@@ -41,7 +49,7 @@ return require("packer").startup({function(use)
     event = "BufRead",
     run= ":TSUpdate",
     config = function()
-      require "kyoto.tree-sitter"
+      require("kyoto.tree-sitter")
     end,
     requires = {
       { "maxmellon/vim-jsx-pretty" },
@@ -52,7 +60,7 @@ return require("packer").startup({function(use)
   use({
     "famiu/feline.nvim",
     config = function()
-      require "kyoto.feline"
+      require("kyoto.feline")
     end
   })
 
@@ -61,6 +69,9 @@ return require("packer").startup({function(use)
     cmd = "Telescope",
     config = function()
       require("kyoto.telescope")
+    end,
+    setup = function()
+      _G.kyoto.keybindings.plugins.telescope()
     end,
     requires = {{
       "nvim-telescope/telescope-fzf-native.nvim",

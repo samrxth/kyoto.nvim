@@ -5,33 +5,8 @@ local configs = require("core.lsp.configs")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-local function common_on_attach(_, bufnr)
-  local function buf_set_keymap(...)
-    vim.api.nvim_buf_set_keymap(bufnr, ...)
-  end
-  local function buf_set_option(...)
-    vim.api.nvim_buf_set_option(bufnr, ...)
-  end
-
-  -- Enable completion triggered by <c-x><c-o>
-  buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
-
-  -- Mappings.
-  local opts = { noremap = true, silent = true }
-  buf_set_keymap(
-    "n",
-    "<space>ca",
-    "<cmd>lua vim.lsp.buf.code_action()<CR>",
-    opts
-  )
-  buf_set_keymap(
-    "n",
-    "<space>e",
-    "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>",
-    opts
-  )
-  buf_set_keymap("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
-  buf_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
+local function common_on_attach()
+  _G.kyoto.keybindings.lsp()
 end
 
 local function load_servers()
@@ -60,10 +35,10 @@ local function aux_set_signcolumn_sign(diag_type, sign)
 end
 
 local function setup_diagnostics()
-  aux_set_signcolumn_sign("LspDiagnosticsSignError",          "")
-  aux_set_signcolumn_sign("LspDiagnosticsSignWarning",        "")
-  aux_set_signcolumn_sign("LspDiagnosticsDefaultInformation", "")
-  aux_set_signcolumn_sign("LspDiagnosticsDefaultHint",        "")
+  aux_set_signcolumn_sign("LspDiagnosticsSignError",          _G.kyoto.interface.diagnostics.error)
+  aux_set_signcolumn_sign("LspDiagnosticsSignWarning",        _G.kyoto.interface.diagnostics.warning)
+  aux_set_signcolumn_sign("LspDiagnosticsDefaultInformation", _G.kyoto.interface.diagnostics.information)
+  aux_set_signcolumn_sign("LspDiagnosticsDefaultHint",        _G.kyoto.interface.diagnostics.hint)
 
   vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
