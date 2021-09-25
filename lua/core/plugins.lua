@@ -126,7 +126,7 @@ return require("packer").startup({function(use)
     end
   })
 
-  -- Gitsigns
+  -- Git
   use({
     "lewis6991/gitsigns.nvim",
     config = function()
@@ -136,6 +136,19 @@ return require("packer").startup({function(use)
       "nvim-lua/plenary.nvim",
     }
   })
+  use({
+    "kdheepak/lazygit.nvim",
+    cmd = "LazyGit"
+  })
+
+  -- Identline
+  use({
+    "lukas-reineke/indent-blankline.nvim",
+    event = "BufRead",
+    config = function()
+      require("kyoto.indent-blankline")
+    end
+  })
 
   -- Formatter
   -- Formatters must be installed separately
@@ -143,6 +156,7 @@ return require("packer").startup({function(use)
     "mhartington/formatter.nvim",
     cmd = "Format",
     config = function()
+      require("kyoto.formatter")
     end
   })
 

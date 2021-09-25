@@ -14,7 +14,6 @@ local defaults = {
   },
   keybindings = {
     window = function()
-      kb.map("n", "<Leader><Leader>", "<C-^>", kb.opts)
       kb.map("n", "<C-J>",     "<C-W><C-J>",          { noremap = true })
       kb.map("n", "<C-K>",     "<C-W><C-K>",          { noremap = true })
       kb.map("n", "<C-L>",     "<C-W><C-L>",          { noremap = true })
@@ -36,7 +35,7 @@ local defaults = {
     end,
     plugins = {
       nvimtree = function()
-        kb.map("n", "<Leader>e",  "<cmd>NvimTreeToggle<CR>", kb.opts)
+        kb.map("n", "<Leader>nn",  "<cmd>NvimTreeToggle<CR>", kb.opts)
       end,
       telescope = function()
         kb.map("n", "<Leader>ff", ":Telescope find_files hidden=true<CR>", kb.opts)
@@ -44,7 +43,10 @@ local defaults = {
       trouble = function()
         kb.map("n", "<Leader>xx", ":TroubleToggle<CR>", kb.opts)
       end
-    }
+    },
+    others = function()
+      -- Add other keybinds here
+    end
   },
   plugins = {
     autopairs = true,
@@ -55,6 +57,7 @@ local defaults = {
 local function setup(config)
   for k, v in pairs(config) do defaults[k] = v end
   defaults.keybindings.window()
+  defaults.keybindings.others()
   return defaults
 end
 
