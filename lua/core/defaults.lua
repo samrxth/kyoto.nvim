@@ -30,20 +30,24 @@ local defaults = {
       kb.map("n", "gd",":Lspsaga preview_definition<CR>", kb.opts)
       kb.map("n", "gD", ":lua vim.lsp.buf.declaration()<CR>", kb.opts)
       kb.map("n", "<Leader>rn", ":Lspsaga rename<CR>", kb.opts)
-      kb.map("n", "gc", ":Lspsaga code_action<CR>", kb.opts)
+      kb.map("n", "ca", ":Lspsaga code_action<CR>", kb.opts)
       kb.map("n", "[g", ":Lspsaga diagnostic_jump_next<CR>", kb.opts)
       kb.map("n", "]g", ":Lspsaga diagnostic_jump_prev<CR>", kb.opts)
     end,
     plugins = {
+      nvimtree = function()
+        kb.map("n", "<Leader>e",  "<cmd>NvimTreeToggle<CR>", kb.opts)
+      end,
       telescope = function()
         kb.map("n", "<Leader>ff", ":Telescope find_files hidden=true<CR>", kb.opts)
       end,
-      nvimtree = function()
-        kb.map("n", "<Leader>e",  "<cmd>NvimTreeToggle<CR>", kb.opts)
+      trouble = function()
+        kb.map("n", "<Leader>xx", ":TroubleToggle<CR>", kb.opts)
       end
     }
   },
   plugins = {
+    autopairs = true,
     syntax_parsers = {"javascript", "typescript", "python", "lua"},
   }
 }

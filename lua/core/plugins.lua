@@ -40,10 +40,16 @@ return require("packer").startup({function(use)
       { "hrsh7th/vim-vsnip",    after = "nvim-cmp" },
       { "hrsh7th/cmp-buffer",   after = "nvim-cmp" },
       { "hrsh7th/cmp-nvim-lsp", after = "nvim-cmp" },
-      { "hrsh7th/cmp-path",     after = "nvim-cmp" }
+      { "hrsh7th/cmp-path",     after = "nvim-cmp" },
+      {
+        "windwp/nvim-autopairs",
+        module = {"nvim-autopairs", "nvim-autopairs.completion.cmp"},
+        opt = _G.kyoto.plugins.autopairs
+      }
     }
   }
 
+  -- Treesitter (and other syntax plugins)
   use({
     "nvim-treesitter/nvim-treesitter",
     event = "BufRead",
@@ -52,33 +58,17 @@ return require("packer").startup({function(use)
       require("kyoto.tree-sitter")
     end,
     requires = {
-      { "maxmellon/vim-jsx-pretty" },
-      { "p00f/nvim-ts-rainbow", after = "nvim-treesitter" }
+      { "p00f/nvim-ts-rainbow", after = "nvim-treesitter" },
+      { "JoosepAlviste/nvim-ts-context-commentstring", after = "nvim-treesitter" }
     }
   })
-
   use({
-    "famiu/feline.nvim",
-    config = function()
-      require("kyoto.feline")
-    end
+    "maxmellon/vim-jsx-pretty",
+    ft = { "javascript", "javascriptreact",
+    "typescript", "typescriptreact" }
   })
 
-  use({
-    "nvim-telescope/telescope.nvim",
-    cmd = "Telescope",
-    config = function()
-      require("kyoto.telescope")
-    end,
-    setup = function()
-      _G.kyoto.keybindings.plugins.telescope()
-    end,
-    requires = {{
-      "nvim-telescope/telescope-fzf-native.nvim",
-      run = "make"
-    }}
-  })
-
+  -- Bufferline
   use({
     "akinsho/nvim-bufferline.lua",
     config = function()
@@ -86,6 +76,37 @@ return require("packer").startup({function(use)
     end
   })
 
+  -- Statusline
+  use({
+    "famiu/feline.nvim",
+    config = function()
+      require("kyoto.feline")
+    end
+  })
+
+  -- Fuzzy Finder (Telescope)
+  use({
+    "nvim-telescope/telescope.nvim",
+    cmd = "Telescope",
+    module = "telescope",
+    config = function()
+      require("kyoto.telescope")
+    end,
+    setup = function()
+      _G.kyoto.keybindings.plugins.telescope()
+    end,
+    requires = {
+      { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
+      {
+        "ahmedkhalf/project.nvim",
+        config = function()
+          require("kyoto.project")
+        end
+      }
+    }
+  })
+
+  -- Dashboard and Project Explorer
   use({
     "glepnir/dashboard-nvim",
     config = function()
@@ -93,13 +114,31 @@ return require("packer").startup({function(use)
     end
   })
 
+  -- Trouble
+  use({
+    "folke/trouble.nvim",
+    cmd = {"Trouble", "TroubleToggle"},
+    config = function()
+      require("kyoto.trouble")
+    end,
+    setup = function()
+      _G.kyoto.keybindings.plugins.trouble()
+    end
+  })
+
+  -- Gitsigns
   use({
     "lewis6991/gitsigns.nvim",
+    config = function()
+      require("kyoto.gitsigns")
+    end,
     requires = {
       "nvim-lua/plenary.nvim",
     }
   })
 
+  -- Formatter
+  -- Formatters must be installed separately
   use({
     "mhartington/formatter.nvim",
     cmd = "Format",
@@ -107,22 +146,13 @@ return require("packer").startup({function(use)
     end
   })
 
-  use({
-    "nvim-lua/popup.nvim",
-    module = "popup"
-  })
-
-  use({
-    "nvim-lua/plenary.nvim",
-    module = "plenary"
-  })
-
-  use({
-    "kyazdani42/nvim-web-devicons",
-    module = "nvim-web-devicons"
-  })
-
+  -- Colorschemes
   use({"NvChad/nvim-base16.lua"})
+
+  -- Modules (required by many plugins)
+  use({ "nvim-lua/popup.nvim", module = "popup" })
+  use({ "nvim-lua/plenary.nvim", module = "plenary" })
+  use({ "kyazdani42/nvim-web-devicons", module = "nvim-web-devicons" })
 end,
 config = {
   display = {
