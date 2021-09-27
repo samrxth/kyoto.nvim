@@ -53,7 +53,11 @@ require("packer").startup(function(use)
   use({
     "NvChad/nvim-base16.lua",
   })
-  use({ "kyazdani42/nvim-tree.lua", opt = true, cmd = { "NvimTreeToggle" } })
+  use({
+    'kyazdani42/nvim-tree.lua',
+    requires = 'kyazdani42/nvim-web-devicons',
+    config = function() require'nvim-tree'.setup {} end
+  })
   use("glepnir/lspsaga.nvim")
   use("kabouzeid/nvim-lspinstall")
   use("nvim-treesitter/nvim-treesitter")
