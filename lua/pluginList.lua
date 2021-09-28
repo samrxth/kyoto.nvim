@@ -58,7 +58,7 @@ require("packer").startup(function(use)
     requires = 'kyazdani42/nvim-web-devicons',
     config = function() require'nvim-tree'.setup {} end
   })
-  use("glepnir/lspsaga.nvim")
+  use("tami5/lspsaga.nvim")
   use("kabouzeid/nvim-lspinstall")
   use("nvim-treesitter/nvim-treesitter")
   use("neovim/nvim-lspconfig")
