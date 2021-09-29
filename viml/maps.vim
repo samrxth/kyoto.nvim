@@ -131,8 +131,13 @@ nnoremap <silent><leader>fs :Telescope lsp_workspace_symbols<CR>
 " Search projects (projects.nvim) 
 nnoremap <silent><leader>fp :Telescope projects<CR>
 
+"Lspsaga mappinggs
 " Symbols Finder
 nnoremap <silent> gh <cmd>lua require'lspsaga.provider'.lsp_finder()<CR>
+" Show code actions
+nnoremap <silent><leader>ca <cmd>lua require('lspsaga.codeaction').code_action()<CR>
+" Show code actions for selection
+vnoremap <silent><leader>ca :<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>
 " Show hovering documentation
 nnoremap <silent> K <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
 " Scroll down in lspsaga menus
@@ -148,6 +153,10 @@ nnoremap <silent> gd <cmd>lua require'lspsaga.provider'.preview_definition()<CR>
 " Show suggestions/errors/warnings for the line
 nnoremap <silent><leader>cd <cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>
 nnoremap <silent><leader>cc <cmd>lua require'lspsaga.diagnostic'.show_cursor_diagnostics()<CR>
+" Jump to the next diagnostic suggestion
+nnoremap <silent> ]e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>
+" Jump to the previous diagnostic suggestion
+nnoremap <silent> [e <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>
 
 " Jump to definition
 nnoremap <silent> gD <cmd>lua vim.lsp.buf.definition()<CR>
