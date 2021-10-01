@@ -16,6 +16,3 @@ require("plugins.misc")
 require("plugins.tree-sitter")
 -- Error finder configurations
 require("plugins.trouble")
--- Project management
-require("plugins.project")
-require("plugins.cmp")

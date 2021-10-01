@@ -29,6 +29,14 @@ g.lsp_config = {
   },
 }
 
+-- COQ-nvim completion config
+g.coq_settings = {
+  auto_start = "shut-up",
+  keymap = {
+    jump_to_mark = "<c-q>",
+  },
+}
+
 -- UI CONFIGS
 g.kyotorc_ui = {
   -- find a list of themes at https://github.com/NvChad/nvim-base16.lua/tree/master/lua/themes

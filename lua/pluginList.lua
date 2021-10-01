@@ -96,7 +96,6 @@ require("packer").startup(function(use)
       "nvim-lua/plenary.nvim",
     },
   })
-  use("liuchengxu/vista.vim")
   use("folke/which-key.nvim")
   use("tpope/vim-commentary")
   use("kdheepak/lazygit.nvim")
@@ -104,16 +103,15 @@ require("packer").startup(function(use)
   use("p00f/nvim-ts-rainbow")
   use("lukas-reineke/indent-blankline.nvim")
   use("famiu/feline.nvim")
-  use("ahmedkhalf/project.nvim")
   use({ "vimwiki/vimwiki", opt = true })
-  use("hrsh7th/nvim-cmp")
-  use("hrsh7th/cmp-path")
-  use("hrsh7th/cmp-nvim-lsp")
-  use("hrsh7th/cmp-buffer")
   use({
     "creativenull/diagnosticls-configs-nvim",
     opt = true,
   })
+
+  use("ms-jpq/coq_nvim")
+  use("ms-jpq/coq.artifacts")
+  use("ms-jpq/coq.thirdparty")
   for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
     use(plugin)
   end
