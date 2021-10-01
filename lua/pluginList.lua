@@ -54,9 +54,11 @@ require("packer").startup(function(use)
     "NvChad/nvim-base16.lua",
   })
   use({
-    'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons',
-    config = function() require'nvim-tree'.setup {} end
+    "kyazdani42/nvim-tree.lua",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("nvim-tree").setup({})
+    end,
   })
   use("tami5/lspsaga.nvim")
   use("kabouzeid/nvim-lspinstall")
@@ -98,10 +100,6 @@ require("packer").startup(function(use)
   use("folke/which-key.nvim")
   use("tpope/vim-commentary")
   use("kdheepak/lazygit.nvim")
-  use({
-    "mhartington/formatter.nvim",
-    opt = true,
-  })
   use({ "tweekmonster/startuptime.vim", opt = true })
   use("p00f/nvim-ts-rainbow")
   use("lukas-reineke/indent-blankline.nvim")
@@ -112,6 +110,10 @@ require("packer").startup(function(use)
   use("hrsh7th/cmp-path")
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-buffer")
+  use({
+    "creativenull/diagnosticls-configs-nvim",
+    opt = true,
+  })
   for _, plugin in ipairs(vim.g.kyoto_extra_plugins) do
     use(plugin)
   end

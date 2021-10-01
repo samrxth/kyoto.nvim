@@ -7,6 +7,8 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 require("lspinstall").setup() -- important
 
 local function common_on_attach(client, bufnr)
+  client.resolved_capabilities.document_formatting = false
+
   local function buf_set_option(...)
     vim.api.nvim_buf_set_option(bufnr, ...)
   end
