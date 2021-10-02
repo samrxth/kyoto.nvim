@@ -16,3 +16,5 @@ require("plugins.misc")
 require("plugins.tree-sitter")
 -- Error finder configurations
 require("plugins.trouble")
+-- Third party sources for coq_nvim
+require("plugins.coq3p")
