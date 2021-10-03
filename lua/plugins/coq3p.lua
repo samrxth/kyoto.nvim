@@ -5,11 +5,10 @@ require("coq_3p")({
   {
     src = "repl",
     sh = "zsh",
-    shell = { p = "python", n = "node"},
+    shell = { p = "python", n = "node" },
     max_lines = 99,
     deadline = 500,
-    unsafe = { "rm", "poweroff", "mv", "trash", "kill"},
+    unsafe = { "rm", "poweroff", "mv", "trash", "kill" },
   },
   { src = "bc", short_name = "MATH", precision = 6 },
-  { src = "cow" },
 })
