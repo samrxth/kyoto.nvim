@@ -1,5 +1,4 @@
 local vim = vim
-local coq = require("coq")
 local lsp = require("lspconfig")
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -22,12 +21,13 @@ local servers = require("lspinstall").installed_servers()
 for _, server in pairs(servers) do
   local client = lsp[server]
   local config = vim.g.lsp_config[server] or client
-  vim.lsp.protocol.make_client_capabilities()
-
-  lsp[server].setup(coq.lsp_ensure_capabilities({
+  capabilities = require("cmp_nvim_lsp").update_capabilities(
+    vim.lsp.protocol.make_client_capabilities()
+  )
+  lsp[server].setup({
     on_attach = config.on_attach or common_on_attach,
     settings = config.settings or {},
-  }))
+  })
 end
 
 vim.fn.sign_define(
