@@ -60,7 +60,7 @@ require("packer").startup(function(use)
       require("nvim-tree").setup({})
     end,
   })
-  use("tami5/lspsaga.nvim")
+  use("glepnir/lspsaga.nvim")
   use("kabouzeid/nvim-lspinstall")
   use("nvim-treesitter/nvim-treesitter")
   use("neovim/nvim-lspconfig")
